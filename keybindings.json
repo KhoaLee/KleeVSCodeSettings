@@ -248,5 +248,29 @@
     {
         "key": "alt+a alt+s",
         "command": "workbench.view.extension.aws-explorer"
-    }
+    },
+    {
+        "key": "alt+q alt+s",
+        "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+    },
+    {
+        "key": "alt+q alt+c",
+        "command": "sqltoolsViewConnectionExplorer.toggleVisibility"
+    },
+    {
+        "key": "alt+q alt+b",
+        "command": "sqltoolsViewBookmarksExplorer.toggleVisibility"
+    },
+    {
+        "key": "alt+q alt+m",
+        "command": "sqltoolsViewConsoleMessages.toggleVisibility"
+    },
+    {
+        "key": "alt+q alt+h",
+        "command": "sqltoolsViewHistoryExplorer.toggleVisibility"
+    },
+    {
+        "key": "alt+q alt+t",
+        "command": "workbench.view.extension.sqltoolsPanelContainer"
+    },
 ]
