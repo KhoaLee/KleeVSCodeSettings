@@ -246,7 +246,7 @@
         "command": "aws.explorer.toggleVisibility"
     },
     {
-        "key": "alt+a alt+s",
+        "key": "shift+cmd+a s",
         "command": "workbench.view.extension.aws-explorer"
     },
     {
@@ -272,5 +272,14 @@
     {
         "key": "alt+q alt+t",
         "command": "workbench.view.extension.sqltoolsPanelContainer"
+    },
+    {
+        "key": "shift+cmd+a r",
+        "command": "aws.refreshAwsExplorer",
+        "when": "aws.explorer.active"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "workbench.output.action.clearOutput"
     },
 ]

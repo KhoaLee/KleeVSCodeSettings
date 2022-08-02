@@ -1,6 +1,7 @@
 {
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "screencastMode.fontSize": 60,
+    "window.commandCenter": true,
     // =============================== EDITOR SETTIGNS ===============================
     "editor.codeLensFontFamily": "Cousine for Powerline",
     "editor.inlayHints.fontFamily": "Cousine for Powerline",
@@ -26,7 +27,7 @@
     "editor.linkedEditing": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    "editor.lineHeight": 1.8,
+    "editor.lineHeight": 1.75,
     "editor.fontSize": 13,
     "editor.fontFamily": "Cousine for Powerline, 'Cousine for Powerline', Cousine for Powerline",
     // =============================== JSON FORMAT SETTINGS ===============================
@@ -72,12 +73,11 @@
         "**/node_modules/**": true
     },
     // ======================================= WORKBENCH SETTINGS =======================================
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 24,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
     "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
-    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.enablePreview": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -95,20 +95,20 @@
         "editor.formatOnSave": true,
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
-    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
-            "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home",
+            "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home",
         },
         {
             "name": "JavaSE-11",
-            "path": "/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home",
+            "path": "/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home",
+            "default": true
         },
         {
-            "name": "JavaSE-9",
-            "path": "/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home",
-            "default": true
+            "name": "JavaSE-17",
+            "path": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home",
         }
     ],
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
@@ -122,10 +122,10 @@
     "python.linting.flake8Enabled": true,
     "python.formatting.autopep8Args": [
         "--max-line-length=200",
-        "--ignore=E502,F841,E402",
+        "--ignore=E502,F841,E402,W503",
     ],
     "python.linting.flake8Args": [
-        "--ignore=E501,F841,E402",
+        "--ignore=E501,F841,E402,W503",
     ],
     "python.defaultInterpreterPath": "~/.pyenv/versions/ytubescraper-env",
     "python.languageServer": "Pylance",
@@ -351,5 +351,42 @@
         "<C-v>": true,
         "<C-z>": false,
         // "<C-y>": false
+    },
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "git.terminalGitEditor": true,
+    "aws.samcli.location": "/usr/local/bin/sam",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "sonarlint.rules": {
+        "java:S125": {
+            "level": "off"
+        }
     },
 }
