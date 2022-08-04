@@ -74,7 +74,7 @@
     },
     // ======================================= WORKBENCH SETTINGS =======================================
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.tree.indent": 24,
+    "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
     "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
@@ -383,10 +383,14 @@
     ],
     "git.terminalGitEditor": true,
     "aws.samcli.location": "/usr/local/bin/sam",
-    "workbench.colorTheme": "GitHub Dark Dimmed",
     "sonarlint.rules": {
         "java:S125": {
             "level": "off"
+        },
+        "typescript:S125": {
+            "level": "off"
         }
     },
+    "git.enableSmartCommit": true,
+    "workbench.colorTheme": "GitHub Dark",
 }

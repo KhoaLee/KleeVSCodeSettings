@@ -282,4 +282,12 @@
         "key": "shift+cmd+d",
         "command": "workbench.output.action.clearOutput"
     },
+    {
+        "key": "alt+r shift+j",
+        "command": "java.debug.runJavaFile"
+    },
+    {
+        "key": "alt+cmd+v s",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
 ]
