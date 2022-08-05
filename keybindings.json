@@ -290,4 +290,29 @@
         "key": "alt+cmd+v s",
         "command": "workbench.action.toggleAuxiliaryBar"
     },
+    {
+        "key": "ctrl+k",
+        "when": "CodeActionMenuVisible",
+        "command": "focusPreviousCodeAction"
+    },
+    {
+        "key": "ctrl+j",
+        "when": "CodeActionMenuVisible",
+        "command": "focusNextCodeAction"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "-workbench.action.terminal.killInstance",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "shift+alt+backspace",
+        "command": "workbench.action.terminal.killInstance",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "delete",
+        "command": "-workbench.action.terminal.killInstance",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    }
 ]

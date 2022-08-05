@@ -138,7 +138,6 @@
     // ======================================= EXTENSIONS SETTINGS =======================================
     // ########### PRETTIER CONFIGURATION ###########
     "prettier.useTabs": true,
-    "prettier.jsxBracketSameLine": true,
     "prettier.jsxSingleQuote": true,
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
@@ -393,4 +392,6 @@
     },
     "git.enableSmartCommit": true,
     "workbench.colorTheme": "GitHub Dark",
+    "prettier.printWidth": 255,
+    "prettier.jsxBracketSameLine": true,
 }
