@@ -25,7 +25,7 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.linkedEditing": true,
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "wordWrapColumn",
     "editor.minimap.enabled": false,
     "editor.lineHeight": 1.75,
     "editor.fontSize": 13,
@@ -388,10 +388,25 @@
         },
         "typescript:S125": {
             "level": "off"
+        },
+        "python:S125": {
+            "level": "off"
+        },
+        "python:S112": {
+            "level": "off"
         }
     },
     "git.enableSmartCommit": true,
-    "workbench.colorTheme": "GitHub Dark",
     "prettier.printWidth": 255,
     "prettier.jsxBracketSameLine": true,
+    "editor.wordWrapColumn": 160,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "xml.format.maxLineWidth": 160,
+    "yaml.format.printWidth": 160,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "workbench.colorTheme": "GitHub Dark",
+    "python.analysis.typeCheckingMode": "strict",
 }

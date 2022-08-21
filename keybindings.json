@@ -314,5 +314,9 @@
         "key": "delete",
         "command": "-workbench.action.terminal.killInstance",
         "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "alt+cmd+v d",
+        "command": "workbench.view.extension.dockerView"
     }
 ]
