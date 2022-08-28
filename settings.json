@@ -51,7 +51,7 @@
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
     "terminal.integrated.detectLocale": "on",
-    "terminal.external.osxExec": "/Applications/Warp.app",
+    "terminal.external.osxExec": "Warp.app",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.allowChords": false,
     "terminal.integrated.gpuAcceleration": "on",
@@ -93,7 +93,7 @@
     // ########### JAVA CONFIGURATION ###########
     "[java]": {
         "editor.formatOnSave": true,
-        "editor.suggest.snippetsPreventQuickSuggestions": false
+        "editor.suggest.snippetsPreventQuickSuggestions": true
     },
     "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home",
     "java.configuration.runtimes": [
@@ -104,16 +104,17 @@
         {
             "name": "JavaSE-11",
             "path": "/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home",
-            "default": true
         },
         {
             "name": "JavaSE-17",
             "path": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home",
+            "default": true
         }
     ],
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
     "maven.terminal.useJavaHome": true,
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
     // ########### XML CONFIGURATION ###########
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
@@ -408,5 +409,9 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "workbench.colorTheme": "GitHub Dark",
-    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.experimental.stickyScroll.enabled": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 }
