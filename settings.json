@@ -82,10 +82,7 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    // "workbench.colorCustomizations": {
-    //     "editorCursor.foreground": "#9d9d99",
-    //     "terminalCursor.foreground": "#9d9d99",
-    // },
+    // https://glitchbone.github.io/vscode-base16-term/#/tomorrow-night
     "workbench.colorCustomizations": {
         "terminal.background": "#1D1F21",
         "terminal.foreground": "#C5C8C6",
