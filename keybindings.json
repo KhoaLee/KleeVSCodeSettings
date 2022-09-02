@@ -132,7 +132,7 @@
         "command": "workbench.action.terminal.newInActiveWorkspace"
     },
     {
-        "key": "cmd+;",
+        "key": "` cmd",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
@@ -318,5 +318,15 @@
     {
         "key": "alt+cmd+v d",
         "command": "workbench.view.extension.dockerView"
+    },
+    {
+        "key": "cmd+'",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     }
 ]
