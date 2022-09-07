@@ -5,8 +5,8 @@
     // =============================== EDITOR SETTIGNS ===============================
     "editor.codeLensFontFamily": "Cousine for Powerline",
     "editor.inlayHints.fontFamily": "Cousine for Powerline",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     "editor.bracketPairColorization.enabled": true,
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.foldingImportsByDefault": true,
     "editor.letterSpacing": 0.5,
     "editor.smoothScrolling": true,
@@ -80,8 +80,8 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.preferredHighContrastColorTheme": "GitHub Dark Dimmed",
-    "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+    "workbench.preferredHighContrastColorTheme": "Base16 Tomorrow",
+    "workbench.preferredDarkColorTheme": "Base16 Tomorrow",
     "workbench.editor.enablePreview": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -168,6 +168,8 @@
     "prettier.jsxSingleQuote": true,
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
+    "prettier.bracketSameLine": true,
+    "prettier.printWidth": 120,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
@@ -203,8 +205,6 @@
     "jupyter.alwaysTrustNotebooks": true,
     // ########### LIVESERVER CONFIGURATION ###########
     "liveServer.settings.donotShowInfoMsg": true,
-    // ########### BRACKETPAIRCOLORIZER CONFIGURATION ###########
-    "bracketPairColorizer.depreciation-notice": false,
     // ########### REDHAT CONFIGURATION ###########
     "redhat.telemetry.enabled": false,
     // ########### KUBERNETES CONFIGURATION ###########
@@ -213,7 +213,7 @@
         "vscode-kubernetes.minikube-path.mac": "/Users/klee/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
     },
     // ########### SYNCSETTINGS CONFIGURATION ###########
-    "sync.gist": "3c546ff6e757bc12188381ccd2560342",
+    "sync.gist": "d4b6cacc3cc2f4b91eca69d46559c9be",
     "sync.autoDownload": false,
     "sync.autoUpload": false,
     "sync.forceDownload": false,
@@ -424,8 +424,6 @@
         }
     },
     "git.enableSmartCommit": true,
-    "prettier.printWidth": 255,
-    "prettier.bracketSameLine": true,
     "editor.wordWrapColumn": 160,
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
@@ -442,6 +440,8 @@
     "search.exclude": {
         "**/node_modules": false
     },
-    "editor.stickyScroll.enabled": true,
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
+    "css.enabledLanguages": [
+        "html"
+    ],
 }
