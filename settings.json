@@ -213,7 +213,7 @@
         "vscode-kubernetes.minikube-path.mac": "/Users/klee/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
     },
     // ########### SYNCSETTINGS CONFIGURATION ###########
-    "sync.gist": "d4b6cacc3cc2f4b91eca69d46559c9be",
+    "sync.gist": "2ef1e47be50cf21e58518e6c732a7dad",
     "sync.autoDownload": false,
     "sync.autoUpload": false,
     "sync.forceDownload": false,
