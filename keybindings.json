@@ -73,11 +73,11 @@
 [
     // Move to the previous/next editor.
     {
-        "key": "ctrl+shift+l",
+        "key": "alt+shift+l",
         "command": "workbench.action.nextEditor"
     },
     {
-        "key": "ctrl+shift+h",
+        "key": "alt+shift+h",
         "command": "workbench.action.previousEditor"
     },
     // Move active editor left or right (useful for full-stack web dev).
@@ -132,7 +132,7 @@
         "command": "workbench.action.terminal.newInActiveWorkspace"
     },
     {
-        "key": "` cmd",
+        "key": "cmd+`",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
@@ -320,7 +320,7 @@
         "command": "workbench.view.extension.dockerView"
     },
     {
-        "key": "cmd+'",
+        "key": "ctrl+cmd+t",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
@@ -346,5 +346,21 @@
     {
         "key": "shift+alt+u",
         "command": "-turboConsoleLog.uncommentAllLogMessages"
+    },
+    {
+        "key": "cmd+shift+h",
+        "command": "workbench.action.splitEditorLeft"
+    },
+    {
+        "key": "cmd+shift+l",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "cmd+shift+u",
+        "command": "workbench.action.splitEditorUp"
+    },
+    {
+        "key": "cmd+shift+b",
+        "command": "workbench.action.splitEditorDown"
     }
 ]

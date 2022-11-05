@@ -2,6 +2,9 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "screencastMode.fontSize": 60,
     "window.commandCenter": true,
+    "breadcrumbs.enabled": false,
+    "editor.codeLens": false,
+    "search.searchOnType": false,
     // =============================== EDITOR SETTIGNS ===============================
     "editor.codeLensFontFamily": "Cousine for Powerline",
     "editor.inlayHints.fontFamily": "Cousine for Powerline",
@@ -20,6 +23,9 @@
         "strings": "on",
         "other": "on"
     },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
     "editor.formatOnSave": true,
     "editor.fontLigatures": true,
     "editor.cursorBlinking": "solid",
@@ -28,7 +34,6 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.minimap.enabled": false,
     "editor.lineHeight": 1.75,
-    "editor.fontSize": 13,
     "editor.fontFamily": "Cousine for Powerline, 'Cousine for Powerline', Cousine for Powerline",
     // =============================== JSON FORMAT SETTINGS ===============================
     "json.maxItemsComputed": 10000,
@@ -38,7 +43,6 @@
     // ======================================= SETTING FOR DEBUGGING ======================================
     "debug.terminal.clearBeforeReusing": true,
     "debug.autoExpandLazyVariables": true,
-    "debug.console.fontSize": 13,
     "debug.console.fontFamily": "Cousine for Powerline, 'Cousine for Powerline', Cousine for Powerline",
     // ======================================= SETTING FOR INTEGRATED TERMINAL =======================================
     "terminal.integrated.profiles.osx": {
@@ -74,7 +78,8 @@
     "files.autoSave": "afterDelay",
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
-        "**/.git/objects/**": true
+        "**/.git/objects/**": true,
+        "**/node_modules": true
     },
     // ======================================= WORKBENCH SETTINGS =======================================
     "workbench.iconTheme": "material-icon-theme",
@@ -113,12 +118,15 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     // ======================================= LANGUAGES SETTINGS =======================================
-    // ########### JAVA CONFIGURATION ###########
+    // ======================================= JAVA CONFIGURATION =======================================
     "[java]": {
         "editor.formatOnSave": true,
-        "editor.suggest.snippetsPreventQuickSuggestions": true
+        "editor.suggest.snippetsPreventQuickSuggestions": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
     },
-    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
@@ -131,18 +139,22 @@
         {
             "name": "JavaSE-17",
             "path": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home",
-            "default": true
+            "default": true,
         }
     ],
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
     "maven.terminal.useJavaHome": true,
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
-    // ########### XML CONFIGURATION ###########
+    // ======================================= HTML,JAVASCRIPT,TYPESCRIPT CONFIGURATION =======================================
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+    // ======================================= XML CONFIGURATION =======================================
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    // ########### PYTHON CONFIGURATION ###########
+    // ======================================= PYTHON CONFIGURATION =======================================
     "python.linting.flake8Enabled": true,
     "python.formatting.autopep8Args": [
         "--max-line-length=200",
@@ -163,7 +175,7 @@
         "esversion": 9
     },
     // ======================================= EXTENSIONS SETTINGS =======================================
-    // ########### PRETTIER CONFIGURATION ###########
+    // ======================================= PRETTIER CONFIGURATION =======================================
     "prettier.useTabs": true,
     "prettier.jsxSingleQuote": true,
     "prettier.singleQuote": true,
@@ -172,11 +184,17 @@
     "prettier.printWidth": 120,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -331,6 +349,24 @@
         {
             "before": [
                 "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "e"
             ],
             "commands": [
@@ -437,11 +473,10 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "search.exclude": {
-        "**/node_modules": false
-    },
     "git-graph.dialog.rebase.launchInteractiveRebase": true,
     "css.enabledLanguages": [
         "html"
     ],
+    "scm.inputFontSize": 12,
+    "markdown.preview.fontSize": 12,
 }
