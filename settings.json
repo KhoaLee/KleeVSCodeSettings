@@ -21,17 +21,38 @@
     "env-*": true
   },
   "files.exclude": {
-    "**/.DS_Store": true,
-    "**/.vscode": true,
-    "**/__pycache__": true,
-    "**/.pytest_cache": true,
-    "venv": true,
     "*.sublime-*": true,
-    "env*": true,
+    "**/.DS_Store": true,
     "**/.git/objects/**": true,
-    "**/node_modules": true
+    "**/.vscode": true,
+    "**/node_modules": true,
+    "env*": true,
+    "venv": true
   },
-  // =============================== EDITOR SETTIGNS ===============================
+  // =============================== WORKBENCH SETTINGS===============================
+  "workbench.colorCustomizations": {
+    "statusBar.background" : "#364e41",
+    "statusBar.noFolderBackground" : "#364e41",
+    "statusBar.debuggingBackground": "#2e3b42",
+    "button.background": "#364e41",
+    "tab.activeBorder": "#364e41",
+    "tab.activeBorderTop": "#364e41",
+    "tab.border": "#364e41",
+    "list.focusBackground": "#364e41",
+    "list.hoverBackground": "#364e41",
+    "focusBorder": "#364e41",
+  },
+
+  "workbench.colorTheme": "Tomorrow Night Eighties",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.preferredHighContrastColorTheme": "Tomorrow Night Eighties",
+  "workbench.preferredDarkColorTheme": "Tomorrow Night Eighties",
+  "workbench.editor.enablePreview": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  // =============================== EDITOR SETTINGS===============================
   "editor.codeLensFontFamily": "Hasklug Nerd Font Mono",
   "editor.inlayHints.fontFamily": "Hasklug Nerd Font Mono",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
@@ -85,7 +106,7 @@
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
   "terminal.integrated.detectLocale": "on",
-  "terminal.external.osxExec": "warp.app",
+  "terminal.external.osxExec": "iterm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.allowChords": false,
   "terminal.integrated.gpuAcceleration": "on",
@@ -97,36 +118,7 @@
   // ======================================= FILES SETTINGS =======================================
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
-  "workbench.tree.renderIndentGuides": "always",
-  "workbench.preferredHighContrastColorTheme": "Base16 Tomorrow",
-  "workbench.preferredDarkColorTheme": "Base16 Tomorrow",
-  "workbench.editor.enablePreview": false,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  // https://glitchbone.github.io/vscode-base16-term/#/tomorrow-night
-  "workbench.colorCustomizations": {
-    "terminal.background": "#1D1F21",
-    "terminal.foreground": "#C5C8C6",
-    "terminalCursor.background": "#C5C8C6",
-    "terminalCursor.foreground": "#C5C8C6",
-    "terminal.ansiBlack": "#1D1F21",
-    "terminal.ansiBlue": "#81A2BE",
-    "terminal.ansiBrightBlack": "#969896",
-    "terminal.ansiBrightBlue": "#81A2BE",
-    "terminal.ansiBrightCyan": "#8ABEB7",
-    "terminal.ansiBrightGreen": "#B5BD68",
-    "terminal.ansiBrightMagenta": "#B294BB",
-    "terminal.ansiBrightRed": "#CC6666",
-    "terminal.ansiBrightWhite": "#FFFFFF",
-    "terminal.ansiBrightYellow": "#F0C674",
-    "terminal.ansiCyan": "#8ABEB7",
-    "terminal.ansiGreen": "#B5BD68",
-    "terminal.ansiMagenta": "#B294BB",
-    "terminal.ansiRed": "#CC6666",
-    "terminal.ansiWhite": "#C5C8C6",
-    "terminal.ansiYellow": "#F0C674"
-  },
+
   // ======================================= EXPLORER SETTINGS =======================================
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -137,7 +129,8 @@
     "editor.suggest.snippetsPreventQuickSuggestions": true,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "redhat.java"
   },
   "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home",
   "java.configuration.runtimes": [
@@ -210,8 +203,6 @@
   // ########### GIT CONFIGURATION ###########
   "git.confirmSync": false,
   "git.autorefresh": false,
-  // ########### AWS CONFIGURATION ###########
-  "aws.profile": "profile:default",
   "aws.telemetry": false,
   // ########### NOTEBOOK CONFIGURATION ###########
   "jupyter.askForKernelRestart": false,
@@ -230,15 +221,6 @@
     "vscode-kubernetes.helm-path.mac": "/Users/klee/.vs-kubernetes/tools/helm/darwin-amd64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/klee/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   },
-  // ########### SYNCSETTINGS CONFIGURATION ###########
-  "sync.gist": "2ef1e47be50cf21e58518e6c732a7dad",
-  "sync.autoDownload": false,
-  "sync.autoUpload": false,
-  "sync.forceDownload": false,
-  "sync.forceUpload": false,
-  "sync.quietSync": false,
-  "sync.removeExtensions": true,
-  "sync.syncExtensions": true,
   //============================================= VIM CONFIGURATION =============================================
   "vim.cursorStylePerMode.insert": "underline",
   "vim.cursorStylePerMode.normal": "block",
@@ -248,12 +230,13 @@
   "vim.cursorStylePerMode.visualline": "line",
   "vim.easymotion": true,
   "vim.surround": true,
-  "vim.scroll": 5,
+  "vim.scroll": 2,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.autoindent": true,
   "vim.normalModeKeyBindings": [
     {
@@ -264,14 +247,6 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["<C-k>"],
       "after": ["<Esc>"]
     }
   ],
@@ -330,10 +305,10 @@
     // VS Code new marker @ next occurence
     "<C-c>": true,
     // Cut
-    "<C-x>": false,
+    // "<C-x>": false,
     // Paste
-    "<C-v>": true,
-    "<C-z>": false
+    // "<C-v>": false ,
+    // "<C-z>": false,
     // "<C-y>": false
   },
   "yaml.customTags": [
@@ -406,7 +381,19 @@
   "editor.fontWeight": "normal",
   "notebook.outputFontFamily": "Jetbrains Nerd Font Mono, 'Jetbrains Nerd Font Mono', Jetbrains Nerd Font Mono",
   "mssql.resultsFontSize": 12,
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Base16 Tomorrow",
-  "python.formatting.provider": "black"
+   "sqltools.connections": [
+    {
+      "previewLimit": 100,
+      "server": "database-1.caokncea9dew.ap-southeast-1.rds.amazonaws.com",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "RDS_AI4BIZ",
+      "database": "postgres",
+      "username": "postgres"
+    }
+  ],
+   "python.analysis.completeFunctionParens": true,
+  "boot-java.rewrite.reconcile": true,
+  "editor.defaultFormatter": "VisualStudioExptTeam.vscodeintellicode"
 }
