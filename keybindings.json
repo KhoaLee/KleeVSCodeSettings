@@ -150,7 +150,7 @@
         "when": "terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "cmd+k",
+        "key": "cmd+alt+k",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus && terminalProcessSupported"
     },
@@ -160,7 +160,7 @@
         "when": "terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "cmd+j",
+        "key": "cmd+alt+j",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus && terminalProcessSupported"
     },

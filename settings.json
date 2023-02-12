@@ -1,4 +1,165 @@
 {
+  //============================================= VIM CONFIGURATION =============================================
+  "vim.cursorStylePerMode.insert": "underline",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "line",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.scroll": 2,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.autoindent": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "revealInExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-c>": true,
+    // Cut
+    // "<C-x>": false,
+    // Paste
+    // "<C-v>": false ,
+    // "<C-z>": false,
+    // "<C-y>": false
+  },
+  //======================================== GENERAL CONFIGURATIONs =============================================
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "screencastMode.fontSize": 60,
   "window.commandCenter": true,
@@ -25,44 +186,32 @@
     "**/.DS_Store": true,
     "**/.git/objects/**": true,
     "**/.vscode": true,
-    "**/node_modules": true,
-    "env*": true,
-    "venv": true
+    "**/node_modules": true
   },
-  // =============================== WORKBENCH SETTINGS===============================
-  "workbench.colorCustomizations": {
-    "statusBar.background" : "#364e41",
-    "statusBar.noFolderBackground" : "#364e41",
-    "statusBar.debuggingBackground": "#2e3b42",
-    "button.background": "#364e41",
-    "tab.activeBorder": "#364e41",
-    "tab.activeBorderTop": "#364e41",
-    "tab.border": "#364e41",
-    "list.focusBackground": "#364e41",
-    "list.hoverBackground": "#364e41",
-    "focusBorder": "#364e41",
-  },
-
-  "workbench.colorTheme": "Tomorrow Night Eighties",
+  // ============================================= WORKBENCH SETTINGS =============================================
+  // "workbench.colorCustomizations": {
+  //   "statusBar.background": "#353535",
+  //   "statusBar.noFolderBackground": "#353535",
+  // },
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.preferredHighContrastColorTheme": "Tomorrow Night Eighties",
-  "workbench.preferredDarkColorTheme": "Tomorrow Night Eighties",
   "workbench.editor.enablePreview": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "vscode-icons",
-  // =============================== EDITOR SETTINGS===============================
-  "editor.codeLensFontFamily": "Hasklug Nerd Font Mono",
-  "editor.inlayHints.fontFamily": "Hasklug Nerd Font Mono",
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "workbench.tree.indent": 12,
+  // ============================================= EDITOR SETTINGS =============================================
+  "editor.codeLensFontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
   "editor.foldingImportsByDefault": true,
   "editor.letterSpacing": 0.5,
   "editor.tabCompletion": "on",
+  "emmet.triggerExpansionOnTab": true,
   "editor.foldingMaximumRegions": 10000,
   "editor.tabSize": 4,
-  "editor.guides.bracketPairs": true,
   "editor.suggestSelection": "first",
   "editor.quickSuggestions": {
     "comments": "on",
@@ -70,35 +219,44 @@
     "other": "on"
   },
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": true,
   },
+  "editor.defaultFormatter": "VisualStudioExptTeam.vscodeintellicode",
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
   "editor.formatOnSave": true,
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
   "editor.linkedEditing": true,
   "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 160,
+  "editor.lineHeight": 1.75,
+  "diffEditor.wordWrap": "on",
+  "editor.fontWeight": "normal",
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Hasklug Nerd Font Mono, 'Hasklug Nerd Font Mono', Hasklug Nerd Font Mono",
-  // =============================== JSON FORMAT SETTINGS ===============================
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
+  // ============================================= JSON FORMAT SETTINGS =============================================
   "json.maxItemsComputed": 10000,
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  // ======================================= SETTING FOR DEBUGGING ======================================
-  "debug.terminal.clearBeforeReusing": true,
+  // =============================================  DEBUGGING SETTINGS =============================================
   "debug.autoExpandLazyVariables": true,
-  "debug.console.fontFamily": "Hasklug Nerd Font Mono, 'Hasklug Nerd Font Mono', Hasklug Nerd Font Mono",
-  // ======================================= SETTING FOR INTEGRATED TERMINAL =======================================
+  "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
+  // =============================================  INTEGRATED TERMINAL SETTINGS =============================================
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "path": "/bin/zsh",
-      "args": ["-l"]
+      "args": [
+        "-l",
+        "-i"
+      ]
     }
   },
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.inheritEnv": true,
-  "terminal.integrated.letterSpacing": 1.15,
+  "terminal.integrated.letterSpacing": 0.75,
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "both",
@@ -111,19 +269,18 @@
   "terminal.integrated.allowChords": false,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.customGlyphs": true,
-  "terminal.integrated.lineHeight": 1.5,
-  "terminal.integrated.fontFamily": "Hasklug Nerd Font Mono, 'Hasklug Nerd Font Mono', Hasklug Nerd Font Mono",
+  "terminal.integrated.lineHeight": 1.75,
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.cursorWidth": 3,
   "terminal.integrated.tabs.defaultIcon": "terminal-bash",
-  // ======================================= FILES SETTINGS =======================================
+  // ============================================= FILES SETTINGS =============================================
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
-
-  // ======================================= EXPLORER SETTINGS =======================================
+  // ============================================= EXPLORER SETTINGS=============================================
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  // ======================================= LANGUAGES SETTINGS =======================================
-  // ======================================= JAVA CONFIGURATION =======================================
+  // ############################################# LANGUAGES SETTINGS #############################################
+  // ============================================= JAVA CONFIGURATION =============================================
   "[java]": {
     "editor.formatOnSave": true,
     "editor.suggest.snippetsPreventQuickSuggestions": true,
@@ -152,38 +309,32 @@
   "maven.terminal.useJavaHome": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "java.format.settings.profile": "GoogleStyle",
-  // ======================================= HTML,JAVASCRIPT,TYPESCRIPT CONFIGURATION =======================================
-  "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true,
-  // ======================================= XML CONFIGURATION =======================================
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
-  },
-  // ======================================= PYTHON CONFIGURATION =======================================
-  "python.linting.flake8Enabled": true,
-  "python.formatting.autopep8Args": [
-    "--max-line-length=200",
-    "--ignore=E502,F841,E402,W503"
+  "java.cleanup.actionsOnSave": [
+    "qualifyMembers",
+    "qualifyStaticMembers",
+    "addOverride",
+    "addDeprecated",
+    "stringConcatToTextBlock",
+    "invertEquals",
+    "instanceofPatternMatch",
+    "lambdaExpression",
+    "switchExpression"
   ],
-  "python.linting.flake8Args": ["--ignore=E501,F841,E402,W503"],
-  "python.defaultInterpreterPath": "~/.pyenv/versions/ytubescraper-env",
-  "python.languageServer": "Pylance",
-  "python.analysis.autoImportCompletions": true,
-  "[python]": {
-    "editor.wordBasedSuggestions": false
-  },
-  // ########### JAVASCRIPT CONFIGURATION ###########
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "jshint.options": {
-    "esversion": 9
-  },
-  // ======================================= EXTENSIONS SETTINGS =======================================
-  // ======================================= PRETTIER CONFIGURATION =======================================
+  "java.codeGeneration.generateComments": true,
+  "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+  "java.configuration.workspaceCacheLimit": 30,
+  // ============================================= HTML CONFIGURATION =============================================
+  "html.autoClosingTags": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "html.format.wrapLineLength": 80,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.formatOnSave": true
   },
+  // ============================================= JAVASCRIPT CONFIGURATION =============================================
+  "javascript.autoClosingTags": true,
   "[javascript][javascriptreact][typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.formatOnSave": true,
@@ -191,126 +342,85 @@
     "editor.insertSpaces": true,
     "editor.detectIndentation": false
   },
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "jshint.options": {
+    "esversion": 9
+  },
+  // ============================================= TYPESCRIPT CONFIGURATION =============================================
+  "typescript.autoClosingTags": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.implicitProjectConfig.target": "ES2022",
+  "typescript.format.semicolons": "insert",
+  // ============================================= JSON CONFIGURATION =============================================
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": true
   },
+  // ============================================= CSS SCSS LESS CONFIGURATION =============================================
   "[css][scss][less]": {
     "editor.defaultFormatter": "vscode.css-language-features",
     "editor.formatOnSave": true
   },
-
-  // ########### GIT CONFIGURATION ###########
+  // ============================================= XML CONFIGURATION =============================================
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  // ============================================= PYTHON CONFIGURATION =============================================
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.linting.flake8Enabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.autopep8Args": [
+    "--max-line-length=200",
+    "--ignore=E502,F841,E402,W503"
+  ],
+  "python.linting.flake8Args": [
+    "--ignore=E501,F841,E402,W503"
+  ],
+  "python.defaultInterpreterPath": "~/.pyenv/versions/ytubescraper-env",
+  "python.languageServer": "Pylance",
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.wordBasedSuggestions": false
+  },
+  // ####################################### EXTENSIONS SETTINGS #######################################
+  // ============================================= GIT CONFIGURATION =============================================
   "git.confirmSync": false,
   "git.autorefresh": false,
-  "aws.telemetry": false,
-  // ########### NOTEBOOK CONFIGURATION ###########
+  "git-graph.dialog.rebase.launchInteractiveRebase": true,
+  "git.enableSmartCommit": true,
+  "git.terminalGitEditor": true,
+  // ============================================= NOTEBOOK CONFIGURATION =============================================
   "jupyter.askForKernelRestart": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
   },
   "notebook.breadcrumbs.showCodeCells": false,
+  "notebook.outputFontFamily": "JetBrainsMonoNL Nerd Font, 'JetBrainsMonoNL Nerd Font', JetBrainsMonoNL Nerd Font",
   "jupyter.alwaysTrustNotebooks": true,
-  // ########### LIVESERVER CONFIGURATION ###########
+  // ============================================= LIVESERVER CONFIGURATION =============================================
   "liveServer.settings.donotShowInfoMsg": true,
-  // ########### REDHAT CONFIGURATION ###########
+  // ============================================= REDHAT CONFIGURATION =============================================
   "redhat.telemetry.enabled": false,
-  // ########### KUBERNETES CONFIGURATION ###########
+  // ============================================= KUBERNETES CONFIGURATION =============================================
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path.mac": "/Users/klee/.vs-kubernetes/tools/helm/darwin-amd64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/klee/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   },
-  //============================================= VIM CONFIGURATION =============================================
-  "vim.cursorStylePerMode.insert": "underline",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.cursorStylePerMode.replace": "line",
-  "vim.cursorStylePerMode.visual": "line",
-  "vim.cursorStylePerMode.visualblock": "line",
-  "vim.cursorStylePerMode.visualline": "line",
-  "vim.easymotion": true,
-  "vim.surround": true,
-  "vim.scroll": 2,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.sneak": true,
-  "vim.sneakUseIgnorecaseAndSmartcase": true,
-  "vim.autoindent": true,
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": [">"],
-      "after": [">", "g", "v"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    },
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["revealInExplorer"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "after": ["_"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
-    }
-  ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    // VS Code new marker @ next occurence
-    "<C-c>": true,
-    // Cut
-    // "<C-x>": false,
-    // Paste
-    // "<C-v>": false ,
-    // "<C-z>": false,
-    // "<C-y>": false
-  },
+  // ============================================= YAML SETTINGS =============================================
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -340,8 +450,16 @@
     "!Split",
     "!Split sequence"
   ],
-  "git.terminalGitEditor": true,
+  "yaml.format.printWidth": 160,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  // ============================================= XML SETTINGS =============================================
+  "xml.format.maxLineWidth": 160,
+  // ============================================= AWS SETTINGS =============================================
   "aws.samcli.location": "/usr/local/bin/sam",
+  "aws.telemetry": false,
+  // ======================================= SONARLINT SETTINGS =======================================
   "sonarlint.rules": {
     "java:S125": {
       "level": "off"
@@ -356,32 +474,17 @@
       "level": "off"
     }
   },
-  "git.enableSmartCommit": true,
-  "editor.wordWrapColumn": 160,
-  "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "xml.format.maxLineWidth": 160,
-  "yaml.format.printWidth": 160,
+  // ============================================= OTHER SETTINGS =============================================
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  "python.analysis.typeCheckingMode": "basic",
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "git-graph.dialog.rebase.launchInteractiveRebase": true,
-  "css.enabledLanguages": ["html"],
+  "css.enabledLanguages": [
+    "html"
+  ],
   "scm.inputFontSize": 12,
   "markdown.preview.fontSize": 12,
-  "workbench.tree.indent": 12,
-  "javascript.format.semicolons": "insert",
-  "typescript.format.semicolons": "insert",
-  "editor.lineHeight": 1.75,
-  "diffEditor.wordWrap": "on",
-  "editor.fontWeight": "normal",
-  "notebook.outputFontFamily": "Jetbrains Nerd Font Mono, 'Jetbrains Nerd Font Mono', Jetbrains Nerd Font Mono",
   "mssql.resultsFontSize": 12,
-   "sqltools.connections": [
+  "sqltools.connections": [
     {
       "previewLimit": 100,
       "server": "database-1.caokncea9dew.ap-southeast-1.rds.amazonaws.com",
@@ -393,7 +496,6 @@
       "username": "postgres"
     }
   ],
-   "python.analysis.completeFunctionParens": true,
   "boot-java.rewrite.reconcile": true,
-  "editor.defaultFormatter": "VisualStudioExptTeam.vscodeintellicode"
+  "markdown.preview.lineHeight": 1.75,
 }
