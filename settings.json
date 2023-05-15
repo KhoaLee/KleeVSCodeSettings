@@ -161,7 +161,6 @@
   },
   //======================================== GENERAL CONFIGURATIONs =============================================
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.codeLens": false,
   "window.commandCenter": true,
   "breadcrumbs.enabled": false,
   "search.searchOnType": false,
@@ -196,7 +195,6 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.colorTheme": "Default Dark+ Experimental",
   "workbench.preferredDarkColorTheme": "Default Dark+ Experimental",
   "workbench.preferredHighContrastColorTheme": "Default Dark+ Experimental",
   "workbench.colorCustomizations": {
@@ -335,7 +333,9 @@
       "path": "/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home"
     }
   ],
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "maven.terminal.useJavaHome": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "java.format.settings.profile": "GoogleStyle",
@@ -354,8 +354,6 @@
   "java.codeGeneration.hashCodeEquals.useInstanceof": true,
   "java.configuration.workspaceCacheLimit": 30,
   "boot-java.rewrite.reconcile": true,
-  // ============================================= EMMET SNIPPET CONFIGURATION =============================================
-  "emmet.triggerExpansionOnTab": true,
   // ============================================= HTML CONFIGURATION =============================================
   "html.format.enable": true,
   "html.suggest.html5": true,
@@ -414,7 +412,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-  "typescript.tsdk": "../kiev/ai4biz-initci-fe/node_modules/typescript/lib",
+  // NOTE: For kiev repository
+  // "typescript.tsdk": "../kiev/ai4biz-initci-fe/node_modules/typescript/lib",
+  // NOTE: For vatican repository
+  // "typescript.tsdk": "../vatican/ai4biz-initci-fe/node_modules/typescript/lib",
   // ============================================= JSON CONFIGURATION =============================================
   "[json][jsonc]": {
     "editor.formatOnSave": true,
@@ -475,7 +476,6 @@
   "jupyter.alwaysTrustNotebooks": true,
   "jupyter.askForKernelRestart": false,
   "notebook.breadcrumbs.showCodeCells": false,
-  "notebook.outputFontFamily": "JetBrainsMonoNL Nerd Font, 'JetBrainsMonoNL Nerd Font', JetBrainsMonoNL Nerd Font",
   // ============================================= LIVESERVER CONFIGURATION =============================================
   "liveServer.settings.donotShowInfoMsg": true,
   // ============================================= REDHAT CONFIGURATION =============================================
@@ -561,4 +561,23 @@
       "username": "postgres"
     }
   ],
+  "editor.scrollbar.vertical": "hidden",
+  "files.insertFinalNewline": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.activityBar.visible": false,
+  "workbench.reduceMotion": "on",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "html": true
+  },
+  "errorLens.excludeBySource": [
+    "ts(4111)"
+  ],
+  "notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font, 'JetBrainsMonoNL Nerd Font', JetBrainsMonoNL Nerd Font",
 }
