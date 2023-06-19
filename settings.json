@@ -160,12 +160,13 @@
     // "<C-y>": false
   },
   //======================================== GENERAL CONFIGURATIONs =============================================
+  "security.workspace.trust.untrustedFiles": "open",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.commandCenter": true,
-  "breadcrumbs.enabled": false,
   "search.searchOnType": false,
   "screencastMode.fontSize": 60,
   "telemetry.telemetryLevel": "off",
+  "breadcrumbs.enabled": false,
   "search.exclude": {
     "**/env": true,
     "**/venv": true,
@@ -188,6 +189,9 @@
   },
   // ============================================= WORKBENCH SETTINGS =============================================
   "workbench.tree.indent": 12,
+  "workbench.reduceMotion": "on",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.activityBar.visible": false,
   "workbench.editor.limit.value": 1,
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.limit.enabled": true,
@@ -195,30 +199,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.preferredDarkColorTheme": "Default Dark+ Experimental",
-  "workbench.preferredHighContrastColorTheme": "Default Dark+ Experimental",
-  "workbench.colorCustomizations": {
-    "terminal.background": "#1D2021",
-    "terminal.foreground": "#D5C4A1",
-    "terminalCursor.background": "#D5C4A1",
-    "terminalCursor.foreground": "#D5C4A1",
-    "terminal.ansiBlack": "#1D2021",
-    "terminal.ansiBlue": "#83A598",
-    "terminal.ansiBrightBlack": "#665C54",
-    "terminal.ansiBrightBlue": "#83A598",
-    "terminal.ansiBrightCyan": "#8EC07C",
-    "terminal.ansiBrightGreen": "#B8BB26",
-    "terminal.ansiBrightMagenta": "#D3869B",
-    "terminal.ansiBrightRed": "#FB4934",
-    "terminal.ansiBrightWhite": "#FBF1C7",
-    "terminal.ansiBrightYellow": "#FABD2F",
-    "terminal.ansiCyan": "#8EC07C",
-    "terminal.ansiGreen": "#B8BB26",
-    "terminal.ansiMagenta": "#D3869B",
-    "terminal.ansiRed": "#FB4934",
-    "terminal.ansiWhite": "#D5C4A1",
-    "terminal.ansiYellow": "#FABD2F"
-  },
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark Default",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -252,6 +234,9 @@
   "editor.defaultFormatter": "VisualStudioExptTeam.vscodeintellicode",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.inlineSuggest.enabled": true,
+  "editor.acceptSuggestionOnEnter": "smart",
   "editor.quickSuggestions": {
     "comments": "on",
     "strings": "on",
@@ -261,6 +246,16 @@
     "source.fixAll": true,
     "source.organizeImports": true,
   },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
   // ============================================= JSON FORMAT SETTINGS =============================================
   "json.maxItemsComputed": 10000,
   "[jsonc]": {
@@ -268,6 +263,7 @@
   },
   // =============================================  DEBUGGING SETTINGS =============================================
   "debug.autoExpandLazyVariables": true,
+  "debug.terminal.clearBeforeReusing": true,
   "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
   // =============================================  INTEGRATED TERMINAL SETTINGS =============================================
   "terminal.integrated.cursorWidth": 3,
@@ -282,7 +278,7 @@
   "terminal.integrated.unicodeVersion": "11",
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": false,
   "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.shellIntegration.enabled": true,
@@ -303,11 +299,19 @@
   // ============================================= FILES SETTINGS =============================================
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "postcss",
+    ".env*": "dotenv"
+  },
+  "files.autoSaveDelay": 10000,
+  "files.insertFinalNewline": true,
   // ============================================= EXPLORER SETTINGS=============================================
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   // ############################################# LANGUAGES SETTINGS #############################################
   // ============================================= JAVA CONFIGURATION =============================================
+  "java.format.enabled": true,
   "[java]": {
     "editor.formatOnSave": true,
     "editor.suggest.snippetsPreventQuickSuggestions": true,
@@ -337,8 +341,11 @@
   "java.dependency.packagePresentation": "hierarchical",
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "maven.terminal.useJavaHome": true,
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml",
   "java.format.settings.profile": "GoogleStyle",
+  "java.format.comments.enabled": true,
+  "java.format.settings.imports.onDemand": false,
+  "java.format.settings.imports.regexp": "^[a-z.]*",
   "java.cleanup.actionsOnSave": [
     "qualifyMembers",
     "qualifyStaticMembers",
@@ -353,6 +360,7 @@
   "java.codeGeneration.generateComments": true,
   "java.codeGeneration.hashCodeEquals.useInstanceof": true,
   "java.configuration.workspaceCacheLimit": 30,
+  "java.maven.downloadSources": true,
   "boot-java.rewrite.reconcile": true,
   // ============================================= HTML CONFIGURATION =============================================
   "html.format.enable": true,
@@ -440,6 +448,7 @@
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
+  "xml.format.maxLineWidth": 160,
   // ============================================= PYTHON CONFIGURATION =============================================
   "python.languageServer": "Pylance",
   "python.formatting.autopep8Args": [
@@ -468,6 +477,14 @@
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.createOnPublishBranch": "never",
   "git-graph.dialog.rebase.launchInteractiveRebase": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "html": true
+  },
   // ============================================= NOTEBOOK CONFIGURATION =============================================
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -519,8 +536,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  // ============================================= XML SETTINGS =============================================
-  "xml.format.maxLineWidth": 160,
   // ============================================= AWS SETTINGS =============================================
   "aws.samcli.location": "/usr/local/bin/sam",
   "aws.telemetry": false,
@@ -545,10 +560,8 @@
   },
   "scm.inputFontSize": 12,
   "mssql.resultsFontSize": 12,
-  "files.autoSaveDelay": 10000,
   "markdown.preview.fontSize": 12,
   "markdown.preview.lineHeight": 1.75,
-  "security.workspace.trust.untrustedFiles": "open",
   "sqltools.connections": [
     {
       "previewLimit": 100,
@@ -561,23 +574,12 @@
       "username": "postgres"
     }
   ],
-  "editor.scrollbar.vertical": "hidden",
-  "files.insertFinalNewline": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.acceptSuggestionOnEnter": "smart",
   "emmet.triggerExpansionOnTab": true,
-  "workbench.activityBar.visible": false,
-  "workbench.reduceMotion": "on",
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "html": true
-  },
   "errorLens.excludeBySource": [
     "ts(4111)"
   ],
   "notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font, 'JetBrainsMonoNL Nerd Font', JetBrainsMonoNL Nerd Font",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
 }
