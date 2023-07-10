@@ -190,8 +190,7 @@
   // ============================================= WORKBENCH SETTINGS =============================================
   "workbench.tree.indent": 12,
   "workbench.reduceMotion": "on",
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "One Monokai",
   "workbench.editor.limit.value": 1,
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.limit.enabled": true,
@@ -199,8 +198,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.preferredHighContrastColorTheme": "GitHub Dark Default",
+  "workbench.preferredDarkColorTheme": "One Monokai",
+  "workbench.preferredHighContrastColorTheme": "One Monokai",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -220,7 +219,7 @@
   "editor.smoothScrolling": true,
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "solid",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "editor.suggestSelection": "first",
   "editor.foldingMaximumRegions": 10000,
   "editor.foldingImportsByDefault": true,
@@ -231,7 +230,7 @@
   "editor.guides.highlightActiveBracketPair": false,
   "editor.codeLensFontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
-  "editor.defaultFormatter": "VisualStudioExptTeam.vscodeintellicode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
   "editor.scrollbar.vertical": "hidden",
@@ -293,7 +292,8 @@
       "args": [
         "-l",
         "-i"
-      ]
+      ],
+      "icon": "terminal-bash"
     }
   },
   // ============================================= FILES SETTINGS =============================================
@@ -374,12 +374,12 @@
     "editor.formatOnSave": true,
     "editor.linkedEditing": true,
     "editor.foldingStrategy": "auto",
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // ============================================= JAVASCRIPT CONFIGURATION =============================================
   "javascript.autoClosingTags": true,
   "[javascript][javascriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
@@ -405,7 +405,7 @@
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "typescript.format.enable": true,
   "typescript.suggest.enabled": true,
@@ -427,13 +427,13 @@
   // ============================================= JSON CONFIGURATION =============================================
   "[json][jsonc]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   // ============================================= CSS SCSS LESS CONFIGURATION =============================================
   "[css][scss][less]": {
     "editor.formatOnSave": true,
     "editor.foldingStrategy": "auto",
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "css.format.enable": true,
   "scss.format.enable": true,
@@ -582,4 +582,5 @@
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
   },
+  "workbench.activityBar.visible": false,
 }
