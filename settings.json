@@ -198,6 +198,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.closeEmptyGroups": true,
   "workbench.preferredDarkColorTheme": "One Monokai",
   "workbench.preferredHighContrastColorTheme": "One Monokai",
   "workbench.editorAssociations": {
@@ -206,7 +207,7 @@
   // ============================================= EDITOR SETTINGS =============================================
   "editor.tabSize": 4,
   "editor.wordWrap": "on",
-  "editor.lineHeight": 1.75,
+  "editor.lineHeight": 1.5,
   "editor.letterSpacing": 0.5,
   "diffEditor.wordWrap": "on",
   "editor.formatOnSave": true,
@@ -215,6 +216,7 @@
   "editor.linkedEditing": true,
   "editor.cursorStyle": "block",
   "editor.fontWeight": "normal",
+  "editor.fontSize": 12,
   "editor.fontLigatures": false,
   "editor.smoothScrolling": true,
   "editor.minimap.enabled": false,
@@ -266,7 +268,7 @@
   "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
   // =============================================  INTEGRATED TERMINAL SETTINGS =============================================
   "terminal.integrated.cursorWidth": 3,
-  "terminal.integrated.lineHeight": 1.0,
+  "terminal.integrated.lineHeight": 1.5,
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.scrollback": 1000,
   "terminal.external.osxExec": "iterm.app",
@@ -339,7 +341,7 @@
   ],
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.dependency.packagePresentation": "hierarchical",
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms1024m -javaagent:\"/Users/klee/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "maven.terminal.useJavaHome": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml",
   "java.format.settings.profile": "GoogleStyle",
@@ -470,12 +472,12 @@
   "python.defaultInterpreterPath": "~/.pyenv/versions/ytubescraper-env",
   // ####################################### EXTENSIONS SETTINGS #######################################
   // ============================================= GIT CONFIGURATION =============================================
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.createOnPublishBranch": "never",
   "git.confirmSync": false,
   "git.autorefresh": false,
   "git.enableSmartCommit": true,
   "git.terminalGitEditor": true,
-  "githubPullRequests.pullBranch": "never",
-  "githubPullRequests.createOnPublishBranch": "never",
   "git-graph.dialog.rebase.launchInteractiveRebase": true,
   "github.copilot.enable": {
     "*": true,
