@@ -208,7 +208,7 @@
   "editor.tabSize": 4,
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
-  "editor.letterSpacing": 0.5,
+  "editor.letterSpacing": 0.75,
   "diffEditor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.tabCompletion": "on",
@@ -268,7 +268,7 @@
   "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Mono, 'JetBrainsMonoNL Nerd Font Mono', JetBrainsMonoNL Nerd Font Mono",
   // =============================================  INTEGRATED TERMINAL SETTINGS =============================================
   "terminal.integrated.cursorWidth": 3,
-  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.lineHeight": 0.75,
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.scrollback": 1000,
   "terminal.external.osxExec": "iterm.app",
