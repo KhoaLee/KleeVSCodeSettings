@@ -1,448 +1,429 @@
 // Place your key bindings in this file to override the defaults
-// [
-//     { "key": "ctrl+l", "command": "workbench.action.terminal.focus" },
-//     {
-//         "key": "ctrl+tab",
-//         "command": "workbench.action.nextEditor"
-//     },
-//     {
-//         "key": "ctrl+l",
-//         "command": "workbench.action.focusActiveEditorGroup",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+n",
-//         "command": "editor.action.addSelectionToNextFindMatch",
-//         "when": "editorFocus"
-//     },
-//     {
-//         "key": "ctrl+d",
-//         "command": "-editor.action.addSelectionToNextFindMatch",
-//         "when": "editorFocus"
-//     },
-//     {
-//         "key": "ctrl+d",
-//         "command": "-list.focusPageDown",
-//         "when": "listFocus && !inputFocus"
-//     },
-//     {
-//         "key": "ctrl+;",
-//         "command": "workbench.action.terminal.toggleTerminal",
-//         "when": "terminal.active"
-//     },
-//     {
-//         "key": "ctrl+`",
-//         "command": "-workbench.action.terminal.toggleTerminal",
-//         "when": "terminal.active"
-//     },
-//     {
-//         "key": "shift+alt+k",
-//         "command": "editor.action.moveLinesUpAction",
-//         "when": "editorTextFocus && !editorReadonly"
-//     },
-//     {
-//         "key": "shift+alt+j",
-//         "command": "editor.action.moveLinesDownAction",
-//         "when": "editorTextFocus && !editorReadonly"
-//     },
-//     {
-//         "key": "tab",
-//         "command": "selectNextSuggestion",
-//         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-//     },
-//     {
-//         "key": "shift+tab",
-//         "command": "selectPrevSuggestion",
-//         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-//     },
-//     {
-//         "key": "ctrl+t",
-//         "command": "-extension.vim_ctrl+t",
-//         "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
-//     },
-//     {
-//         "key": "ctrl+t",
-//         "command": "-workbench.action.showAllSymbols"
-//     },
-//     {
-//         "key": "ctrl+k",
-//         "command": "-extension.vim_ctrl+k",
-//         "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
-//     }
-// ]
 [
-    // Move to the previous/next editor.
-    {
-        "key": "alt+shift+l",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+shift+h",
-        "command": "workbench.action.previousEditor"
-    },
-    // Move active editor left or right (useful for full-stack web dev).
-    {
-        "key": "cmd+ctrl+h",
-        "command": "moveActiveEditor",
-        "args": {
-            "to": "left"
-        }
-    },
-    {
-        "key": "cmd+ctrl+l",
-        "command": "moveActiveEditor",
-        "args": {
-            "to": "right"
-        }
-    },
-    // Quickly debug with console log.
-    {
-        "key": "ctrl+l",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "console.log('${TM_SELECTED_TEXT}$1')$2;"
-        }
-    },
-    // Traverse VSCode IntelliSense suggestions with vim keybindings.
-    {
-        "key": "cmd+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "cmd+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    // Traverse VSCode quick open options with vim keybindings.
-    {
-        "key": "cmd+j",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "cmd+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    },
-    // VSCode terminal commands.
-    {
-        "key": "cmd+n",
-        "command": "workbench.action.terminal.newInActiveWorkspace"
-    },
-    {
-        "key": "cmd+`",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-        "key": "cmd+ctrl+;",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    {
-        "key": "cmd+d",
-        "command": "workbench.action.terminal.split",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "cmd+\\",
-        "command": "-workbench.action.terminal.split",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "cmd+alt+k",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+cmd+down",
-        "command": "-workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "cmd+alt+j",
-        "command": "workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+cmd+up",
-        "command": "-workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "cmd+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
-    },
-    // Ensure that tab button works in vim.
-    // {
-    //     "key": "tab",
-    //     "command": "tab",
-    //     "when": "editorTextFocus && !editorTabMovesFocus"
-    // },
-    {
-        "key": "tab",
-        "command": "-acceptSelectedSuggestion",
-        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus && editorTextFocus && !editorTabMovesFocus"
-    },
-    {
-        "key": "shift+tab",
-        "command": "outdent",
-        "when": "editorTextFocus && !editorTabMovesFocus"
-    },
-    {
-        "key": "ctrl+shift+b",
-        "command": "editor.debug.action.toggleBreakpoint",
-        "when": "editorTextFocus && !editorTabMovesFocus"
-    },
-    {
-        "key": "ctrl+cmd+r",
-        "command": "workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
-        "key": "ctrl+f5",
-        "command": "-workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
-        "key": "ctrl+cmd+s",
-        "command": "workbench.action.debug.pause",
-        "when": "debugState == 'running'"
-    },
-    {
-        "key": "ctrl+cmd+b",
-        "command": "workbench.action.debug.start",
-        "when": "debuggersAvailable && debugState == 'inactive'"
-    },
-    {
-        "key": "ctrl+cmd+b",
-        "command": "workbench.action.debug.continue",
-        "when": "debugState == 'stopped'"
-    },
-    // Toggle between terminal and editor focus
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
-    },
-    {
-        "key": "alt+v",
-        "command": "aws.explorer.toggleVisibility"
-    },
-    {
-        "key": "shift+cmd+a s",
-        "command": "workbench.view.extension.aws-explorer"
-    },
-    {
-        "key": "alt+q alt+s",
-        "command": "workbench.view.extension.sqltoolsActivityBarContainer"
-    },
-    {
-        "key": "alt+q alt+c",
-        "command": "sqltoolsViewConnectionExplorer.toggleVisibility"
-    },
-    {
-        "key": "alt+q alt+b",
-        "command": "sqltoolsViewBookmarksExplorer.toggleVisibility"
-    },
-    {
-        "key": "alt+q alt+m",
-        "command": "sqltoolsViewConsoleMessages.toggleVisibility"
-    },
-    {
-        "key": "alt+q alt+h",
-        "command": "sqltoolsViewHistoryExplorer.toggleVisibility"
-    },
-    {
-        "key": "alt+q alt+t",
-        "command": "workbench.view.extension.sqltoolsPanelContainer"
-    },
-    {
-        "key": "shift+cmd+a r",
-        "command": "aws.refreshAwsExplorer",
-        "when": "aws.explorer.active"
-    },
-    {
-        "key": "shift+cmd+d",
-        "command": "workbench.output.action.clearOutput"
-    },
-    {
-        "key": "alt+r shift+j",
-        "command": "java.debug.runJavaFile"
-    },
-    {
-        "key": "alt+cmd+v s",
-        "command": "workbench.action.toggleAuxiliaryBar"
-    },
-    {
-        "key": "ctrl+k",
-        "when": "CodeActionMenuVisible",
-        "command": "focusPreviousCodeAction"
-    },
-    {
-        "key": "ctrl+j",
-        "when": "CodeActionMenuVisible",
-        "command": "focusNextCodeAction"
-    },
-    {
-        "key": "cmd+backspace",
-        "command": "-workbench.action.terminal.killInstance",
-        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-    },
-    {
-        "key": "shift+alt+backspace",
-        "command": "workbench.action.terminal.killInstance",
-        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-    },
-    {
-        "key": "delete",
-        "command": "-workbench.action.terminal.killInstance",
-        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-    },
-    {
-        "key": "alt+cmd+v d",
-        "command": "workbench.view.extension.dockerView"
-    },
-    {
-        "key": "shift+alt+r",
-        "command": "java.projectConfiguration.update",
-        "when": "editorFocus"
-    },
-    {
-        "key": "shift+alt+u",
-        "command": "-java.projectConfiguration.update",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+shift+u",
-        "command": "turboConsoleLog.uncommentAllLogMessages"
-    },
-    {
-        "key": "shift+alt+u",
-        "command": "-turboConsoleLog.uncommentAllLogMessages"
-    },
-    {
-        "key": "cmd+shift+h",
-        "command": "workbench.action.splitEditorLeft"
-    },
-    {
-        "key": "cmd+shift+l",
-        "command": "workbench.action.splitEditorRight"
-    },
-    {
-        "key": "cmd+shift+u",
-        "command": "workbench.action.splitEditorUp"
-    },
-    {
-        "key": "cmd+shift+b",
-        "command": "workbench.action.splitEditorDown"
-    },
-    {
-        "key": "space",
-        "command": "-notification.toggle",
-        "when": "notificationFocus"
-    },
-    {
-        "key": "space",
-        "command": "-refactorPreview.toggleCheckedState",
-        "when": "listFocus && refactorPreview.enabled && !inputFocus"
-    },
-    {
-        "key": "space",
-        "command": "-list.toggleExpand",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "space",
-        "command": "-filesExplorer.openFilePreserveFocus",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-    },
-    {
-        "key": "alt+t",
-        "command": "debug.toggleBreakpoint",
-        "when": "breakpointsFocused && !inputFocus"
-    },
-    {
-        "key": "space",
-        "command": "-debug.toggleBreakpoint",
-        "when": "breakpointsFocused && !inputFocus"
-    },
-    {
-        "key": "space",
-        "command": "-breadcrumbs.revealFocused",
-        "when": "breadcrumbsActive && breadcrumbsVisible"
-    },
-    {
-        "key": "cmd+p",
-        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "key": "cmd+p",
-        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "key": "shift+alt+.",
-        "command": "editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
-    {
-        "key": "f12",
-        "command": "-editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
-    {
-        "key": "shift+alt+.",
-        "command": "editor.action.goToTypeDefinition"
-    },
-    {
-        "key": "ctrl+shift+d",
-        "command": "editor.action.revealDeclaration"
-    },
-    {
-        "key": "shift+cmd+r",
-        "command": "references-view.findReferences",
-        "when": "editorHasReferenceProvider"
-    },
-    {
-        "key": "shift+alt+f12",
-        "command": "-references-view.findReferences",
-        "when": "editorHasReferenceProvider"
-    },
-    {
-        "key": "shift+cmd+i",
-        "command": "references-view.findImplementations"
-    },
-    {
-        "key": "shift+cmd+d",
-        "command": "workbench.view.debug",
-        "when": "viewContainer.workbench.view.debug.enabled || editorFocus"
-    },
-    {
-        "key": "shift+cmd+d",
-        "command": "-workbench.view.debug",
-        "when": "viewContainer.workbench.view.debug.enabled"
+  // Move to the previous/next editor.
+  {
+    "key": "alt+shift+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+shift+h",
+    "command": "workbench.action.previousEditor"
+  },
+  // Move active editor left or right (useful for full-stack web dev).
+  {
+    "key": "cmd+ctrl+h",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "left"
     }
+  },
+  {
+    "key": "cmd+ctrl+l",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "right"
+    }
+  },
+  // Quickly debug with console log.
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log('${TM_SELECTED_TEXT}$1')$2;"
+    }
+  },
+  // Traverse VSCode IntelliSense suggestions with vim keybindings.
+  {
+    "key": "cmd+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // Traverse VSCode quick open options with vim keybindings.
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  // Explorer keybindings
+  {
+    "key": "e",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "moveFileToTrash",
+    "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "f",
+    "command": "revealFileInOS",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "t",
+    "command": "openInTerminal",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "u",
+    "command": "copyFilePath",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "i",
+    "command": "copyRelativeFilePath",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  // TERMINAL KEYBINDINGS COMMANDS.
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.newInActiveWorkspace"
+  },
+  {
+    "key": "alt+shift+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+  },
+  {
+    "key": "cmd+ctrl+;",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // Ensure that tab button works in vim.
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus && editorTextFocus && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "outdent",
+    "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+cmd+r",
+    "command": "workbench.action.debug.run",
+    "when": "debuggersAvailable && debugState != 'initializing'"
+  },
+  {
+    "key": "ctrl+f5",
+    "command": "-workbench.action.debug.run",
+    "when": "debuggersAvailable && debugState != 'initializing'"
+  },
+  {
+    "key": "ctrl+cmd+s",
+    "command": "workbench.action.debug.pause",
+    "when": "debugState == 'running'"
+  },
+  {
+    "key": "ctrl+cmd+b",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'"
+  },
+  {
+    "key": "ctrl+cmd+b",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'"
+  },
+  // Toggle between terminal and editor focus
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "alt+v",
+    "command": "aws.explorer.toggleVisibility"
+  },
+  {
+    "key": "shift+cmd+a s",
+    "command": "workbench.view.extension.aws-explorer"
+  },
+  {
+    "key": "alt+q alt+s",
+    "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+  },
+  {
+    "key": "alt+q alt+c",
+    "command": "sqltoolsViewConnectionExplorer.toggleVisibility"
+  },
+  {
+    "key": "alt+q alt+b",
+    "command": "sqltoolsViewBookmarksExplorer.toggleVisibility"
+  },
+  {
+    "key": "alt+q alt+m",
+    "command": "sqltoolsViewConsoleMessages.toggleVisibility"
+  },
+  {
+    "key": "alt+q alt+h",
+    "command": "sqltoolsViewHistoryExplorer.toggleVisibility"
+  },
+  {
+    "key": "alt+q alt+t",
+    "command": "workbench.view.extension.sqltoolsPanelContainer"
+  },
+  {
+    "key": "shift+cmd+a r",
+    "command": "aws.refreshAwsExplorer",
+    "when": "aws.explorer.active"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "workbench.output.action.clearOutput"
+  },
+  {
+    "key": "alt+r shift+j",
+    "command": "java.debug.runJavaFile"
+  },
+  {
+    "key": "alt+cmd+v s",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+k",
+    "when": "CodeActionMenuVisible",
+    "command": "focusPreviousCodeAction"
+  },
+  {
+    "key": "ctrl+j",
+    "when": "CodeActionMenuVisible",
+    "command": "focusNextCodeAction"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "-workbench.action.terminal.killInstance",
+    "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "shift+alt+backspace",
+    "command": "workbench.action.terminal.killInstance",
+    "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "delete",
+    "command": "-workbench.action.terminal.killInstance",
+    "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "alt+cmd+v d",
+    "command": "workbench.view.extension.dockerView"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "java.projectConfiguration.update",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+u",
+    "command": "-java.projectConfiguration.update",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "turboConsoleLog.uncommentAllLogMessages"
+  },
+  {
+    "key": "shift+alt+u",
+    "command": "-turboConsoleLog.uncommentAllLogMessages"
+  },
+  {
+    "key": "cmd+shift+h",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+shift+u",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "cmd+shift+b",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "space",
+    "command": "-notification.toggle",
+    "when": "notificationFocus"
+  },
+  {
+    "key": "space",
+    "command": "-refactorPreview.toggleCheckedState",
+    "when": "listFocus && refactorPreview.enabled && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "-list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "-filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "alt+t",
+    "command": "debug.toggleBreakpoint",
+    "when": "breakpointsFocused && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "-debug.toggleBreakpoint",
+    "when": "breakpointsFocused && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "-breadcrumbs.revealFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "shift+alt+.",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+alt+.",
+    "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.revealDeclaration"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "shift+alt+f12",
+    "command": "-references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "references-view.findImplementations"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled || editorFocus"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  },
 ]
