@@ -1,4 +1,13 @@
 {
+
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": ["."],
+            "name": "Commands...",
+            "type": "command",
+            "command": "workbench.action.showCommands"
+        }
+    ],
   //============================================= VIM CONFIGURATION =============================================
   // Copy indent from current line when starting a new line
   "vim.autoindent": true,
@@ -7,27 +16,23 @@
   // Ignore case in search patterns
   "vim.ignorecase": true,
   // Show the next match while entering a search
+  "vim.scroll": 5,
   "vim.incsearch": true,
   "vim.leader": "<space>",
+  "vim.sneak": true,
   "vim.showcmd": true,
+  "vim.surround": true,
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.cursorStylePerMode.insert": "underline",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "line",
   "vim.cursorStylePerMode.visual": "line",
   "vim.cursorStylePerMode.visualblock": "line",
   "vim.cursorStylePerMode.visualline": "line",
-  "vim.easymotion": true,
-  "vim.surround": true,
-  "vim.scroll": 5,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.sneak": true,
-  "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
     //<leader>w to save file
     {
       "before": ["<leader>", "w"],
@@ -36,37 +41,15 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>"],
+      "before": ["<leader>", "w", "k", "s"],
       "commands": ["whichkey.show"]
     },
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    // Bind go to the last word character
-    {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
-    },
-    // Bind go to the begining of word character
-    {
-      "before": ["<leader>", "h"],
-      "after": ["^"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "e"],
+      "before": ["<leader>", "t", "s", "b"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": ["<leader>", "f"],
+      "before": ["<leader>", "r", "i", "e"],
       "commands": ["revealInExplorer"]
     },
     {
@@ -74,16 +57,12 @@
       "after": ["_"]
     },
     {
-      "before": ["<leader>", "e", "f"],
+      "before": ["<leader>", "f", "v", "f"],
       "commands": ["workbench.explorer.fileView.focus"]
     },
     {
-      "before": ["<leader>", "a"],
+      "before": ["<leader>", "q", "f"],
       "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["<leader>", "s", "b"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
       "before": ["<leader>", "d", "s"],
@@ -94,35 +73,27 @@
       "commands": ["editor.action.formatDocument"]
     },
     {
-      "before": ["<leader>", "q"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "r", "s"],
+      "before": ["<leader>", "r", "n"],
       "commands": ["editor.action.rename"]
     },
     {
-      "before": ["<leader>", "t", "s"],
+      "before": ["<leader>", "g", "t", "s"],
       "commands": ["workbench.action.gotoSymbol"]
     },
     {
-      "before": ["<leader>", "u"],
+      "before": ["<leader>", "t", "u"],
       "commands": ["editor.action.transformToTitlecase"]
     },
     {
-      "before": ["<leader>", "i"],
+      "before": ["<leader>", "t", "e", "w"],
       "commands": ["workbench.action.toggleEditorWidths"]
     },
     {
-      "before": ["<leader>", "o"],
+      "before": ["<leader>", "q", "o"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "p"],
+      "before": ["<leader>", "s", "p"],
       "commands": ["workbench.action.showCommands"]
     },
     {
@@ -171,11 +142,11 @@
     },
     // VIEW COMMANDS
     {
-      "before": ["<leader>", "v", "i", "i"],
+      "before": ["<leader>", "v", "i", "s"],
       "commands": ["workbench.action.increaseViewSize"]
     },
     {
-      "before": ["<leader>", "v", "d", "d"],
+      "before": ["<leader>", "v", "d", "s"],
       "commands": ["workbench.action.decreaseViewSize"]
     },
     {
@@ -207,43 +178,43 @@
       "commands": ["workbench.action.previousEditor"]
     },
     {
-      "before": ["<leader>", "v", "g", "j"],
+      "before": ["<leader>", "m", "v", "g", "j"],
       "commands": ["workbench.action.moveActiveEditorGroupDown"]
     },
     {
-      "before": ["<leader>", "v", "g", "h"],
+      "before": ["<leader>", "m", "v", "g", "h"],
       "commands": ["workbench.action.moveActiveEditorGroupLeft"]
     },
     {
-      "before": ["<leader>", "v", "g", "l"],
+      "before": ["<leader>", "m", "v", "g", "l"],
       "commands": ["workbench.action.moveActiveEditorGroupRight"]
     },
     {
-      "before": ["<leader>", "v", "g", "k"],
+      "before": ["<leader>", "m", "v", "g", "k"],
       "commands": ["workbench.action.moveActiveEditorGroupUp"]
     },
     {
-      "before": ["<leader>", "v", "i", "f"],
+      "before": ["<leader>", "m", "v", "i", "f"],
       "commands": ["workbench.action.moveEditorToFirstGroup"]
     },
     {
-      "before": ["<leader>", "v", "i", "l"],
+      "before": ["<leader>", "m", "v", "i", "l"],
       "commands": ["workbench.action.moveEditorToLastGroup"]
     },
     {
-      "before": ["<leader>", "v", "i", "n"],
+      "before": ["<leader>", "m", "v", "i", "n"],
       "commands": ["workbench.action.moveEditorToNextGroup"]
     },
     {
-      "before": ["<leader>", "v", "i", "p"],
+      "before": ["<leader>", "m", "v", "i", "p"],
       "commands": ["workbench.action.moveEditorToPreviousGroup"]
     },
     {
-      "before": ["<leader>", "v", "e", "h"],
+      "before": ["<leader>", "m", "v", "e", "h"],
       "commands": ["workbench.action.moveEditorLeftInGroup"]
     },
     {
-      "before": ["<leader>", "v", "e", "l"],
+      "before": ["<leader>", "m", "v", "e", "l"],
       "commands": ["workbench.action.moveEditorRightInGroup"]
     },
     {
@@ -656,7 +627,7 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>"],
+      "before": ["<leader>", "w", "k", "s"],
       "commands": ["whichkey.show"]
     },
     // Bind "p" to paste in visual mode
@@ -664,29 +635,19 @@
       "before": ["p"],
       "after": ["p", "g", "v", "y"]
     },
-    // Bind go to the last word character
-    {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
-    },
-    // Bind go to the begining of word character
-    {
-      "before": ["<leader>", "h"],
-      "after": ["^"]
-    },
     // Bind to toggle quick fix action
     {
-      "before": ["<leader>", "a"],
+      "before": ["<leader>", "q", "f"],
       "commands": ["editor.action.quickFix"]
     },
     // Bind to toggle side bar visibility
     {
-      "before": ["<leader>", "s"],
+      "before": ["<leader>", "t", "s", "b"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     // Bind to toggle dupplicate the selection
     {
-      "before": ["<leader>", "d"],
+      "before": ["<leader>", "d", "s"],
       "commands": ["editor.action.duplicateSelection"]
     },
     {
@@ -694,21 +655,21 @@
       "commands": ["editor.action.formatSelection"]
     },
     {
-      "before": ["<leader>", "u"],
+      "before": ["<leader>", "t", "u"],
       "commands": ["editor.action.transformToTitlecase"]
     },
     {
-      "before": ["<leader>", "i"],
+      "before": ["<leader>", "t", "e", "w"],
       "commands": ["workbench.action.toggleEditorWidths"]
     },
     // Bind to toggle quickOpen file action like shortcut CMD + p in VSCODE
     {
-      "before": ["<leader>", "o"],
+      "before": ["<leader>", "q", "o"],
       "commands": ["workbench.action.quickOpen"]
     },
-    // Bind to toggle quickOpen file action like shortcut CMD + P in VSCODE
+    // Bind to toggle commands palette file action like shortcut CMD + P in VSCODE
     {
-      "before": ["<leader>", "p"],
+      "before": ["<leader>", "s", "p"],
       "commands": ["workbench.action.showCommands"]
     },
     {
@@ -757,7 +718,7 @@
     "<C-a>": false,
     "<C-f>": false,
     // VS Code new marker @ next occurence
-    "<C-c>": true
+    "<C-c>": true,
     // Cut
     // "<C-x>": false,
     // Paste
@@ -765,6 +726,7 @@
     // "<C-z>": false,
     // "<C-y>": false
   },
+  // TO IMPROVE VIM PERFORMANCE
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -797,6 +759,8 @@
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
   "workbench.preferredHighContrastColorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.showTabs": "single",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
@@ -809,6 +773,7 @@
   "editor.lineHeight": 1.75,
   "editor.letterSpacing": 0,
   "editor.lineNumbers": "relative",
+  "editor.glyphMargin": true,
   "diffEditor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.tabCompletion": "on",
@@ -1083,6 +1048,7 @@
     "editor.wordWrap",
     "editor.lineHeight",
     "editor.letterSpacing",
+    "editor.glyphMargin",
     "diffEditor.wordWrap",
     "editor.formatOnSave",
     "editor.tabCompletion",
@@ -1176,7 +1142,6 @@
   "[java]": {
     "editor.defaultFormatter": "Oracle.oracle-java"
   },
-  "editor.glyphMargin": true,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-  "workbench.productIconTheme": "fluent-icons"
+
+
 }

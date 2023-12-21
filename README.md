@@ -1,16 +1,23 @@
 # KleeVSCodeSettings
+
+### ACKNOWLEDGEMENT:
+
+Thanks to the public repo - https://github.com/AnthonyAsDev/VSCodeVimSettings.git for providing the awesome VSCodeVim Settings.
+
+You can go to the above link to go to the original public project from Anthony to use default settings from him. I am going to update the keybindings to suite my needs and easier for me to remember
+
 # VSCodeVim Settings
 
 VSCodeVim is a Vim emulator for Visual Studio Code + Commands
 
 ## Table of Content
 
--   [Vim Shortcuts](#-vim-shortcuts)
--   [VSCode Shortcuts](#-vscode-shortcuts)
--   [View Commands](#-view-commands)
--   [Emmet Commands](#-emmet-commands)
--   [Git Commands](#-git-commands)
--   [Debug Commands](#-debug-commands)
+- [Vim Shortcuts](#-vim-shortcuts)
+- [VSCode Shortcuts](#-vscode-shortcuts)
+- [View Commands](#-view-commands)
+- [Emmet Commands](#-emmet-commands)
+- [Git Commands](#-git-commands)
+- [Debug Commands](#-debug-commands)
 
 <br>
 
@@ -38,44 +45,44 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["J"],
-			"after": ["5", "j"]
-		},
-		{
-			"before": ["K"],
-			"after": ["5", "k"]
-		},
-		{
-			"before": ["<Leader>", "l"],
-			"after": ["$"]
-		},
-		{
-			"before": ["<Leader>", "h"],
-			"after": ["^"]
-		},
-		{
-			"before": ["<C-n>"],
-			"commands": [":nohl"]
-		},
-		{
-			"before": ["<C-h>"],
-			"after": ["<C-w>", "h"]
-		},
-		{
-			"before": ["<C-j>"],
-			"after": ["<C-w>", "j"]
-		},
-		{
-			"before": ["<C-k>"],
-			"after": ["<C-w>", "k"]
-		},
-		{
-			"before": ["<C-l>"],
-			"after": ["<C-w>", "l"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["<Leader>", "l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<Leader>", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    }
+  ]
 }
 ```
 
@@ -100,24 +107,24 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.visualModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "l"],
-			"after": ["$"]
-		},
-		{
-			"before": ["<Leader>", "h"],
-			"after": ["^"]
-		},
-		{
-			"before": ["J"],
-			"after": ["5", "j"]
-		},
-		{
-			"before": ["K"],
-			"after": ["5", "k"]
-		}
-	]
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<Leader>", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    }
+  ]
 }
 ```
 
@@ -139,12 +146,12 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.insertModeKeyBindingsNonRecursive": [
-		{
-			"before": ["j", "k"],
-			"after": ["<Esc>"]
-		}
-	]
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ]
 }
 ```
 
@@ -193,104 +200,104 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "e", "f"],
-			"commands": ["workbench.explorer.fileView.focus"]
-		},
-		{
-			"before": ["<Leader>", "a"],
-			"commands": ["editor.action.quickFix"]
-		},
-		{
-			"before": ["<Leader>", "s", "b"],
-			"commands": ["workbench.action.toggleSidebarVisibility"]
-		},
-		{
-			"before": ["<Leader>", "d", "s"],
-			"commands": ["editor.action.duplicateSelection"]
-		},
-		{
-			"before": ["<Leader>", "f", "d"],
-			"commands": ["editor.action.formatDocument"]
-		},
-		{
-			"before": ["<Leader>", "q"],
-			"commands": ["workbench.action.closeActiveEditor"]
-		},
-		{
-			"before": ["<Leader>", "w"],
-			"commands": ["workbench.action.files.save"]
-		},
-		{
-			"before": ["<Leader>", "r", "s"],
-			"commands": ["editor.action.rename"]
-		},
-		{
-			"before": ["<Leader>", "t", "s"],
-			"commands": ["workbench.action.gotoSymbol"]
-		},
-		{
-			"before": ["<Leader>", "u"],
-			"commands": ["editor.action.transformToTitlecase"]
-		},
-		{
-			"before": ["<Leader>", "i"],
-			"commands": ["workbench.action.toggleEditorWidths"]
-		},
-		{
-			"before": ["<Leader>", "o"],
-			"commands": ["workbench.action.quickOpen"]
-		},
-		{
-			"before": ["<Leader>", "p"],
-			"commands": ["workbench.action.showCommands"]
-		},
-		{
-			"before": ["<Leader>", "m", "n"],
-			"commands": ["editor.action.marker.next"]
-		},
-		{
-			"before": ["<Leader>", "m", "N"],
-			"commands": ["editor.action.marker.prev"]
-		},
-		{
-			"before": ["<Leader>", "t", "r"],
-			"commands": ["workbench.action.tasks.reRunTask"]
-		},
-		{
-			"before": ["<Leader>", "t", "c"],
-			"commands": ["workbench.action.tasks.configureTaskRunner"]
-		},
-		{
-			"before": ["<Leader>", "n", "h"],
-			"commands": ["notifications.hideList"]
-		},
-		{
-			"before": ["<Leader>", "n", "c"],
-			"commands": ["notifications.clearAll"]
-		},
-		{
-			"before": ["<Leader>", "n", "f"],
-			"commands": ["notifications.focusToasts"]
-		},
-		{
-			"before": ["<Leader>", "n", "s"],
-			"commands": ["notifications.showList"]
-		},
-		{
-			"before": ["<Leader>", "g", "l"],
-			"commands": ["workbench.action.gotoLine"]
-		},
-		{
-			"before": ["<Leader>", "f", "b"],
-			"commands": ["breadcrumbs.focusAndSelect"]
-		},
-		{
-			"before": ["<Leader>", "t", "w"],
-			"commands": ["editor.action.toggleWordWrap"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "e", "f"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    {
+      "before": ["<Leader>", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<Leader>", "s", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<Leader>", "d", "s"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["<Leader>", "f", "d"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<Leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<Leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<Leader>", "r", "s"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<Leader>", "t", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<Leader>", "u"],
+      "commands": ["editor.action.transformToTitlecase"]
+    },
+    {
+      "before": ["<Leader>", "i"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<Leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<Leader>", "m", "n"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<Leader>", "m", "N"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["<Leader>", "t", "r"],
+      "commands": ["workbench.action.tasks.reRunTask"]
+    },
+    {
+      "before": ["<Leader>", "t", "c"],
+      "commands": ["workbench.action.tasks.configureTaskRunner"]
+    },
+    {
+      "before": ["<Leader>", "n", "h"],
+      "commands": ["notifications.hideList"]
+    },
+    {
+      "before": ["<Leader>", "n", "c"],
+      "commands": ["notifications.clearAll"]
+    },
+    {
+      "before": ["<Leader>", "n", "f"],
+      "commands": ["notifications.focusToasts"]
+    },
+    {
+      "before": ["<Leader>", "n", "s"],
+      "commands": ["notifications.showList"]
+    },
+    {
+      "before": ["<Leader>", "g", "l"],
+      "commands": ["workbench.action.gotoLine"]
+    },
+    {
+      "before": ["<Leader>", "f", "b"],
+      "commands": ["breadcrumbs.focusAndSelect"]
+    },
+    {
+      "before": ["<Leader>", "t", "w"],
+      "commands": ["editor.action.toggleWordWrap"]
+    }
+  ]
 }
 ```
 
@@ -321,48 +328,48 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.visualModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "a"],
-			"commands": ["editor.action.quickFix"]
-		},
-		{
-			"before": ["<Leader>", "s"],
-			"commands": ["workbench.action.toggleSidebarVisibility"]
-		},
-		{
-			"before": ["<Leader>", "d"],
-			"commands": ["editor.action.duplicateSelection"]
-		},
-		{
-			"before": ["<Leader>", "f"],
-			"commands": ["editor.action.formatSelection"]
-		},
-		{
-			"before": ["<Leader>", "u"],
-			"commands": ["editor.action.transformToTitlecase"]
-		},
-		{
-			"before": ["<Leader>", "i"],
-			"commands": ["workbench.action.toggleEditorWidths"]
-		},
-		{
-			"before": ["<Leader>", "o"],
-			"commands": ["workbench.action.quickOpen"]
-		},
-		{
-			"before": ["<Leader>", "p"],
-			"commands": ["workbench.action.showCommands"]
-		},
-		{
-			"before": ["<C-j>"],
-			"commands": ["editor.action.moveLinesDownAction"]
-		},
-		{
-			"before": ["<C-k>"],
-			"commands": ["editor.action.moveLinesUpAction"]
-		}
-	]
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<Leader>", "s"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<Leader>", "d"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["<Leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    },
+    {
+      "before": ["<Leader>", "u"],
+      "commands": ["editor.action.transformToTitlecase"]
+    },
+    {
+      "before": ["<Leader>", "i"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<Leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ]
 }
 ```
 
@@ -411,112 +418,112 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "v", "i", "i"],
-			"commands": ["workbench.action.increaseViewSize"]
-		},
-		{
-			"before": ["<Leader>", "v", "d", "d"],
-			"commands": ["workbench.action.decreaseViewSize"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "h"],
-			"commands": ["workbench.action.increaseViewHeight"]
-		},
-		{
-			"before": ["<Leader>", "v", "d", "h"],
-			"commands": ["workbench.action.decreaseViewHeight"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "w"],
-			"commands": ["workbench.action.increaseViewWidth"]
-		},
-		{
-			"before": ["<Leader>", "v", "d", "w"],
-			"commands": ["workbench.action.decreaseViewWidth"]
-		},
-		{
-			"before": ["<Leader>", "t", "t"],
-			"commands": ["workbench.action.files.newUntitledFile"]
-		},
-		{
-			"before": ["<Leader>", "t", "n"],
-			"commands": ["workbench.action.nextEditor"]
-		},
-		{
-			"before": ["<Leader>", "t", "N"],
-			"commands": ["workbench.action.previousEditor"]
-		},
-		{
-			"before": ["<Leader>", "v", "g", "j"],
-			"commands": ["workbench.action.moveActiveEditorGroupDown"]
-		},
-		{
-			"before": ["<Leader>", "v", "g", "h"],
-			"commands": ["workbench.action.moveActiveEditorGroupLeft"]
-		},
-		{
-			"before": ["<Leader>", "v", "g", "l"],
-			"commands": ["workbench.action.moveActiveEditorGroupRight"]
-		},
-		{
-			"before": ["<Leader>", "v", "g", "k"],
-			"commands": ["workbench.action.moveActiveEditorGroupUp"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "f"],
-			"commands": ["workbench.action.moveEditorToFirstGroup"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "l"],
-			"commands": ["workbench.action.moveEditorToLastGroup"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "n"],
-			"commands": ["workbench.action.moveEditorToNextGroup"]
-		},
-		{
-			"before": ["<Leader>", "v", "i", "p"],
-			"commands": ["workbench.action.moveEditorToPreviousGroup"]
-		},
-		{
-			"before": ["<Leader>", "v", "e", "h"],
-			"commands": ["workbench.action.moveEditorLeftInGroup"]
-		},
-		{
-			"before": ["<Leader>", "v", "e", "l"],
-			"commands": ["workbench.action.moveEditorRightInGroup"]
-		},
-		{
-			"before": ["<Leader>", "c", "e", "g"],
-			"commands": ["workbench.action.closeEditorsAndGroup"]
-		},
-		{
-			"before": ["<Leader>", "c", "o", "e"],
-			"commands": ["workbench.action.closeOtherEditors"]
-		},
-		{
-			"before": ["<Leader>", "c", "e", "o"],
-			"commands": ["workbench.action.closeEditorsInOtherGroups"]
-		},
-		{
-			"before": ["<Leader>", "s", "h"],
-			"commands": ["workbench.action.splitEditorLeft"]
-		},
-		{
-			"before": ["<Leader>", "s", "j"],
-			"commands": ["workbench.action.splitEditorDown"]
-		},
-		{
-			"before": ["<Leader>", "s", "k"],
-			"commands": ["workbench.action.splitEditorUp"]
-		},
-		{
-			"before": ["<Leader>", "s", "l"],
-			"commands": ["workbench.action.splitEditorRight"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "v", "i", "i"],
+      "commands": ["workbench.action.increaseViewSize"]
+    },
+    {
+      "before": ["<Leader>", "v", "d", "d"],
+      "commands": ["workbench.action.decreaseViewSize"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "h"],
+      "commands": ["workbench.action.increaseViewHeight"]
+    },
+    {
+      "before": ["<Leader>", "v", "d", "h"],
+      "commands": ["workbench.action.decreaseViewHeight"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "w"],
+      "commands": ["workbench.action.increaseViewWidth"]
+    },
+    {
+      "before": ["<Leader>", "v", "d", "w"],
+      "commands": ["workbench.action.decreaseViewWidth"]
+    },
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<Leader>", "t", "N"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<Leader>", "v", "g", "j"],
+      "commands": ["workbench.action.moveActiveEditorGroupDown"]
+    },
+    {
+      "before": ["<Leader>", "v", "g", "h"],
+      "commands": ["workbench.action.moveActiveEditorGroupLeft"]
+    },
+    {
+      "before": ["<Leader>", "v", "g", "l"],
+      "commands": ["workbench.action.moveActiveEditorGroupRight"]
+    },
+    {
+      "before": ["<Leader>", "v", "g", "k"],
+      "commands": ["workbench.action.moveActiveEditorGroupUp"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "f"],
+      "commands": ["workbench.action.moveEditorToFirstGroup"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "l"],
+      "commands": ["workbench.action.moveEditorToLastGroup"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "n"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["<Leader>", "v", "i", "p"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["<Leader>", "v", "e", "h"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+    {
+      "before": ["<Leader>", "v", "e", "l"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    {
+      "before": ["<Leader>", "c", "e", "g"],
+      "commands": ["workbench.action.closeEditorsAndGroup"]
+    },
+    {
+      "before": ["<Leader>", "c", "o", "e"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
+      "before": ["<Leader>", "c", "e", "o"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },
+    {
+      "before": ["<Leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorLeft"]
+    },
+    {
+      "before": ["<Leader>", "s", "j"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<Leader>", "s", "k"],
+      "commands": ["workbench.action.splitEditorUp"]
+    },
+    {
+      "before": ["<Leader>", "s", "l"],
+      "commands": ["workbench.action.splitEditorRight"]
+    }
+  ]
 }
 ```
 
@@ -559,88 +566,88 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "e", "b", "i"],
-			"commands": ["editor.emmet.action.balanceIn"]
-		},
-		{
-			"before": ["<Leader>", "e", "b", "o"],
-			"commands": ["editor.emmet.action.balanceOut"]
-		},
-		{
-			"before": ["<Leader>", "e", "i", "0"],
-			"commands": ["editor.emmet.action.incrementNumberByOneTenth"]
-		},
-		{
-			"before": ["<Leader>", "e", "d", "0"],
-			"commands": ["editor.emmet.action.decrementNumberByOneTenth"]
-		},
-		{
-			"before": ["<Leader>", "e", "i", "u"],
-			"commands": ["editor.emmet.action.incrementNumberByOne"]
-		},
-		{
-			"before": ["<Leader>", "e", "d", "u"],
-			"commands": ["editor.emmet.action.decrementNumberByOne"]
-		},
-		{
-			"before": ["<Leader>", "e", "i", "d"],
-			"commands": ["editor.emmet.action.incrementNumberByTen"]
-		},
-		{
-			"before": ["<Leader>", "e", "d", "d"],
-			"commands": ["editor.emmet.action.decrementNumberByTen"]
-		},
-		{
-			"before": ["<Leader>", "e", "t"],
-			"commands": ["editor.emmet.action.matchTag"]
-		},
-		{
-			"before": ["<Leader>", "e", "n"],
-			"commands": ["editor.emmet.action.nextEditPoint"]
-		},
-		{
-			"before": ["<Leader>", "e", "N"],
-			"commands": ["editor.emmet.action.prevEditPoint"]
-		},
-		{
-			"before": ["<Leader>", "e", "x"],
-			"commands": ["editor.emmet.action.evaluateMathExpression"]
-		},
-		{
-			"before": ["<Leader>", "e", "m", "l"],
-			"commands": ["editor.emmet.action.mergeLines"]
-		},
-		{
-			"before": ["<Leader>", "e", "u", "t"],
-			"commands": ["editor.emmet.action.updateTag"]
-		},
-		{
-			"before": ["<Leader>", "e", "r", "t"],
-			"commands": ["editor.emmet.action.removeTag"]
-		},
-		{
-			"before": ["<Leader>", "e", "s", "j"],
-			"commands": ["editor.emmet.action.splitJoinTag"]
-		},
-		{
-			"before": ["<Leader>", "e", "u", "i"],
-			"commands": ["editor.emmet.action.updateImageSize"]
-		},
-		{
-			"before": ["<Leader>", "e", "c"],
-			"commands": ["editor.emmet.action.toggleComment"]
-		},
-		{
-			"before": ["<Leader>", "e", "r", "c"],
-			"commands": ["editor.emmet.action.reflectCSSValue"]
-		},
-		{
-			"before": ["<Leader>", "e", "w"],
-			"commands": ["editor.emmet.action.wrapWithAbbreviation"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "e", "b", "i"],
+      "commands": ["editor.emmet.action.balanceIn"]
+    },
+    {
+      "before": ["<Leader>", "e", "b", "o"],
+      "commands": ["editor.emmet.action.balanceOut"]
+    },
+    {
+      "before": ["<Leader>", "e", "i", "0"],
+      "commands": ["editor.emmet.action.incrementNumberByOneTenth"]
+    },
+    {
+      "before": ["<Leader>", "e", "d", "0"],
+      "commands": ["editor.emmet.action.decrementNumberByOneTenth"]
+    },
+    {
+      "before": ["<Leader>", "e", "i", "u"],
+      "commands": ["editor.emmet.action.incrementNumberByOne"]
+    },
+    {
+      "before": ["<Leader>", "e", "d", "u"],
+      "commands": ["editor.emmet.action.decrementNumberByOne"]
+    },
+    {
+      "before": ["<Leader>", "e", "i", "d"],
+      "commands": ["editor.emmet.action.incrementNumberByTen"]
+    },
+    {
+      "before": ["<Leader>", "e", "d", "d"],
+      "commands": ["editor.emmet.action.decrementNumberByTen"]
+    },
+    {
+      "before": ["<Leader>", "e", "t"],
+      "commands": ["editor.emmet.action.matchTag"]
+    },
+    {
+      "before": ["<Leader>", "e", "n"],
+      "commands": ["editor.emmet.action.nextEditPoint"]
+    },
+    {
+      "before": ["<Leader>", "e", "N"],
+      "commands": ["editor.emmet.action.prevEditPoint"]
+    },
+    {
+      "before": ["<Leader>", "e", "x"],
+      "commands": ["editor.emmet.action.evaluateMathExpression"]
+    },
+    {
+      "before": ["<Leader>", "e", "m", "l"],
+      "commands": ["editor.emmet.action.mergeLines"]
+    },
+    {
+      "before": ["<Leader>", "e", "u", "t"],
+      "commands": ["editor.emmet.action.updateTag"]
+    },
+    {
+      "before": ["<Leader>", "e", "r", "t"],
+      "commands": ["editor.emmet.action.removeTag"]
+    },
+    {
+      "before": ["<Leader>", "e", "s", "j"],
+      "commands": ["editor.emmet.action.splitJoinTag"]
+    },
+    {
+      "before": ["<Leader>", "e", "u", "i"],
+      "commands": ["editor.emmet.action.updateImageSize"]
+    },
+    {
+      "before": ["<Leader>", "e", "c"],
+      "commands": ["editor.emmet.action.toggleComment"]
+    },
+    {
+      "before": ["<Leader>", "e", "r", "c"],
+      "commands": ["editor.emmet.action.reflectCSSValue"]
+    },
+    {
+      "before": ["<Leader>", "e", "w"],
+      "commands": ["editor.emmet.action.wrapWithAbbreviation"]
+    }
+  ]
 }
 ```
 
@@ -669,42 +676,40 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.visualModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "e", "b", "i"],
-			"commands": ["editor.emmet.action.balanceIn"]
-		},
-		{
-			"before": ["<Leader>", "e", "b", "o"],
-			"commands": ["editor.emmet.action.balanceOut"]
-		},
-		{
-			"before": ["<Leader>", "e", "t"],
-			"commands": ["editor.emmet.action.matchTag"]
-		},
-		{
-			"before": ["<Leader>", "e", "c"],
-			"commands": ["editor.emmet.action.toggleComment"]
-		},
-		{
-			"before": ["<Leader>", "e", "n"],
-			"commands": ["editor.emmet.action.selectNextItem"]
-		},
-		{
-			"before": ["<Leader>", "e", "N"],
-			"commands": ["editor.emmet.action.selectPrevItem"]
-		},
-		{
-			"before": ["<Leader>", "e", "x"],
-			"commands": ["editor.emmet.action.evaluateMathExpression"]
-		},
-		{
-			"before": ["<Leader>", "e", "w"],
-			"commands": [
-				"editor.emmet.action.wrapIndividualLinesWithAbbreviation"
-			]
-		}
-	]
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "e", "b", "i"],
+      "commands": ["editor.emmet.action.balanceIn"]
+    },
+    {
+      "before": ["<Leader>", "e", "b", "o"],
+      "commands": ["editor.emmet.action.balanceOut"]
+    },
+    {
+      "before": ["<Leader>", "e", "t"],
+      "commands": ["editor.emmet.action.matchTag"]
+    },
+    {
+      "before": ["<Leader>", "e", "c"],
+      "commands": ["editor.emmet.action.toggleComment"]
+    },
+    {
+      "before": ["<Leader>", "e", "n"],
+      "commands": ["editor.emmet.action.selectNextItem"]
+    },
+    {
+      "before": ["<Leader>", "e", "N"],
+      "commands": ["editor.emmet.action.selectPrevItem"]
+    },
+    {
+      "before": ["<Leader>", "e", "x"],
+      "commands": ["editor.emmet.action.evaluateMathExpression"]
+    },
+    {
+      "before": ["<Leader>", "e", "w"],
+      "commands": ["editor.emmet.action.wrapIndividualLinesWithAbbreviation"]
+    }
+  ]
 }
 ```
 
@@ -801,296 +806,296 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["leader", "g", "g"],
-			"commands": ["workbench.scm.focus"]
-		},
-		{
-			"before": ["leader", "g", "t", "l"],
-			"commands": ["timeline.focus"]
-		},
-		{
-			"before": ["leader", "g", "i", "r"],
-			"commands": ["git.init"]
-		},
-		{
-			"before": ["leader", "g", "a", "i"],
-			"commands": ["git.ignore"]
-		},
-		{
-			"before": ["leader", "g", "p", "g"],
-			"commands": ["github.publish"]
-		},
-		{
-			"before": ["leader", "g", "a", "r"],
-			"commands": ["git.addRemote"]
-		},
-		{
-			"before": ["leader", "g", "r", "r"],
-			"commands": ["git.removeRemote"]
-		},
-		{
-			"before": ["leader", "g", "s", "c"],
-			"commands": ["git.stage"]
-		},
-		{
-			"before": ["leader", "g", "s", "a", "c"],
-			"commands": ["git.stageAll"]
-		},
-		{
-			"before": ["leader", "g", "s", "a", "m"],
-			"commands": ["git.stageAllMerge"]
-		},
-		{
-			"before": ["leader", "g", "s", "a", "t"],
-			"commands": ["git.stageAllTracked"]
-		},
-		{
-			"before": ["leader", "g", "s", "a", "u"],
-			"commands": ["git.stageAllUntracked"]
-		},
-		{
-			"before": ["leader", "g", "u", "c"],
-			"commands": ["git.unstage"]
-		},
-		{
-			"before": ["leader", "g", "u", "a", "c"],
-			"commands": ["git.unstageAll"]
-		},
-		{
-			"before": ["leader", "g", "c", "c"],
-			"commands": ["git.commit"]
-		},
-		{
-			"before": ["leader", "g", "c", "a"],
-			"commands": ["git.commitAll"]
-		},
-		{
-			"before": ["leader", "g", "c", "s"],
-			"commands": ["git.commitStaged"]
-		},
-		{
-			"before": ["leader", "g", "c", "e"],
-			"commands": ["git.commitEmpty"]
-		},
-		{
-			"before": ["leader", "g", "u", "l", "c"],
-			"commands": ["git.undoCommit"]
-		},
-		{
-			"before": ["leader", "g", "p", "h"],
-			"commands": ["git.push"]
-		},
-		{
-			"before": ["leader", "g", "p", "f"],
-			"commands": ["git.pushForce"]
-		},
-		{
-			"before": ["leader", "g", "p", "b", "t"],
-			"commands": ["git.pushTo"]
-		},
-		{
-			"before": ["leader", "g", "p", "b", "t", "f"],
-			"commands": ["git.pushToForce"]
-		},
-		{
-			"before": ["leader", "g", "p", "l"],
-			"commands": ["git.pull"]
-		},
-		{
-			"before": ["leader", "g", "P", "f"],
-			"commands": ["git.pullFrom"]
-		},
-		{
-			"before": ["leader", "g", "P", "r"],
-			"commands": ["git.pullRebase"]
-		},
-		{
-			"before": ["leader", "g", "A", "r"],
-			"commands": ["git.rebaseAbort"]
-		},
-		{
-			"before": ["leader", "g", "c", "b"],
-			"commands": ["git.branch"]
-		},
-		{
-			"before": ["leader", "g", "c", "b", "f"],
-			"commands": ["git.branchFrom"]
-		},
-		{
-			"before": ["leader", "g", "d", "b"],
-			"commands": ["git.deleteBranch"]
-		},
-		{
-			"before": ["leader", "g", "m", "b"],
-			"commands": ["git.merge"]
-		},
-		{
-			"before": ["leader", "g", "p", "b"],
-			"commands": ["git.publish"]
-		},
-		{
-			"before": ["leader", "g", "r", "b"],
-			"commands": ["git.renameBranch"]
-		},
-		{
-			"before": ["leader", "g", "R", "b"],
-			"commands": ["git.rebase"]
-		},
-		{
-			"before": ["leader", "g", "C"],
-			"commands": ["git.checkout"]
-		},
-		{
-			"before": ["leader", "g", "C", "d"],
-			"commands": ["git.checkoutDetached"]
-		},
-		{
-			"before": ["leader", "g", "c", "p"],
-			"commands": ["git.cherryPick"]
-		},
-		{
-			"before": ["leader", "g", "d", "c"],
-			"commands": ["git.clean"]
-		},
-		{
-			"before": ["leader", "g", "d", "a", "c"],
-			"commands": ["git.cleanAll"]
-		},
-		{
-			"before": ["leader", "g", "d", "a", "t"],
-			"commands": ["git.cleanAllTracked"]
-		},
-		{
-			"before": ["leader", "g", "d", "a", "u"],
-			"commands": ["git.cleanAllUntracked"]
-		},
-		{
-			"before": ["leader", "g", "s", "s"],
-			"commands": ["git.stash"]
-		},
-		{
-			"before": ["leader", "g", "s", "i", "u"],
-			"commands": ["git.stashIncludeUntracked"]
-		},
-		{
-			"before": ["leader", "g", "a", "s"],
-			"commands": ["git.stashApply"]
-		},
-		{
-			"before": ["leader", "g", "a", "l", "s"],
-			"commands": ["git.stashApplyLatest"]
-		},
-		{
-			"before": ["leader", "g", "d", "s"],
-			"commands": ["git.stashDrop"]
-		},
-		{
-			"before": ["leader", "g", "p", "s"],
-			"commands": ["git.stashPop"]
-		},
-		{
-			"before": ["leader", "g", "p", "l", "s"],
-			"commands": ["git.stashPopLatest"]
-		},
-		{
-			"before": ["leader", "g", "c", "t"],
-			"commands": ["git.createTag"]
-		},
-		{
-			"before": ["leader", "g", "d", "t"],
-			"commands": ["git.deleteTag"]
-		},
-		{
-			"before": ["leader", "g", "p", "t"],
-			"commands": ["git.pushTags"]
-		},
-		{
-			"before": ["leader", "g", "f", "f"],
-			"commands": ["git.fetch"]
-		},
-		{
-			"before": ["leader", "g", "f", "p"],
-			"commands": ["git.fetchPrune"]
-		},
-		{
-			"before": ["leader", "g", "f", "f", "a", "r"],
-			"commands": ["git.fetchAll"]
-		},
-		{
-			"before": ["leader", "g", "o", "c"],
-			"commands": ["git.openChange"]
-		},
-		{
-			"before": ["leader", "g", "o", "f"],
-			"commands": ["git.openFile"]
-		},
-		{
-			"before": ["leader", "g", "s", "n"],
-			"commands": ["editor.action.dirtydiff.next"]
-		},
-		{
-			"before": ["leader", "g", "s", "N"],
-			"commands": ["editor.action.dirtydiff.previous"]
-		},
-		{
-			"before": ["leader", "g", "m", "n"],
-			"commands": ["workbench.action.editor.nextChange"]
-		},
-		{
-			"before": ["leader", "g", "m", "N"],
-			"commands": ["workbench.action.editor.previousChange"]
-		},
-		{
-			"before": ["leader", "g", "c", "n"],
-			"commands": ["workbench.action.compareEditor.nextChange"]
-		},
-		{
-			"before": ["leader", "g", "c", "N"],
-			"commands": ["workbench.action.compareEditor.previousChange"]
-		},
-		{
-			"before": ["leader", "g", "i", "v"],
-			"commands": ["toggle.diff.renderSideBySide"]
-		},
-		{
-			"before": ["leader", "m", "c", "b"],
-			"commands": ["merge-conflict.accept.both"]
-		},
-		{
-			"before": ["leader", "m", "c", "c"],
-			"commands": ["merge-conflict.accept.current"]
-		},
-		{
-			"before": ["leader", "m", "c", "i"],
-			"commands": ["merge-conflict.accept.incoming"]
-		},
-		{
-			"before": ["leader", "m", "c", "a", "b"],
-			"commands": ["merge-conflict.accept.all-both"]
-		},
-		{
-			"before": ["leader", "m", "c", "a", "c"],
-			"commands": ["merge-conflict.accept.all-current"]
-		},
-		{
-			"before": ["leader", "m", "c", "a", "i"],
-			"commands": ["merge-conflict.accept.all-incoming"]
-		},
-		{
-			"before": ["leader", "m", "c", "o"],
-			"commands": ["merge-conflict.compare"]
-		},
-		{
-			"before": ["leader", "m", "c", "n"],
-			"commands": ["merge-conflict.next"]
-		},
-		{
-			"before": ["leader", "m", "c", "N"],
-			"commands": ["merge-conflict.previous"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "g", "g"],
+      "commands": ["workbench.scm.focus"]
+    },
+    {
+      "before": ["leader", "g", "t", "l"],
+      "commands": ["timeline.focus"]
+    },
+    {
+      "before": ["leader", "g", "i", "r"],
+      "commands": ["git.init"]
+    },
+    {
+      "before": ["leader", "g", "a", "i"],
+      "commands": ["git.ignore"]
+    },
+    {
+      "before": ["leader", "g", "p", "g"],
+      "commands": ["github.publish"]
+    },
+    {
+      "before": ["leader", "g", "a", "r"],
+      "commands": ["git.addRemote"]
+    },
+    {
+      "before": ["leader", "g", "r", "r"],
+      "commands": ["git.removeRemote"]
+    },
+    {
+      "before": ["leader", "g", "s", "c"],
+      "commands": ["git.stage"]
+    },
+    {
+      "before": ["leader", "g", "s", "a", "c"],
+      "commands": ["git.stageAll"]
+    },
+    {
+      "before": ["leader", "g", "s", "a", "m"],
+      "commands": ["git.stageAllMerge"]
+    },
+    {
+      "before": ["leader", "g", "s", "a", "t"],
+      "commands": ["git.stageAllTracked"]
+    },
+    {
+      "before": ["leader", "g", "s", "a", "u"],
+      "commands": ["git.stageAllUntracked"]
+    },
+    {
+      "before": ["leader", "g", "u", "c"],
+      "commands": ["git.unstage"]
+    },
+    {
+      "before": ["leader", "g", "u", "a", "c"],
+      "commands": ["git.unstageAll"]
+    },
+    {
+      "before": ["leader", "g", "c", "c"],
+      "commands": ["git.commit"]
+    },
+    {
+      "before": ["leader", "g", "c", "a"],
+      "commands": ["git.commitAll"]
+    },
+    {
+      "before": ["leader", "g", "c", "s"],
+      "commands": ["git.commitStaged"]
+    },
+    {
+      "before": ["leader", "g", "c", "e"],
+      "commands": ["git.commitEmpty"]
+    },
+    {
+      "before": ["leader", "g", "u", "l", "c"],
+      "commands": ["git.undoCommit"]
+    },
+    {
+      "before": ["leader", "g", "p", "h"],
+      "commands": ["git.push"]
+    },
+    {
+      "before": ["leader", "g", "p", "f"],
+      "commands": ["git.pushForce"]
+    },
+    {
+      "before": ["leader", "g", "p", "b", "t"],
+      "commands": ["git.pushTo"]
+    },
+    {
+      "before": ["leader", "g", "p", "b", "t", "f"],
+      "commands": ["git.pushToForce"]
+    },
+    {
+      "before": ["leader", "g", "p", "l"],
+      "commands": ["git.pull"]
+    },
+    {
+      "before": ["leader", "g", "P", "f"],
+      "commands": ["git.pullFrom"]
+    },
+    {
+      "before": ["leader", "g", "P", "r"],
+      "commands": ["git.pullRebase"]
+    },
+    {
+      "before": ["leader", "g", "A", "r"],
+      "commands": ["git.rebaseAbort"]
+    },
+    {
+      "before": ["leader", "g", "c", "b"],
+      "commands": ["git.branch"]
+    },
+    {
+      "before": ["leader", "g", "c", "b", "f"],
+      "commands": ["git.branchFrom"]
+    },
+    {
+      "before": ["leader", "g", "d", "b"],
+      "commands": ["git.deleteBranch"]
+    },
+    {
+      "before": ["leader", "g", "m", "b"],
+      "commands": ["git.merge"]
+    },
+    {
+      "before": ["leader", "g", "p", "b"],
+      "commands": ["git.publish"]
+    },
+    {
+      "before": ["leader", "g", "r", "b"],
+      "commands": ["git.renameBranch"]
+    },
+    {
+      "before": ["leader", "g", "R", "b"],
+      "commands": ["git.rebase"]
+    },
+    {
+      "before": ["leader", "g", "C"],
+      "commands": ["git.checkout"]
+    },
+    {
+      "before": ["leader", "g", "C", "d"],
+      "commands": ["git.checkoutDetached"]
+    },
+    {
+      "before": ["leader", "g", "c", "p"],
+      "commands": ["git.cherryPick"]
+    },
+    {
+      "before": ["leader", "g", "d", "c"],
+      "commands": ["git.clean"]
+    },
+    {
+      "before": ["leader", "g", "d", "a", "c"],
+      "commands": ["git.cleanAll"]
+    },
+    {
+      "before": ["leader", "g", "d", "a", "t"],
+      "commands": ["git.cleanAllTracked"]
+    },
+    {
+      "before": ["leader", "g", "d", "a", "u"],
+      "commands": ["git.cleanAllUntracked"]
+    },
+    {
+      "before": ["leader", "g", "s", "s"],
+      "commands": ["git.stash"]
+    },
+    {
+      "before": ["leader", "g", "s", "i", "u"],
+      "commands": ["git.stashIncludeUntracked"]
+    },
+    {
+      "before": ["leader", "g", "a", "s"],
+      "commands": ["git.stashApply"]
+    },
+    {
+      "before": ["leader", "g", "a", "l", "s"],
+      "commands": ["git.stashApplyLatest"]
+    },
+    {
+      "before": ["leader", "g", "d", "s"],
+      "commands": ["git.stashDrop"]
+    },
+    {
+      "before": ["leader", "g", "p", "s"],
+      "commands": ["git.stashPop"]
+    },
+    {
+      "before": ["leader", "g", "p", "l", "s"],
+      "commands": ["git.stashPopLatest"]
+    },
+    {
+      "before": ["leader", "g", "c", "t"],
+      "commands": ["git.createTag"]
+    },
+    {
+      "before": ["leader", "g", "d", "t"],
+      "commands": ["git.deleteTag"]
+    },
+    {
+      "before": ["leader", "g", "p", "t"],
+      "commands": ["git.pushTags"]
+    },
+    {
+      "before": ["leader", "g", "f", "f"],
+      "commands": ["git.fetch"]
+    },
+    {
+      "before": ["leader", "g", "f", "p"],
+      "commands": ["git.fetchPrune"]
+    },
+    {
+      "before": ["leader", "g", "f", "f", "a", "r"],
+      "commands": ["git.fetchAll"]
+    },
+    {
+      "before": ["leader", "g", "o", "c"],
+      "commands": ["git.openChange"]
+    },
+    {
+      "before": ["leader", "g", "o", "f"],
+      "commands": ["git.openFile"]
+    },
+    {
+      "before": ["leader", "g", "s", "n"],
+      "commands": ["editor.action.dirtydiff.next"]
+    },
+    {
+      "before": ["leader", "g", "s", "N"],
+      "commands": ["editor.action.dirtydiff.previous"]
+    },
+    {
+      "before": ["leader", "g", "m", "n"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    {
+      "before": ["leader", "g", "m", "N"],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["leader", "g", "c", "n"],
+      "commands": ["workbench.action.compareEditor.nextChange"]
+    },
+    {
+      "before": ["leader", "g", "c", "N"],
+      "commands": ["workbench.action.compareEditor.previousChange"]
+    },
+    {
+      "before": ["leader", "g", "i", "v"],
+      "commands": ["toggle.diff.renderSideBySide"]
+    },
+    {
+      "before": ["leader", "m", "c", "b"],
+      "commands": ["merge-conflict.accept.both"]
+    },
+    {
+      "before": ["leader", "m", "c", "c"],
+      "commands": ["merge-conflict.accept.current"]
+    },
+    {
+      "before": ["leader", "m", "c", "i"],
+      "commands": ["merge-conflict.accept.incoming"]
+    },
+    {
+      "before": ["leader", "m", "c", "a", "b"],
+      "commands": ["merge-conflict.accept.all-both"]
+    },
+    {
+      "before": ["leader", "m", "c", "a", "c"],
+      "commands": ["merge-conflict.accept.all-current"]
+    },
+    {
+      "before": ["leader", "m", "c", "a", "i"],
+      "commands": ["merge-conflict.accept.all-incoming"]
+    },
+    {
+      "before": ["leader", "m", "c", "o"],
+      "commands": ["merge-conflict.compare"]
+    },
+    {
+      "before": ["leader", "m", "c", "n"],
+      "commands": ["merge-conflict.next"]
+    },
+    {
+      "before": ["leader", "m", "c", "N"],
+      "commands": ["merge-conflict.previous"]
+    }
+  ]
 }
 ```
 
@@ -1115,24 +1120,24 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.visualModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "g", "s"],
-			"commands": ["git.stageSelectedRanges"]
-		},
-		{
-			"before": ["<Leader>", "g", "u"],
-			"commands": ["git.unstageSelectedRanges"]
-		},
-		{
-			"before": ["<Leader>", "g", "r"],
-			"commands": ["git.revertSelectedRanges"]
-		},
-		{
-			"before": ["leader", "m", "c", "a"],
-			"commands": ["merge-conflict.accept.selection"]
-		}
-	]
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "g", "s"],
+      "commands": ["git.stageSelectedRanges"]
+    },
+    {
+      "before": ["<Leader>", "g", "u"],
+      "commands": ["git.unstageSelectedRanges"]
+    },
+    {
+      "before": ["<Leader>", "g", "r"],
+      "commands": ["git.revertSelectedRanges"]
+    },
+    {
+      "before": ["leader", "m", "c", "a"],
+      "commands": ["merge-conflict.accept.selection"]
+    }
+  ]
 }
 ```
 
@@ -1177,90 +1182,88 @@ Below is an example of a [settings.json](https://code.visualstudio.com/Docs/cust
 
 ```json
 {
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<Leader>", "d", "f"],
-			"commands": ["workbench.view.debug"]
-		},
-		{
-			"before": ["<Leader>", "d", "c"],
-			"commands": ["workbench.action.debug.continue"]
-		},
-		{
-			"before": ["<Leader>", "d", "p"],
-			"commands": ["workbench.action.debug.pause"]
-		},
-		{
-			"before": ["<Leader>", "d", "r"],
-			"commands": ["workbench.action.debug.restart"]
-		},
-		{
-			"before": ["<Leader>", "d", "h"],
-			"commands": ["editor.debug.action.showDebugHover"]
-		},
-		{
-			"before": ["<Leader>", "d", "s"],
-			"commands": ["workbench.action.debug.start"]
-		},
-		{
-			"before": ["<Leader>", "d", "i"],
-			"commands": ["workbench.action.debug.stepInto"]
-		},
-		{
-			"before": ["<Leader>", "d", "u"],
-			"commands": ["workbench.action.debug.stepOut"]
-		},
-		{
-			"before": ["<Leader>", "d", "o"],
-			"commands": ["workbench.action.debug.stepOver"]
-		},
-		{
-			"before": ["<Leader>", "d", "b"],
-			"commands": ["editor.debug.action.toggleBreakpoint"]
-		},
-		{
-			"before": ["<Leader>", "d", "x"],
-			"commands": ["workbench.action.debug.stop"]
-		},
-		{
-			"before": ["<Leader>", "d", "a", "l"],
-			"commands": ["editor.debug.action.addLogPoint"]
-		},
-		{
-			"before": ["<Leader>", "d", "a", "f"],
-			"commands": [
-				"workbench.debug.viewlet.action.addFunctionBreakpointAction"
-			]
-		},
-		{
-			"before": ["<Leader>", "d", "a", "c"],
-			"commands": ["editor.debug.action.conditionalBreakpoint"]
-		},
-		{
-			"before": ["<Leader>", "d", "a", "i"],
-			"commands": ["editor.debug.action.toggleInlineBreakpoint"]
-		},
-		{
-			"before": ["<Leader>", "d", "e", "b"],
-			"commands": ["workbench.debug.viewlet.action.enableAllBreakpoints"]
-		},
-		{
-			"before": ["<Leader>", "d", "d", "b"],
-			"commands": ["workbench.debug.viewlet.action.disableAllBreakpoints"]
-		},
-		{
-			"before": ["<Leader>", "d", "r", "b"],
-			"commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
-		},
-		{
-			"before": ["<Leader>", "d", "n"],
-			"commands": ["editor.debug.action.goToNextBreakpoint"]
-		},
-		{
-			"before": ["<Leader>", "d", "N"],
-			"commands": ["editor.debug.action.goToPreviousBreakpoint"]
-		}
-	]
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "d", "f"],
+      "commands": ["workbench.view.debug"]
+    },
+    {
+      "before": ["<Leader>", "d", "c"],
+      "commands": ["workbench.action.debug.continue"]
+    },
+    {
+      "before": ["<Leader>", "d", "p"],
+      "commands": ["workbench.action.debug.pause"]
+    },
+    {
+      "before": ["<Leader>", "d", "r"],
+      "commands": ["workbench.action.debug.restart"]
+    },
+    {
+      "before": ["<Leader>", "d", "h"],
+      "commands": ["editor.debug.action.showDebugHover"]
+    },
+    {
+      "before": ["<Leader>", "d", "s"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["<Leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    {
+      "before": ["<Leader>", "d", "u"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+    {
+      "before": ["<Leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<Leader>", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "x"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "l"],
+      "commands": ["editor.debug.action.addLogPoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "f"],
+      "commands": ["workbench.debug.viewlet.action.addFunctionBreakpointAction"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "c"],
+      "commands": ["editor.debug.action.conditionalBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "i"],
+      "commands": ["editor.debug.action.toggleInlineBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "e", "b"],
+      "commands": ["workbench.debug.viewlet.action.enableAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "d", "b"],
+      "commands": ["workbench.debug.viewlet.action.disableAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "r", "b"],
+      "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "n"],
+      "commands": ["editor.debug.action.goToNextBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "N"],
+      "commands": ["editor.debug.action.goToPreviousBreakpoint"]
+    }
+  ]
 }
 ```
 
@@ -1298,82 +1301,82 @@ Visual Studio Code lets you perform most tasks directly from the keyboard. This 
 
 ```json
 [
-	// Explorer
-	{
-		"key": "e",
-		"command": "workbench.explorer.fileView.focus",
-		"when": "!editorFocus && !inputFocus"
-	},
-	{
-		"key": "a",
-		"command": "explorer.newFile",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	},
-	{
-		"key": "shift+a",
-		"command": "explorer.newFolder",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	},
-	{
-		"key": "y",
-		"command": "filesExplorer.copy",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	},
-	{
-		"key": "x",
-		"command": "filesExplorer.cut",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	},
-	{
-		"key": "p",
-		"command": "filesExplorer.paste",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		"key": "r",
-		"command": "renameFile",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		"key": "d",
-		"command": "moveFileToTrash",
-		"when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		"key": "shift+d",
-		"command": "deleteFile",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		"key": "c",
-		"command": "workbench.files.action.collapseExplorerFolders",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-	},
-	{
-		"key": "s",
-		"command": "explorer.openToSide",
-		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-	},
-	{
-		"key": "f",
-		"command": "revealFileInOS",
-		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-	},
-	{
-		"key": "t",
-		"command": "openInTerminal",
-		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-	},
-	{
-		"key": "u",
-		"command": "copyFilePath",
-		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-	},
-	{
-		"key": "i",
-		"command": "copyRelativeFilePath",
-		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-	}
+  // Explorer
+  {
+    "key": "e",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!editorFocus && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "moveFileToTrash",
+    "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "f",
+    "command": "revealFileInOS",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "t",
+    "command": "openInTerminal",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "u",
+    "command": "copyFilePath",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "i",
+    "command": "copyRelativeFilePath",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  }
 ]
 ```
 
@@ -1403,42 +1406,42 @@ Visual Studio Code lets you perform most tasks directly from the keyboard. This 
 
 ```json
 [
-	// Terminal
-	{
-		"key": "ctrl+m",
-		"command": "workbench.action.toggleMaximizedPanel",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "workbench.action.terminal.scrollDown",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+k",
-		"command": "workbench.action.terminal.scrollUp",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+h",
-		"command": "workbench.action.terminal.scrollDownPage",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+l",
-		"command": "workbench.action.terminal.scrollUpPage",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "workbench.action.terminal.focusNext",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+n",
-		"command": "workbench.action.terminal.focusPrevious",
-		"when": "terminalFocus && terminalProcessSupported"
-	}
+  // Terminal
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported"
+  }
 ]
 ```
 
