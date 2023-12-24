@@ -2479,6 +2479,7 @@
 		"editor.wordWrap",
 		"editor.lineHeight",
 		"editor.letterSpacing",
+		"editor.lineNumbers",
 		"editor.glyphMargin",
 		"diffEditor.wordWrap",
 		"editor.formatOnSave",
