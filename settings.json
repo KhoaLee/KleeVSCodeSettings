@@ -1,0 +1,2526 @@
+{
+	/*==================================================================================
+	================================== VIM CONFIGURATION ===============================
+	==================================================================================*/
+	// Copy indent from current line when starting a new line
+	"vim.autoindent": true,
+	// Highlights all text matching current search
+	"vim.hlsearch": true,
+	// Ignore case in search patterns
+	"vim.ignorecase": true,
+	// Show the next match while entering a search
+	"vim.scroll": 5,
+	"vim.incsearch": true,
+	"vim.leader": "<space>",
+	"vim.sneak": true,
+	"vim.showcmd": true,
+	"vim.surround": true,
+	"vim.easymotion": true,
+	"vim.useCtrlKeys": true,
+	"vim.useSystemClipboard": true,
+	"vim.sneakUseIgnorecaseAndSmartcase": true,
+	"vim.cursorStylePerMode.insert": "underline",
+	"vim.cursorStylePerMode.normal": "block",
+	"vim.cursorStylePerMode.replace": "line",
+	"vim.cursorStylePerMode.visual": "line",
+	"vim.cursorStylePerMode.visualblock": "line",
+	"vim.cursorStylePerMode.visualline": "line",
+	"vim.normalModeKeyBindings": [
+		//<leader>w to save file
+		{
+			"before": [
+				"<leader>",
+				"w"
+			],
+			"commands": [
+				"workbench.action.files.save"
+			]
+		},
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"s",
+				"b"
+			],
+			"commands": [
+				"workbench.action.toggleSidebarVisibility"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"r",
+				"i",
+				"e"
+			],
+			"commands": [
+				"revealInExplorer"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"h"
+			],
+			"after": [
+				"_"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"v",
+				"f"
+			],
+			"commands": [
+				"workbench.explorer.fileView.focus"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"q",
+				"f"
+			],
+			"commands": [
+				"editor.action.quickFix"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"s"
+			],
+			"commands": [
+				"editor.action.duplicateSelection"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"d"
+			],
+			"commands": [
+				"editor.action.formatDocument"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"r",
+				"n"
+			],
+			"commands": [
+				"editor.action.rename"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"t",
+				"s"
+			],
+			"commands": [
+				"workbench.action.gotoSymbol"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"u"
+			],
+			"commands": [
+				"editor.action.transformToTitlecase"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"e",
+				"w"
+			],
+			"commands": [
+				"workbench.action.toggleEditorWidths"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"q",
+				"o"
+			],
+			"commands": [
+				"workbench.action.quickOpen"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"p"
+			],
+			"commands": [
+				"workbench.action.showCommands"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"n"
+			],
+			"commands": [
+				"editor.action.marker.next"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"N"
+			],
+			"commands": [
+				"editor.action.marker.prev"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"r"
+			],
+			"commands": [
+				"workbench.action.tasks.reRunTask"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"c"
+			],
+			"commands": [
+				"workbench.action.tasks.configureTaskRunner"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"n",
+				"h"
+			],
+			"commands": [
+				"notifications.hideList"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"n",
+				"c"
+			],
+			"commands": [
+				"notifications.clearAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"n",
+				"f"
+			],
+			"commands": [
+				"notifications.focusToasts"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"n",
+				"s"
+			],
+			"commands": [
+				"notifications.showList"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"l"
+			],
+			"commands": [
+				"workbench.action.gotoLine"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"f",
+				"b"
+			],
+			"commands": [
+				"breadcrumbs.focusAndSelect"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"w"
+			],
+			"commands": [
+				"editor.action.toggleWordWrap"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"i",
+				"s"
+			],
+			"commands": [
+				"workbench.action.increaseViewSize"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"d",
+				"s"
+			],
+			"commands": [
+				"ench.action.decreaseViewSize"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"i",
+				"h"
+			],
+			"commands": [
+				"workbench.action.increaseViewHeight"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"d",
+				"h"
+			],
+			"commands": [
+				"workbench.action.decreaseViewHeight"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"i",
+				"w"
+			],
+			"commands": [
+				"workbench.action.increaseViewWidth"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"v",
+				"d",
+				"w"
+			],
+			"commands": [
+				"workbench.action.decreaseViewWidth"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"t"
+			],
+			"commands": [
+				"workbench.action.files.newUntitledFile"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"n"
+			],
+			"commands": [
+				"workbench.action.nextEditor"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"N"
+			],
+			"commands": [
+				"workbench.action.previousEditor"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"g",
+				"j"
+			],
+			"commands": [
+				"workbench.action.moveActiveEditorGroupDown"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"g",
+				"h"
+			],
+			"commands": [
+				"workbench.action.moveActiveEditorGroupLeft"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"g",
+				"l"
+			],
+			"commands": [
+				"workbench.action.moveActiveEditorGroupRight"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"g",
+				"k"
+			],
+			"commands": [
+				"workbench.action.moveActiveEditorGroupUp"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"i",
+				"f"
+			],
+			"commands": [
+				"workbench.action.moveEditorToFirstGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"i",
+				"l"
+			],
+			"commands": [
+				"workbench.action.moveEditorToLastGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"i",
+				"n"
+			],
+			"commands": [
+				"workbench.action.moveEditorToNextGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"i",
+				"p"
+			],
+			"commands": [
+				"workbench.action.moveEditorToPreviousGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"e",
+				"h"
+			],
+			"commands": [
+				"workbench.action.moveEditorLeftInGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"v",
+				"e",
+				"l"
+			],
+			"commands": [
+				"workbench.action.moveEditorRightInGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"e",
+				"g"
+			],
+			"commands": [
+				"workbench.action.closeEditorsAndGroup"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"o",
+				"e"
+			],
+			"commands": [
+				"workbench.action.closeOtherEditors"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"e",
+				"o"
+			],
+			"commands": [
+				"workbench.action.closeEditorsInOtherGroups"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"h"
+			],
+			"commands": [
+				"workbench.action.splitEditorLeft"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"j"
+			],
+			"commands": [
+				"workbench.action.splitEditorDown"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"k"
+			],
+			"commands": [
+				"workbench.action.splitEditorUp"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"l"
+			],
+			"commands": [
+				"workbench.action.splitEditorRight"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"g"
+			],
+			"commands": [
+				"workbench.scm.focus"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"t",
+				"l"
+			],
+			"commands": [
+				"timeline.focus"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"i",
+				"r"
+			],
+			"commands": [
+				"git.init"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"a",
+				"i"
+			],
+			"commands": [
+				"git.ignore"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"g"
+			],
+			"commands": [
+				"github.publish"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"a",
+				"r"
+			],
+			"commands": [
+				"git.addRemote"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"r",
+				"r"
+			],
+			"commands": [
+				"git.removeRemote"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"c"
+			],
+			"commands": [
+				"git.stage"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"a",
+				"c"
+			],
+			"commands": [
+				"git.stageAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"a",
+				"m"
+			],
+			"commands": [
+				"git.stageAllMerge"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"a",
+				"t"
+			],
+			"commands": [
+				"git.stageAllTracked"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"a",
+				"u"
+			],
+			"commands": [
+				"git.stageAllUntracked"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"u",
+				"c"
+			],
+			"commands": [
+				"git.unstage"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"u",
+				"a",
+				"c"
+			],
+			"commands": [
+				"git.unstageAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"c"
+			],
+			"commands": [
+				"git.commit"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"a"
+			],
+			"commands": [
+				"git.commitAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"s"
+			],
+			"commands": [
+				"git.commitStaged"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"e"
+			],
+			"commands": [
+				"git.commitEmpty"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"u",
+				"l",
+				"c"
+			],
+			"commands": [
+				"git.undoCommit"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"h"
+			],
+			"commands": [
+				"git.push"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"f"
+			],
+			"commands": [
+				"git.pushForce"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"b",
+				"t"
+			],
+			"commands": [
+				"git.pushTo"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"b",
+				"t",
+				"f"
+			],
+			"commands": [
+				"git.pushToForce"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"l"
+			],
+			"commands": [
+				"git.pull"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"P",
+				"f"
+			],
+			"commands": [
+				"git.pullFrom"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"P",
+				"r"
+			],
+			"commands": [
+				"git.pullRebase"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"A",
+				"r"
+			],
+			"commands": [
+				"git.rebaseAbort"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"b"
+			],
+			"commands": [
+				"git.branch"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"b",
+				"f"
+			],
+			"commands": [
+				"git.branchFrom"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"b"
+			],
+			"commands": [
+				"git.deleteBranch"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"m",
+				"b"
+			],
+			"commands": [
+				"git.merge"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"b"
+			],
+			"commands": [
+				"git.publish"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"r",
+				"b"
+			],
+			"commands": [
+				"git.renameBranch"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"R",
+				"b"
+			],
+			"commands": [
+				"git.rebase"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"C"
+			],
+			"commands": [
+				"git.checkout"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"C",
+				"d"
+			],
+			"commands": [
+				"git.checkoutDetached"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"p"
+			],
+			"commands": [
+				"git.cherryPick"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"c"
+			],
+			"commands": [
+				"git.clean"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"a",
+				"c"
+			],
+			"commands": [
+				"git.cleanAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"a",
+				"t"
+			],
+			"commands": [
+				"git.cleanAllTracked"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"a",
+				"u"
+			],
+			"commands": [
+				"git.cleanAllUntracked"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"s"
+			],
+			"commands": [
+				"git.stash"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"i",
+				"u"
+			],
+			"commands": [
+				"git.stashIncludeUntracked"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"a",
+				"s"
+			],
+			"commands": [
+				"git.stashApply"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"a",
+				"l",
+				"s"
+			],
+			"commands": [
+				"git.stashApplyLatest"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"s"
+			],
+			"commands": [
+				"git.stashDrop"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"s"
+			],
+			"commands": [
+				"git.stashPop"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"l",
+				"s"
+			],
+			"commands": [
+				"git.stashPopLatest"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"t"
+			],
+			"commands": [
+				"git.createTag"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"d",
+				"t"
+			],
+			"commands": [
+				"git.deleteTag"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"p",
+				"t"
+			],
+			"commands": [
+				"git.pushTags"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"f",
+				"f"
+			],
+			"commands": [
+				"git.fetch"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"f",
+				"p"
+			],
+			"commands": [
+				"git.fetchPrune"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"f",
+				"f",
+				"a",
+				"r"
+			],
+			"commands": [
+				"git.fetchAll"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"o",
+				"c"
+			],
+			"commands": [
+				"git.openChange"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"o",
+				"f"
+			],
+			"commands": [
+				"git.openFile"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"n"
+			],
+			"commands": [
+				"editor.action.dirtydiff.next"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s",
+				"N"
+			],
+			"commands": [
+				"editor.action.dirtydiff.previous"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"m",
+				"n"
+			],
+			"commands": [
+				"workbench.action.editor.nextChange"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"m",
+				"N"
+			],
+			"commands": [
+				"workbench.action.editor.previousChange"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"n"
+			],
+			"commands": [
+				"workbench.action.compareEditor.nextChange"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"c",
+				"N"
+			],
+			"commands": [
+				"workbench.action.compareEditor.previousChange"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"i",
+				"v"
+			],
+			"commands": [
+				"toggle.diff.renderSideBySide"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"b"
+			],
+			"commands": [
+				"merge-conflict.accept.both"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"c"
+			],
+			"commands": [
+				"merge-conflict.accept.current"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"i"
+			],
+			"commands": [
+				"merge-conflict.accept.incoming"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"a",
+				"b"
+			],
+			"commands": [
+				"merge-conflict.accept.all-both"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"a",
+				"c"
+			],
+			"commands": [
+				"merge-conflict.accept.all-current"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"a",
+				"i"
+			],
+			"commands": [
+				"merge-conflict.accept.all-incoming"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"o"
+			],
+			"commands": [
+				"merge-conflict.compare"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"n"
+			],
+			"commands": [
+				"merge-conflict.next"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"N"
+			],
+			"commands": [
+				"merge-conflict.previous"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"f"
+			],
+			"commands": [
+				"workbench.view.debug"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"c"
+			],
+			"commands": [
+				"workbench.action.debug.continue"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"p"
+			],
+			"commands": [
+				"workbench.action.debug.pause"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"r"
+			],
+			"commands": [
+				"workbench.action.debug.restart"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"h"
+			],
+			"commands": [
+				"editor.debug.action.showDebugHover"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"s"
+			],
+			"commands": [
+				"workbench.action.debug.start"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"i"
+			],
+			"commands": [
+				"workbench.action.debug.stepInto"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"u"
+			],
+			"commands": [
+				"workbench.action.debug.stepOut"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"o"
+			],
+			"commands": [
+				"workbench.action.debug.stepOver"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"b"
+			],
+			"commands": [
+				"editor.debug.action.toggleBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"x"
+			],
+			"commands": [
+				"workbench.action.debug.stop"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"a",
+				"l"
+			],
+			"commands": [
+				"editor.debug.action.addLogPoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"a",
+				"f"
+			],
+			"commands": [
+				"workbench.debug.viewlet.action.addFunctionBreakpointAction"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"a",
+				"c"
+			],
+			"commands": [
+				"editor.debug.action.conditionalBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"a",
+				"i"
+			],
+			"commands": [
+				"editor.debug.action.toggleInlineBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"e",
+				"b"
+			],
+			"commands": [
+				"workbench.debug.viewlet.action.enableAllBreakpoints"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"d",
+				"b"
+			],
+			"commands": [
+				"workbench.debug.viewlet.action.disableAllBreakpoints"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"r",
+				"b"
+			],
+			"commands": [
+				"workbench.debug.viewlet.action.removeAllBreakpoints"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"n"
+			],
+			"commands": [
+				"editor.debug.action.goToNextBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"N"
+			],
+			"commands": [
+				"editor.debug.action.goToPreviousBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"v",
+				"s",
+				"c"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"command": "whichkey.triggerKey",
+					"args": "m"
+				}
+			]
+		}
+	],
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"k"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"w",
+				"k",
+				"s"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		},
+		{
+			"before": [
+				"p"
+			],
+			"after": [
+				"p",
+				"g",
+				"v",
+				"y"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"q",
+				"f"
+			],
+			"commands": [
+				"editor.action.quickFix"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"s",
+				"b"
+			],
+			"commands": [
+				"workbench.action.toggleSidebarVisibility"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"s"
+			],
+			"commands": [
+				"editor.action.duplicateSelection"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"editor.action.formatSelection"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"u"
+			],
+			"commands": [
+				"editor.action.transformToTitlecase"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"t",
+				"e",
+				"w"
+			],
+			"commands": [
+				"workbench.action.toggleEditorWidths"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"q",
+				"o"
+			],
+			"commands": [
+				"workbench.action.quickOpen"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"p"
+			],
+			"commands": [
+				"workbench.action.showCommands"
+			]
+		},
+		{
+			"before": [
+				"<C-j>"
+			],
+			"commands": [
+				"editor.action.moveLinesDownAction"
+			]
+		},
+		{
+			"before": [
+				"<C-k>"
+			],
+			"commands": [
+				"editor.action.moveLinesUpAction"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"s"
+			],
+			"commands": [
+				"git.stageSelectedRanges"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"u"
+			],
+			"commands": [
+				"git.unstageSelectedRanges"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"g",
+				"r"
+			],
+			"commands": [
+				"git.revertSelectedRanges"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"m",
+				"c",
+				"a"
+			],
+			"commands": [
+				"merge-conflict.accept.selection"
+			]
+		},
+		{
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"command": "whichkey.triggerKey",
+					"args": "m"
+				}
+			]
+		},
+		{
+			"before": [
+				">"
+			],
+			"commands": [
+				"editor.action.indentLines"
+			]
+		},
+		{
+			"before": [
+				"<"
+			],
+			"commands": [
+				"editor.action.outdentLines"
+			]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			"before": [
+				">"
+			],
+			"after": [
+				">",
+				"g",
+				"v"
+			],
+			"commands": [
+				"editor.action.indentLines"
+			]
+		},
+		{
+			"before": [
+				"<"
+			],
+			"after": [
+				"<",
+				"g",
+				"v"
+			],
+			"commands": [
+				"editor.action.outdentLines"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d"
+			],
+			"after": [
+				"d",
+				"d"
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"v",
+				"s",
+				"c"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"command": "whichkey.triggerKey",
+					"args": "m"
+				}
+			]
+		},
+		{
+			"before": [
+				"<space>",
+				"v",
+				"s",
+				"c"
+			],
+			"commands": [
+				"vspacecode.space"
+			]
+		},
+		{
+			"before": [
+				","
+			],
+			"commands": [
+				"vspacecode.space",
+				{
+					"command": "whichkey.triggerKey",
+					"args": "m"
+				}
+			]
+		}
+	],
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false,
+		// VS Code new marker @ next occurence
+		"<C-c>": true,
+		// Cut
+		// "<C-x>": false,
+		// Paste
+		// "<C-v>": false ,
+		// "<C-z>": false,
+		// "<C-y>": false
+	},
+	// TO IMPROVE VIM PERFORMANCE
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	},
+	/*==================================================================================
+	================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
+	==================================================================================*/
+	"apc.electron": {
+		"frame": false,
+		"titleBarStyle": "hiddenInset",
+		"visualEffectState": "inactive",
+		"transparent": false,
+		"opacity": 1,
+	},
+	"apc.font.family": "RobotoMono Nerd Font",
+	"apc.monospace.font.family": "RobotoMono Nerd Font",
+	"apc.header": {
+		"height": 24,
+		"default": 24,
+		"compact": 24,
+		"fontSize": 11
+	},
+	"apc.menubar.compact": true,
+	"apc.activityBar": {
+		"itemSize": 28,
+		"size": 28,
+		"position": "bottom",
+	},
+	"apc.statusBar": {
+		// This option will apply status bar only at bottom the editor file
+		"position": "editor-bottom",
+		"height": 20,
+		"fontSize": 12
+	},
+	"apc.sidebar.titlebar": {
+		"height": 32,
+		"fontSize": 12,
+	},
+	"apc.listRow": {
+		// Remember to exclude the "monaco-table" to avoid the height not fit with the text content on keyboard shortcuts
+		"lists": [
+			"customview-tree",
+			"debug-breakpoints",
+			"debug-view-content",
+			"explorer-folders-view",
+			"open-editors",
+			"outline-tree",
+			"results",
+			"scm-view",
+			"select-box-dropdown-list-container",
+			"settings-toc-wrapper",
+			"settings-tree-container",
+			"tabs-list",
+			"tree",
+		],
+		"fontSize": 12,
+		"parts": {
+			"quick-input-list": {
+				"height": 20,
+				"fontSize": 12,
+			},
+			"explorer-folders-view": {
+				"height": 20,
+				"fontSize": 12,
+			},
+			"extensions-list": {
+				"height": 60,
+				"fontSize": 12,
+			},
+			"notifications-list-container": {
+				"height": 120,
+				"fontSize": 12,
+			},
+		},
+	},
+	/*==================================================================================
+	================================== GENERAL CONFIGURATION ===========================
+	==================================================================================*/
+	"security.workspace.trust.untrustedFiles": "open",
+	"vsintellicode.modify.editor.suggestSelection": "enabled",
+	"search.searchOnType": false,
+	"screencastMode.fontSize": 60,
+	"telemetry.telemetryLevel": "all",
+	"search.exclude": {
+		"**/env": true,
+		"**/venv": true,
+		"**/node_modules": true,
+		"**/bower_components": true
+	},
+	"accessibility.dimUnfocused.enabled": false,
+	/*==================================================================================
+	================================ WORKBENCH CONFIGURATION ===========================
+	==================================================================================*/
+	"workbench.tree.indent": 16,
+	"workbench.reduceMotion": "on",
+	"workbench.editor.limit.value": 1,
+	"workbench.editor.limit.enabled": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.editor.enablePreview": false,
+	"workbench.editor.limit.perEditorGroup": true,
+	"workbench.tree.renderIndentGuides": "onHover",
+	"workbench.editor.closeEmptyGroups": true,
+	"workbench.activityBar.location": "side",
+	"workbench.colorTheme": "Kanagawa",
+	"workbench.preferredDarkColorTheme": "Kanagawa",
+	"workbench.preferredHighContrastColorTheme": "Kanagawa",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.productIconTheme": "fluent-icons",
+	"workbench.editor.showTabs": "single",
+	"workbench.editor.openPositioning": "left",
+	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.closeOnFileDelete": false,
+	"workbench.editor.labelFormat": "long",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	},
+	/*==================================================================================
+	================================ EDITOR CONFIGURATION ===========================
+	==================================================================================*/
+	"editor.tabSize": 4,
+	"editor.wordWrap": "on",
+	"editor.fontSize": 11,
+	"editor.inlayHints.fontSize": 11,
+	"editor.lineHeight": 1.5,
+	"editor.letterSpacing": 1,
+	"editor.lineNumbers": "relative",
+	"editor.glyphMargin": true,
+	"diffEditor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"editor.tabCompletion": "on",
+	"editor.wordWrapColumn": 160,
+	"editor.linkedEditing": true,
+	"editor.cursorStyle": "block",
+	"editor.fontWeight": "normal",
+	"editor.fontLigatures": false,
+	"editor.minimap.enabled": false,
+	"editor.cursorBlinking": "solid",
+	"editor.renderWhitespace": "boundary",
+	"editor.suggestSelection": "first",
+	"editor.foldingMaximumRegions": 10000,
+	"editor.foldingImportsByDefault": true,
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.guides.bracketPairsHorizontal": false,
+	"editor.bracketPairColorization.enabled": false,
+	"editor.guides.highlightActiveBracketPair": false,
+	"editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
+	"editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+	"editor.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"editor.scrollbar.vertical": "hidden",
+	"editor.inlineSuggest.enabled": true,
+	"editor.inlayHints.enabled": "on",
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.accessibilitySupport": "off",
+	"editor.smoothScrolling": true,
+	"editor.stickyScroll.enabled": false,
+	"editor.quickSuggestions": {
+		"comments": "on",
+		"strings": "on",
+		"other": "on"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"editor.tokenColorCustomizations": {
+		"[*Light*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#000"
+					}
+				}
+			]
+		},
+		"[*Dark*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#fff"
+					}
+				}
+			]
+		},
+		"textMateRules": [
+			{
+				"scope": "keyword.other.dotenv",
+				"settings": {
+					"foreground": "#FF000000"
+				}
+			}
+		]
+	},
+	/*==================================================================================
+	=================================== JSON CONFIGURATION =============================
+	==================================================================================*/
+	"json.maxItemsComputed": 10000,
+	"[json][jsonc]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	/*==================================================================================
+	================================== DEBUG CONFIGURATION =============================
+	==================================================================================*/
+	"debug.autoExpandLazyVariables": true,
+	"debug.terminal.clearBeforeReusing": true,
+	"debug.console.wordWrap": true,
+	"debug.console.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"debug.console.fontSize": 11,
+	/*==================================================================================
+	=============================== TERMINAL CONFIGURATION =============================
+	==================================================================================*/
+	"terminal.integrated.fontSize": 11,
+	"terminal.integrated.lineHeight": 1,
+	"terminal.integrated.cursorWidth": 1,
+	"terminal.integrated.letterSpacing": 1,
+	"terminal.integrated.inheritEnv": true,
+	"terminal.integrated.scrollback": 1000,
+	"terminal.integrated.fontWeight": "normal",
+	// =============== For MacOS ===========
+	// "terminal.external.osxExec": "iterm.app",
+	// =============== For Window ===========
+	"terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe",
+	"terminal.integrated.detectLocale": "on",
+	"terminal.integrated.allowChords": false,
+	"terminal.integrated.customGlyphs": true,
+	"terminal.integrated.unicodeVersion": "11",
+	"terminal.integrated.cursorStyle": "block",
+	"terminal.integrated.gpuAcceleration": "on",
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.macOptionIsMeta": true,
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+	"terminal.integrated.shellIntegration.enabled": true,
+	"terminal.integrated.enablePersistentSessions": false,
+	"terminal.integrated.tabs.defaultIcon": "terminal",
+	"terminal.integrated.shellIntegration.decorationsEnabled": "both",
+	"terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"terminal.integrated.stickyScroll.enabled": false,
+	// =================== For terminal on Windows ============
+	"terminal.integrated.profiles.windows": {
+		"Ubuntu (WSL)": {
+			"path": [
+				"C:\\Windows\\System32\\wsl.exe",
+			],
+			"source": "Ubuntu (WSL)",
+			"icon": "terminal-ubuntu",
+			"args": [
+				"--distribution",
+				"Ubuntu"
+			]
+		},
+		// "PowerShell": {
+		// 	"source": "PowerShell",
+		// 	"icon": "terminal-powershell"
+		// },
+		// "Command Prompt": {
+		// 	"path": [
+		// 		"${env:windir}\\Sysnative\\cmd.exe",
+		// 		"${env:windir}\\System32\\cmd.exe"
+		// 	],
+		// 	"args": [],
+		// 	"icon": "terminal-cmd"
+		// },
+	},
+	// ================== For terminal on Mac =================
+	"terminal.integrated.profiles.osx": {
+		"zsh": {
+			"path": "/bin/zsh",
+			"args": [
+				"-l",
+				"-i"
+			],
+			"icon": "terminal-bash"
+		}
+	},
+	/*==================================================================================
+	================================= FILES CONFIGURATION ==============================
+	==================================================================================*/
+	"files.autoSave": "afterDelay",
+	"files.trimTrailingWhitespace": true,
+	"files.autoSaveDelay": 10000,
+	"files.insertFinalNewline": true,
+	"files.associations": {
+		"*.css": "tailwindcss",
+		"*.scss": "postcss",
+		".env*": "dotenv"
+	},
+	"files.watcherExclude": {
+		"env-*": true,
+		"**/env/**": true,
+		"**/venv/**": true,
+		"**/.git/objects/**": true,
+		"**/node_modules/**": true,
+		"**/.git/subtree-cache/**": true
+	},
+	"files.exclude": {
+		"*.sublime-*": true,
+		"**/.DS_Store": true,
+		"**/node_modules": true,
+		"**/.git/objects/**": true
+	},
+	"files.enableTrash": true,
+	/*==================================================================================
+	============================== FILE EXPLORER CONFIGURATION =========================
+	==================================================================================*/
+	"explorer.confirmDelete": true,
+	"explorer.confirmDragAndDrop": true,
+	// NOTE: For kiev repository
+	// "typescript.tsdk": "../kiev/ai4biz-initci-fe/node_modules/typescript/lib",
+	// NOTE: For vatican repository
+	// "typescript.tsdk": "../vatican/ai4biz-initci-fe/node_modules/typescript/lib",
+	/*##################################################################################
+	################################# EXTENSIONS CONFIGURATION #########################
+	####################################################################################*/
+	/*==================================================================================
+	================================== GIT CONFIGURATION ===============================
+	==================================================================================*/
+	"githubPullRequests.pullBranch": "never",
+	"githubPullRequests.createOnPublishBranch": "never",
+	"git.confirmSync": false,
+	"git.autorefresh": false,
+	"git.enableSmartCommit": true,
+	"git.terminalGitEditor": true,
+	"git-graph.dialog.rebase.launchInteractiveRebase": true,
+	/*==================================================================================
+	================================== NOTEBOOK CONFIGURATION ==========================
+	==================================================================================*/
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "right"
+	},
+	"jupyter.askForKernelRestart": false,
+	"notebook.breadcrumbs.showCodeCells": false,
+	"notebook.output.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	/*==================================================================================
+	================================== AWS CONFIGURATION ===============================
+	==================================================================================*/
+	// "aws.samcli.location": "/usr/local/bin/sam",
+	// "aws.telemetry": false,
+	/*==================================================================================
+	================================== MICS CONFIGURATION ===============================
+	==================================================================================*/
+	"remote.autoForwardPorts": false,
+	"window.commandCenter": false,
+	"window.titleBarStyle": "custom",
+	"breadcrumbs.enabled": false,
+	"scm.inputFontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', RobotoMono Nerd Font",
+	"scm.inputFontSize": 11,
+	"vsicons.dontShowNewVersionMessage": true,
+	"vva.trustedDomain": true,
+	/*==================================================================================
+	=================== WORKBENCH CONFIGURATION APPLY TO ALL PROFILES ==================
+	==================================================================================*/
+	"workbench.settings.applyToAllProfiles": [
+		/*==================================================================================
+		================================= GENERAL CONFIGURATION ============================
+		==================================================================================*/
+		"scm.defaultViewMode",
+		"scm.inputFontFamily",
+		"scm.inputFontSize",
+		"search.defaultViewMode",
+		"security.workspace.trust.untrustedFiles",
+		"vsintellicode.modify.editor.suggestSelection",
+		"window.commandCenter",
+		"window.density.editorTabHeight",
+		"window.titleBarStyle",
+		"search.searchOnType",
+		"screencastMode.fontSize",
+		"telemetry.telemetryLevel",
+		"breadcrumbs.enabled",
+		"search.exclude",
+		"remote.autoForwardPorts",
+		"accessibility.dimUnfocused.enabled",
+		/*==================================================================================
+		=================================== VIM CONFIGURATION ==============================
+		==================================================================================*/
+		"vim.normalModeKeyBindings",
+		"vim.normalModeKeyBindingsNonRecursive",
+		"vim.insertModeKeyBindings",
+		"vim.insertModeKeyBindingsNonRecursive",
+		"vim.visualModeKeyBindings",
+		"vim.visualModeKeyBindingsNonRecursive",
+		"vim.handleKeys",
+		"vim.cursorStylePerMode.insert",
+		"vim.cursorStylePerMode.normal",
+		"vim.cursorStylePerMode.replace",
+		"vim.cursorStylePerMode.visual",
+		"vim.cursorStylePerMode.visualblock",
+		"vim.cursorStylePerMode.visualline",
+		"vim.digraphs",
+		"vim.autoindent",
+		"vim.easymotion",
+		"vim.easymotionDimBackground",
+		"vim.easymotionDimColor",
+		"vim.easymotionIncSearchForegroundColor",
+		"vim.easymotionJumpToAnywhereRegex",
+		"vim.easymotionKeys",
+		"vim.easymotionMarkerBackgroundColor",
+		"vim.easymotionMarkerFontWeight",
+		"vim.easymotionMarkerForegroundColorOneChar",
+		"vim.easymotionMarkerForegroundColorTwoCharFirst",
+		"vim.easymotionMarkerForegroundColorTwoCharSecond",
+		"vim.highlightedyank.color",
+		"vim.highlightedyank.duration",
+		"vim.history",
+		"vim.hlsearch",
+		"vim.ignorecase",
+		"vim.inccommand",
+		"vim.incsearch",
+		"vim.joinspaces",
+		"vim.leader",
+		"vim.matchpairs",
+		"vim.maxmapdepth",
+		"vim.mouseSelectionGoesIntoVisualMode",
+		"vim.overrideCopy",
+		"vim.report",
+		"vim.scroll",
+		"vim.showcmd",
+		"vim.showmodename",
+		"vim.smartcase",
+		"vim.sneak",
+		"vim.sneakUseIgnorecaseAndSmartcase",
+		"vim.startofline",
+		"vim.surround",
+		"vim.targets.bracketObjects.enable",
+		"vim.targets.smartQuotes.aIncludesSurroundingSpaces",
+		"vim.targets.smartQuotes.breakThroughLines",
+		"vim.targets.smartQuotes.enable",
+		"vim.textwidth",
+		"vim.timeout",
+		"vim.useCtrlKeys",
+		"vim.useSystemClipboard",
+		"vim.wrapscan",
+		"extensions.experimental.affinity",
+		/*==================================================================================
+		================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
+		==================================================================================*/
+		"apc.electron",
+		"apc.font.family",
+		"apc.monospace.font.family",
+		"apc.parts.font.family",
+		"apc.menubar.compact",
+		"apc.header",
+		"apc.activityBar",
+		"apc.statusBar",
+		"apc.sidebar.titlebar",
+		"apc.listRow",
+		/*==================================================================================
+		================================ WORKBENCH CONFIGURATION ===========================
+		==================================================================================*/
+		"workbench.tree.indent",
+		"workbench.reduceMotion",
+		"workbench.colorTheme",
+		"workbench.editor.limit.value",
+		"workbench.iconTheme",
+		"workbench.editor.limit.enabled",
+		"workbench.list.smoothScrolling",
+		"workbench.editor.enablePrevi",
+		"workbench.editor.limit.perEditorGroup",
+		"workbench.tree.renderIndentGuides",
+		"workbench.editor.closeEmptyGroups",
+		"workbench.preferredDarkColorTheme",
+		"workbench.preferredHighContrastColorTheme",
+		"workbench.editorAssociations",
+		"workbench.activityBar.visible",
+		"workbench.productIconTheme",
+		"workbench.editor.showTabs",
+		"workbench.editor.openPositioning",
+		"workbench.editor.tabSizing",
+		"workbench.editor.closeOnFileDelete",
+		"workbench.editor.labelFormat",
+		/*==================================================================================
+		================================== EDITOR CONFIGURATION ============================
+		==================================================================================*/
+		"editor.tabSize",
+		"editor.wordWrap",
+		"editor.lineHeight",
+		"editor.letterSpacing",
+		"editor.lineNumbers",
+		"editor.glyphMargin",
+		"diffEditor.wordWrap",
+		"editor.formatOnSave",
+		"editor.tabCompletion",
+		"editor.wordWrapColumn",
+		"editor.linkedEditing",
+		"editor.cursorStyle",
+		"editor.fontWeight",
+		"editor.fontSize",
+		"editor.inlayHints.fontSize",
+		"editor.fontLigatures",
+		"editor.smoothScrolling",
+		"editor.minimap.enabled",
+		"editor.cursorBlinking",
+		"editor.renderWhitespace",
+		"editor.suggestSelection",
+		"editor.foldingMaximumRegions",
+		"editor.foldingImportsByDefault",
+		"editor.scrollbar.horizontal",
+		"editor.cursorSmoothCaretAnimation",
+		"editor.guides.bracketPairsHorizontal",
+		"editor.bracketPairColorization.enabled",
+		"editor.guides.highlightActiveBracketPair",
+		"editor.codeLensFontFamily",
+		"editor.inlayHints.fontFamily",
+		"editor.defaultFormatter",
+		"editor.bracketPairColorization.independentColorPoolPerBracketType",
+		"editor.fontFamily",
+		"editor.scrollbar.vertical",
+		"editor.inlineSuggest.enabled",
+		"editor.acceptSuggestionOnEnter",
+		"editor.accessibilitySupport",
+		"editor.quickSuggestions",
+		"editor.codeActionsOnSave",
+		"editor.tokenColorCustomizations",
+		"editor.multiCursorModifier",
+		"editor.stickyScroll.enabled",
+		/*==================================================================================
+		================================== JSON CONFIGURATION ==============================
+		==================================================================================*/
+		"json.maxItemsComputed",
+		"[json][jsonc]",
+		/*==================================================================================
+		================================== DEBUG CONFIGURATION =============================
+		==================================================================================*/
+		"debug.autoExpandLazyVariables",
+		"debug.terminal.clearBeforeReusing",
+		"debug.console.fontFamily",
+		"debug.console.fontSize",
+		/*==================================================================================
+		================================== TERMINAL CONFIGURATION ==========================
+		==================================================================================*/
+		"terminal.integrated.fontSize",
+		"terminal.integrated.cursorWidth",
+		"terminal.integrated.lineHeight",
+		"terminal.integrated.inheritEnv",
+		"terminal.integrated.scrollback",
+		"terminal.external.osxExec",
+		"terminal.external.windowsExec",
+		"terminal.integrated.detectLocale",
+		"terminal.integrated.allowChords",
+		"terminal.integrated.customGlyphs",
+		"terminal.integrated.letterSpacing",
+		"terminal.integrated.unicodeVersion",
+		"terminal.integrated.cursorStyle",
+		"terminal.integrated.gpuAcceleration",
+		"terminal.integrated.smoothScrolling",
+		"terminal.integrated.macOptionIsMeta",
+		"terminal.integrated.defaultProfile.osx",
+		"terminal.integrated.defaultProfile.windows",
+		"terminal.integrated.shellIntegration.enabled",
+		"terminal.integrated.enablePersistentSessions",
+		"terminal.integrated.tabs.defaultIcon",
+		"terminal.integrated.shellIntegration.decorationsEnabled",
+		"terminal.integrated.persistentSessionReviveProcess",
+		"terminal.integrated.fontFamily",
+		"terminal.integrated.profiles.osx",
+		"terminal.integrated.profiles.linux",
+		"terminal.integrated.stickyScroll.enabled",
+		/*==================================================================================
+		================================== FILES CONFIGURATION =============================
+		==================================================================================*/
+		"files.autoSave",
+		"files.trimTrailingWhitespace",
+		"files.associations",
+		"files.autoSaveDelay",
+		"files.insertFinalNewline",
+		"files.watcherExclude",
+		"files.exclude",
+		"files.enableTrash",
+		/*==================================================================================
+		============================= FILE EXPLORER CONFIGURATION ==========================
+		==================================================================================*/
+		"explorer.confirmDelete",
+		"explorer.confirmDragAndDrop",
+		/*==================================================================================
+		================================== GIT CONFIGURATION ===============================
+		==================================================================================*/
+		"githubPullRequests.pullBranch",
+		"githubPullRequests.createOnPublishBranch",
+		"git.confirmSync",
+		"git.autorefresh",
+		"git.enableSmartCommit",
+		"git.terminalGitEditor",
+		"git-graph.dialog.rebase.launchInteractiveRebase",
+		"github.copilot.enable",
+		"vsicons.dontShowNewVersionMessage",
+		"vva.trustedDomain"
+	],
+	"settingsSync.ignoredExtensions": [
+		"ms-vscode-remote.remote-wsl",
+		"mngrm3a.vscode-google-java-formatter"
+	],
+	"workbench.colorCustomizations": {},
+	"sonarlint.rules": {
+		"typescript:S3358": {
+			"level": "off"
+		}
+	},
+}
