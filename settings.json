@@ -1954,8 +1954,9 @@
 	},
 	"apc.menubar.compact": true,
 	"apc.activityBar": {
-		"itemSize": 32,
-		"size": 32,
+		"itemSize": 36,
+		"size": 36,
+		"itemMargin": 0
 	},
 	"apc.statusBar": {
 		// This option will apply status bar only at bottom the editor file
@@ -1965,7 +1966,7 @@
 	},
 	"apc.sidebar.titlebar": {
 		"height": 24,
-		"fontSize": 12,
+		"fontSize": 12
 	},
 	"apc.listRow": {
 		// Remember to exclude the "monaco-table" to avoid the height not fit with the text content on keyboard shortcuts
@@ -2521,5 +2522,6 @@
 	],
 	"settingsSync.ignoredExtensions": [
 		"ms-vscode-remote.remote-wsl",
+		"tomrijndorp.find-it-faster"
 	],
 }
