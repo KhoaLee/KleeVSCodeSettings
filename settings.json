@@ -26,7 +26,6 @@
 	"vim.cursorStylePerMode.visualblock": "line",
 	"vim.cursorStylePerMode.visualline": "line",
 	"vim.normalModeKeyBindings": [
-		//<leader>w to save file
 		{
 			"before": [
 				"<leader>",
@@ -1927,87 +1926,80 @@
 	==================================================================================*/
 	"apc.electron": {
 		"frame": false,
-		"titleBarStyle": "hiddenInset",
+		"titleBarStyle": "hidden",
 		"visualEffectState": "inactive",
 		"transparent": false,
 		"opacity": 1,
 	},
+	"window.titleBarStyle": "native",
+	"window.customTitleBarVisibility": "never",
 	"apc.font.family": "RobotoMono Nerd Font",
 	"apc.monospace.font.family": "RobotoMono Nerd Font",
+	"apc.parts.font.family": {
+		"sidebar": "RobotoMono Nerd Font",
+		"titlebar": "RobotoMono Nerd Font",
+		"activityBar": "RobotoMono Nerd Font",
+		"panel": "RobotoMono Nerd Font",
+		"tabs": "RobotoMono Nerd Font",
+		"statusbar": "RobotoMono Nerd Font",
+		"settings-body": "RobotoMono Nerd Font",
+		"extension-editor": "RobotoMono Nerd Font", // Install the font and restart vscode
+		"monaco-menu": "RobotoMono Nerd Font"
+	},
 	"apc.header": {
-		"height": 24,
-		"default": 24,
-		"compact": 24,
-		"fontSize": 11
+		"height": 24, // Applied when neither "default" nor "compact" is specified
+		"default": 24, // Applied with "window.density.editorTabHeight": "default"
+		"compact": 24, // Applied wtih "window.density.editorTabHeight": "compact"
+		"fontSize": 12
 	},
 	"apc.menubar.compact": true,
 	"apc.activityBar": {
-		"itemSize": 28,
-		"size": 28,
-		"position": "bottom",
+		"itemSize": 32,
+		"size": 32,
 	},
 	"apc.statusBar": {
 		// This option will apply status bar only at bottom the editor file
 		"position": "editor-bottom",
 		"height": 20,
-		"fontSize": 12
+		"fontSize": 11
 	},
 	"apc.sidebar.titlebar": {
-		"height": 32,
+		"height": 24,
 		"fontSize": 12,
 	},
 	"apc.listRow": {
 		// Remember to exclude the "monaco-table" to avoid the height not fit with the text content on keyboard shortcuts
 		"lists": [
+			"tree",
+			"results",
+			"scm-view",
+			"tabs-list",
+			"outline-tree",
+			"open-editors",
 			"customview-tree",
 			"debug-breakpoints",
 			"debug-view-content",
-			"explorer-folders-view",
-			"open-editors",
-			"outline-tree",
-			"results",
-			"scm-view",
-			"select-box-dropdown-list-container",
 			"settings-toc-wrapper",
+			"explorer-folders-view",
 			"settings-tree-container",
-			"tabs-list",
-			"tree",
+			"select-box-dropdown-list-container",
 		],
 		"fontSize": 12,
 		"parts": {
 			"quick-input-list": {
-				"height": 20,
+				"height": 32,
 				"fontSize": 12,
 			},
 			"explorer-folders-view": {
-				"height": 20,
+				"height": 24,
 				"fontSize": 12,
 			},
 			"extensions-list": {
 				"height": 60,
 				"fontSize": 12,
 			},
-			"notifications-list-container": {
-				"height": 120,
-				"fontSize": 12,
-			},
 		},
 	},
-	/*==================================================================================
-	================================== GENERAL CONFIGURATION ===========================
-	==================================================================================*/
-	"security.workspace.trust.untrustedFiles": "open",
-	"vsintellicode.modify.editor.suggestSelection": "enabled",
-	"search.searchOnType": false,
-	"screencastMode.fontSize": 60,
-	"telemetry.telemetryLevel": "all",
-	"search.exclude": {
-		"**/env": true,
-		"**/venv": true,
-		"**/node_modules": true,
-		"**/bower_components": true
-	},
-	"accessibility.dimUnfocused.enabled": false,
 	/*==================================================================================
 	================================ WORKBENCH CONFIGURATION ===========================
 	==================================================================================*/
@@ -2020,11 +2012,10 @@
 	"workbench.editor.limit.perEditorGroup": true,
 	"workbench.tree.renderIndentGuides": "onHover",
 	"workbench.editor.closeEmptyGroups": true,
-	"workbench.activityBar.location": "side",
 	"workbench.colorTheme": "Kanagawa",
 	"workbench.preferredDarkColorTheme": "Kanagawa",
 	"workbench.preferredHighContrastColorTheme": "Kanagawa",
-	"workbench.iconTheme": "vscode-icons",
+	"workbench.iconTheme": "vs-minimal",
 	"workbench.productIconTheme": "fluent-icons",
 	"workbench.editor.showTabs": "single",
 	"workbench.editor.openPositioning": "left",
@@ -2034,6 +2025,7 @@
 	"workbench.editorAssociations": {
 		"*.ipynb": "jupyter-notebook"
 	},
+	"workbench.colorCustomizations": {},
 	/*==================================================================================
 	================================ EDITOR CONFIGURATION ===========================
 	==================================================================================*/
@@ -2143,9 +2135,8 @@
 	"terminal.integrated.scrollback": 1000,
 	"terminal.integrated.fontWeight": "normal",
 	// =============== For MacOS ===========
-	// "terminal.external.osxExec": "iterm.app",
-	// =============== For Window ===========
-	"terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe",
+	"terminal.external.osxExec": "iterm.app",
+	// "terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe", // =============== For Window ===========
 	"terminal.integrated.detectLocale": "on",
 	"terminal.integrated.allowChords": false,
 	"terminal.integrated.customGlyphs": true,
@@ -2155,7 +2146,7 @@
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.macOptionIsMeta": true,
 	"terminal.integrated.defaultProfile.osx": "zsh",
-	"terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+	// "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)", // =============== For Window ===========
 	"terminal.integrated.shellIntegration.enabled": true,
 	"terminal.integrated.enablePersistentSessions": false,
 	"terminal.integrated.tabs.defaultIcon": "terminal",
@@ -2164,31 +2155,32 @@
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"terminal.integrated.stickyScroll.enabled": false,
 	// =================== For terminal on Windows ============
-	"terminal.integrated.profiles.windows": {
-		"Ubuntu (WSL)": {
-			"path": [
-				"C:\\Windows\\System32\\wsl.exe",
-			],
-			"source": "Ubuntu (WSL)",
-			"icon": "terminal-ubuntu",
-			"args": [
-				"--distribution",
-				"Ubuntu"
-			]
-		},
-		// "PowerShell": {
-		// 	"source": "PowerShell",
-		// 	"icon": "terminal-powershell"
-		// },
-		// "Command Prompt": {
-		// 	"path": [
-		// 		"${env:windir}\\Sysnative\\cmd.exe",
-		// 		"${env:windir}\\System32\\cmd.exe"
-		// 	],
-		// 	"args": [],
-		// 	"icon": "terminal-cmd"
-		// },
-	},
+	// "terminal.integrated.profiles.windows": {
+	// 	"Ubuntu (WSL)": {
+	// 		"path": [
+	// 			"C:\\Windows\\System32\\wsl.exe",
+	// 		],
+	// 		"source": "Ubuntu (WSL)",
+	// 		"icon": "terminal-ubuntu",
+	// 		"args": [
+	// 			"--distribution",
+	// 			"Ubuntu"
+	// 		]
+	// 	},
+	// 	"PowerShell": {
+	// 		"source": "PowerShell",
+	// 		"icon": "terminal-powershell"
+	// 	},
+	// 	"Command Prompt": {
+	// 		"path": [
+	// 			"${env:windir}\\Sysnative\\cmd.exe",
+	// 			"${env:windir}\\System32\\cmd.exe"
+	// 		],
+	// 		"args": [],
+	// 		"icon": "terminal-cmd"
+	// 	},
+	// },
+	// ===========================================================
 	// ================== For terminal on Mac =================
 	"terminal.integrated.profiles.osx": {
 		"zsh": {
@@ -2204,8 +2196,8 @@
 	================================= FILES CONFIGURATION ==============================
 	==================================================================================*/
 	"files.autoSave": "afterDelay",
-	"files.trimTrailingWhitespace": true,
 	"files.autoSaveDelay": 10000,
+	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"files.associations": {
 		"*.css": "tailwindcss",
@@ -2232,10 +2224,6 @@
 	==================================================================================*/
 	"explorer.confirmDelete": true,
 	"explorer.confirmDragAndDrop": true,
-	// NOTE: For kiev repository
-	// "typescript.tsdk": "../kiev/ai4biz-initci-fe/node_modules/typescript/lib",
-	// NOTE: For vatican repository
-	// "typescript.tsdk": "../vatican/ai4biz-initci-fe/node_modules/typescript/lib",
 	/*##################################################################################
 	################################# EXTENSIONS CONFIGURATION #########################
 	####################################################################################*/
@@ -2267,37 +2255,48 @@
 	/*==================================================================================
 	================================== MICS CONFIGURATION ===============================
 	==================================================================================*/
-	"remote.autoForwardPorts": false,
-	"window.commandCenter": false,
-	"window.titleBarStyle": "custom",
+	"search.exclude": {
+		"**/env": true,
+		"**/venv": true,
+		"**/node_modules": true,
+		"**/bower_components": true
+	},
+	"vva.trustedDomain": true,
+	"scm.inputFontSize": 11,
 	"breadcrumbs.enabled": false,
 	"scm.inputFontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', RobotoMono Nerd Font",
-	"scm.inputFontSize": 11,
+	"search.searchOnType": false,
+	"window.commandCenter": false,
+	"remote.autoForwardPorts": false,
+	"screencastMode.fontSize": 60,
+	"telemetry.telemetryLevel": "all",
+	"window.density.editorTabHeight": "compact",
 	"vsicons.dontShowNewVersionMessage": true,
-	"vva.trustedDomain": true,
+	"accessibility.dimUnfocused.enabled": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"vsintellicode.modify.editor.suggestSelection": "enabled",
 	/*==================================================================================
 	=================== WORKBENCH CONFIGURATION APPLY TO ALL PROFILES ==================
 	==================================================================================*/
 	"workbench.settings.applyToAllProfiles": [
 		/*==================================================================================
-		================================= GENERAL CONFIGURATION ============================
+		================================= MISC CONFIGURATION ============================
 		==================================================================================*/
-		"scm.defaultViewMode",
-		"scm.inputFontFamily",
+		"search.exclude",
+		"vva.trustedDomain",
 		"scm.inputFontSize",
-		"search.defaultViewMode",
-		"security.workspace.trust.untrustedFiles",
-		"vsintellicode.modify.editor.suggestSelection",
-		"window.commandCenter",
-		"window.density.editorTabHeight",
-		"window.titleBarStyle",
+		"breadcrumbs.enabled",
+		"scm.inputFontFamily",
 		"search.searchOnType",
+		"window.commandCenter",
+		"remote.autoForwardPorts",
 		"screencastMode.fontSize",
 		"telemetry.telemetryLevel",
-		"breadcrumbs.enabled",
-		"search.exclude",
-		"remote.autoForwardPorts",
+		"window.density.editorTabHeight",
+		"vsicons.dontShowNewVersionMessage",
 		"accessibility.dimUnfocused.enabled",
+		"security.workspace.trust.untrustedFiles",
+		"vsintellicode.modify.editor.suggestSelection",
 		/*==================================================================================
 		=================================== VIM CONFIGURATION ==============================
 		==================================================================================*/
@@ -2363,11 +2362,13 @@
 		================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
 		==================================================================================*/
 		"apc.electron",
+		"window.titleBarStyle",
+		"window.customTitleBarVisibility",
 		"apc.font.family",
 		"apc.monospace.font.family",
 		"apc.parts.font.family",
-		"apc.menubar.compact",
 		"apc.header",
+		"apc.menubar.compact",
 		"apc.activityBar",
 		"apc.statusBar",
 		"apc.sidebar.titlebar",
@@ -2377,30 +2378,33 @@
 		==================================================================================*/
 		"workbench.tree.indent",
 		"workbench.reduceMotion",
-		"workbench.colorTheme",
 		"workbench.editor.limit.value",
-		"workbench.iconTheme",
 		"workbench.editor.limit.enabled",
 		"workbench.list.smoothScrolling",
-		"workbench.editor.enablePrevi",
+		"workbench.editor.enablePreview",
 		"workbench.editor.limit.perEditorGroup",
 		"workbench.tree.renderIndentGuides",
 		"workbench.editor.closeEmptyGroups",
+		"workbench.colorTheme",
 		"workbench.preferredDarkColorTheme",
 		"workbench.preferredHighContrastColorTheme",
-		"workbench.editorAssociations",
-		"workbench.activityBar.visible",
+		"workbench.iconTheme",
 		"workbench.productIconTheme",
 		"workbench.editor.showTabs",
 		"workbench.editor.openPositioning",
 		"workbench.editor.tabSizing",
 		"workbench.editor.closeOnFileDelete",
 		"workbench.editor.labelFormat",
+		"workbench.editorAssociations",
+		"workbench.sideBar.location",
+		"workbench.colorCustomizations",
 		/*==================================================================================
 		================================== EDITOR CONFIGURATION ============================
 		==================================================================================*/
 		"editor.tabSize",
 		"editor.wordWrap",
+		"editor.fontSize",
+		"editor.inlayHints.fontSize",
 		"editor.lineHeight",
 		"editor.letterSpacing",
 		"editor.lineNumbers",
@@ -2412,10 +2416,7 @@
 		"editor.linkedEditing",
 		"editor.cursorStyle",
 		"editor.fontWeight",
-		"editor.fontSize",
-		"editor.inlayHints.fontSize",
 		"editor.fontLigatures",
-		"editor.smoothScrolling",
 		"editor.minimap.enabled",
 		"editor.cursorBlinking",
 		"editor.renderWhitespace",
@@ -2434,13 +2435,14 @@
 		"editor.fontFamily",
 		"editor.scrollbar.vertical",
 		"editor.inlineSuggest.enabled",
+		"editor.inlayHints.enabled",
 		"editor.acceptSuggestionOnEnter",
 		"editor.accessibilitySupport",
+		"editor.smoothScrolling",
+		"editor.stickyScroll.enabled",
 		"editor.quickSuggestions",
 		"editor.codeActionsOnSave",
 		"editor.tokenColorCustomizations",
-		"editor.multiCursorModifier",
-		"editor.stickyScroll.enabled",
 		/*==================================================================================
 		================================== JSON CONFIGURATION ==============================
 		==================================================================================*/
@@ -2451,38 +2453,44 @@
 		==================================================================================*/
 		"debug.autoExpandLazyVariables",
 		"debug.terminal.clearBeforeReusing",
+		"debug.console.wordWrap",
 		"debug.console.fontFamily",
 		"debug.console.fontSize",
 		/*==================================================================================
 		================================== TERMINAL CONFIGURATION ==========================
 		==================================================================================*/
 		"terminal.integrated.fontSize",
-		"terminal.integrated.cursorWidth",
 		"terminal.integrated.lineHeight",
+		"terminal.integrated.cursorWidth",
+		"terminal.integrated.letterSpacing",
 		"terminal.integrated.inheritEnv",
 		"terminal.integrated.scrollback",
+		"terminal.integrated.fontWeight",
+		// =============== For MacOS ===========
 		"terminal.external.osxExec",
-		"terminal.external.windowsExec",
+		// "terminal.external.windowsExec", // =============== For Window ===========
 		"terminal.integrated.detectLocale",
 		"terminal.integrated.allowChords",
 		"terminal.integrated.customGlyphs",
-		"terminal.integrated.letterSpacing",
 		"terminal.integrated.unicodeVersion",
 		"terminal.integrated.cursorStyle",
 		"terminal.integrated.gpuAcceleration",
 		"terminal.integrated.smoothScrolling",
 		"terminal.integrated.macOptionIsMeta",
 		"terminal.integrated.defaultProfile.osx",
-		"terminal.integrated.defaultProfile.windows",
+		// "terminal.integrated.defaultProfile.windows", // =============== For Window ===========
 		"terminal.integrated.shellIntegration.enabled",
 		"terminal.integrated.enablePersistentSessions",
 		"terminal.integrated.tabs.defaultIcon",
 		"terminal.integrated.shellIntegration.decorationsEnabled",
 		"terminal.integrated.persistentSessionReviveProcess",
 		"terminal.integrated.fontFamily",
-		"terminal.integrated.profiles.osx",
-		"terminal.integrated.profiles.linux",
 		"terminal.integrated.stickyScroll.enabled",
+		// =================== For terminal on Windows ============
+		// "terminal.integrated.profiles.windows",
+		// ===========================================================
+		// ================== For terminal on Mac =================
+		"terminal.integrated.profiles.osx",
 		/*==================================================================================
 		================================== FILES CONFIGURATION =============================
 		==================================================================================*/
@@ -2510,17 +2518,8 @@
 		"git.terminalGitEditor",
 		"git-graph.dialog.rebase.launchInteractiveRebase",
 		"github.copilot.enable",
-		"vsicons.dontShowNewVersionMessage",
-		"vva.trustedDomain"
 	],
 	"settingsSync.ignoredExtensions": [
 		"ms-vscode-remote.remote-wsl",
-		"mngrm3a.vscode-google-java-formatter"
 	],
-	"workbench.colorCustomizations": {},
-	"sonarlint.rules": {
-		"typescript:S3358": {
-			"level": "off"
-		}
-	},
 }

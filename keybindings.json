@@ -32,6 +32,17 @@
       "to": "right"
     }
   },
+  // Move line up and line down remap
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
   // Traverse VSCode IntelliSense suggestions with vim keybindings.
   {
     "key": "ctrl+j",
