@@ -1965,7 +1965,7 @@
 		"fontSize": 11
 	},
 	"apc.sidebar.titlebar": {
-		"height": 24,
+		"height": 40,
 		"fontSize": 12
 	},
 	"apc.listRow": {
@@ -2026,6 +2026,7 @@
 	"workbench.editorAssociations": {
 		"*.ipynb": "jupyter-notebook"
 	},
+	"workbench.sideBar.location": "left",
 	"workbench.colorCustomizations": {},
 	/*==================================================================================
 	================================ EDITOR CONFIGURATION ===========================
