@@ -1988,11 +1988,11 @@
 		"fontSize": 12,
 		"parts": {
 			"quick-input-list": {
-				"height": 32,
+				"height": 20,
 				"fontSize": 12,
 			},
 			"explorer-folders-view": {
-				"height": 24,
+				"height": 20,
 				"fontSize": 12,
 			},
 			"extensions-list": {
@@ -2016,8 +2016,8 @@
 	"workbench.colorTheme": "Kanagawa",
 	"workbench.preferredDarkColorTheme": "Kanagawa",
 	"workbench.preferredHighContrastColorTheme": "Kanagawa",
-	"workbench.iconTheme": "vs-minimal",
-	"workbench.productIconTheme": "fluent-icons",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.productIconTheme": "material-product-icons",
 	"workbench.editor.showTabs": "single",
 	"workbench.editor.openPositioning": "left",
 	"workbench.editor.tabSizing": "fit",
@@ -2523,6 +2523,11 @@
 	],
 	"settingsSync.ignoredExtensions": [
 		"ms-vscode-remote.remote-wsl",
-		"tomrijndorp.find-it-faster"
+		"tomrijndorp.find-it-faster",
+		"ritwickdey.liveserver",
+		"miguelsolorio.fluent-icons",
+		"vscode-icons-team.vscode-icons",
+		"tomphilbin.gruvbox-themes",
+		"naumovs.color-highlight"
 	],
 }
