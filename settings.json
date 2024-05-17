@@ -1933,6 +1933,7 @@
 	},
 	"window.titleBarStyle": "native",
 	"window.customTitleBarVisibility": "never",
+	"window.density.editorTabHeight": "compact",
 	"apc.font.family": "RobotoMono Nerd Font",
 	"apc.monospace.font.family": "RobotoMono Nerd Font",
 	"apc.parts.font.family": {
@@ -1952,7 +1953,7 @@
 		"compact": 24, // Applied wtih "window.density.editorTabHeight": "compact"
 		"fontSize": 12
 	},
-	"apc.menubar.compact": true,
+	"apc.menubar.compact": false,
 	"apc.activityBar": {
 		"itemSize": 36,
 		"size": 36,
@@ -1965,7 +1966,7 @@
 		"fontSize": 11
 	},
 	"apc.sidebar.titlebar": {
-		"height": 40,
+		"height": 36,
 		"fontSize": 12
 	},
 	"apc.listRow": {
@@ -1982,13 +1983,13 @@
 			"debug-view-content",
 			"settings-toc-wrapper",
 			"explorer-folders-view",
-			"settings-tree-container",
+			// "settings-tree-container",
 			"select-box-dropdown-list-container",
 		],
 		"fontSize": 12,
 		"parts": {
 			"quick-input-list": {
-				"height": 20,
+				"height": 24,
 				"fontSize": 12,
 			},
 			"explorer-folders-view": {
@@ -2062,7 +2063,8 @@
 	"editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-	"editor.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	// "editor.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"editor.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
 	"editor.scrollbar.vertical": "hidden",
 	"editor.inlineSuggest.enabled": true,
 	"editor.inlayHints.enabled": "on",
@@ -2124,7 +2126,8 @@
 	"debug.autoExpandLazyVariables": true,
 	"debug.terminal.clearBeforeReusing": true,
 	"debug.console.wordWrap": true,
-	"debug.console.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	// "debug.console.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"debug.console.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
 	"debug.console.fontSize": 11,
 	/*==================================================================================
 	=============================== TERMINAL CONFIGURATION =============================
@@ -2154,7 +2157,8 @@
 	"terminal.integrated.tabs.defaultIcon": "terminal",
 	"terminal.integrated.shellIntegration.decorationsEnabled": "both",
 	"terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
-	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	// "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"terminal.integrated.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
 	"terminal.integrated.stickyScroll.enabled": false,
 	// =================== For terminal on Windows ============
 	// "terminal.integrated.profiles.windows": {
@@ -2202,8 +2206,7 @@
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"files.associations": {
-		"*.css": "tailwindcss",
-		"*.scss": "postcss",
+		"*.scss": "scss",
 		".env*": "dotenv"
 	},
 	"files.watcherExclude": {
@@ -2229,6 +2232,10 @@
 	/*##################################################################################
 	################################# EXTENSIONS CONFIGURATION #########################
 	####################################################################################*/
+	/*============================ SONARLINT CONFIGURATION ============================*/
+	"sonarlint.disableTelemetry": true,
+	// @description: path to node executable on macOS with NVM
+	"sonarlint.pathToNodeExecutable": "/Users/klee/.nvm/versions/node/v20.12.1/bin/node",
 	/*==================================================================================
 	================================== GIT CONFIGURATION ===============================
 	==================================================================================*/
@@ -2248,7 +2255,8 @@
 	},
 	"jupyter.askForKernelRestart": false,
 	"notebook.breadcrumbs.showCodeCells": false,
-	"notebook.output.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	// "notebook.output.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
+	"notebook.output.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
 	/*==================================================================================
 	================================== AWS CONFIGURATION ===============================
 	==================================================================================*/
@@ -2272,8 +2280,6 @@
 	"remote.autoForwardPorts": false,
 	"screencastMode.fontSize": 60,
 	"telemetry.telemetryLevel": "all",
-	"window.density.editorTabHeight": "compact",
-	"vsicons.dontShowNewVersionMessage": true,
 	"accessibility.dimUnfocused.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
 	"vsintellicode.modify.editor.suggestSelection": "enabled",
@@ -2295,7 +2301,6 @@
 		"screencastMode.fontSize",
 		"telemetry.telemetryLevel",
 		"window.density.editorTabHeight",
-		"vsicons.dontShowNewVersionMessage",
 		"accessibility.dimUnfocused.enabled",
 		"security.workspace.trust.untrustedFiles",
 		"vsintellicode.modify.editor.suggestSelection",
@@ -2375,6 +2380,11 @@
 		"apc.statusBar",
 		"apc.sidebar.titlebar",
 		"apc.listRow",
+		/*================================================================================
+		======================= SONAR LINT EXTENSION CONFIGURATION ========================
+		================================================================================*/
+		"sonarlint.disableTelemetry",
+		"sonarlint.pathToNodeExecutable",
 		/*==================================================================================
 		================================ WORKBENCH CONFIGURATION ===========================
 		==================================================================================*/
@@ -2521,13 +2531,9 @@
 		"git-graph.dialog.rebase.launchInteractiveRebase",
 		"github.copilot.enable",
 	],
-	"settingsSync.ignoredExtensions": [
-		"ms-vscode-remote.remote-wsl",
-		"tomrijndorp.find-it-faster",
-		"ritwickdey.liveserver",
-		"miguelsolorio.fluent-icons",
-		"vscode-icons-team.vscode-icons",
-		"tomphilbin.gruvbox-themes",
-		"naumovs.color-highlight"
-	],
+	"sonarlint.rules": {
+		"typescript:S5843": {
+			"level": "on"
+		}
+	},
 }

@@ -180,12 +180,12 @@
     "when": "!editorFocus && !inputFocus"
   },
   {
-    "key": "o",
+    "key": "ctrl + shift + o",
     "command": "workbench.action.focusNextPart",
-    "when": "timelineFollowActiveEditor && !inputFocus"
+    "when": "timelineFollowActiveEditor && !inputFocus && !scmFocus"
   },
   {
-    "key": "c",
+    "key": "ctrl + shift + c",
     "command": "git.timeline.copyCommitId",
     "when": "timelineFollowActiveEditor && !inputFocus"
   },
