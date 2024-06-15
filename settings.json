@@ -354,7 +354,7 @@
 				"t"
 			],
 			"commands": [
-				"workbench.action.files.newUntitledFile"
+				"rkbench.action.files.newUntitledFile"
 			]
 		},
 		{
@@ -1924,16 +1924,20 @@
 	/*==================================================================================
 	================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
 	==================================================================================*/
+	"window.titleBarStyle": "native",
+	"window.customTitleBarVisibility": "never",
+	"window.density.editorTabHeight": "compact",
 	"apc.electron": {
 		"frame": false,
-		"titleBarStyle": "hidden",
+		"titleBarStyle": "hiddenInset",
+		"trafficLightPosition": {
+			"x": 11,
+			"y": 10
+		},
 		"visualEffectState": "inactive",
 		"transparent": false,
 		"opacity": 1,
 	},
-	"window.titleBarStyle": "native",
-	"window.customTitleBarVisibility": "never",
-	"window.density.editorTabHeight": "compact",
 	"apc.font.family": "RobotoMono Nerd Font",
 	"apc.monospace.font.family": "RobotoMono Nerd Font",
 	"apc.parts.font.family": {
@@ -2008,46 +2012,50 @@
 	"workbench.tree.indent": 16,
 	"workbench.reduceMotion": "on",
 	"workbench.editor.limit.value": 1,
-	"workbench.editor.limit.enabled": true,
-	"workbench.list.smoothScrolling": true,
-	"workbench.editor.enablePreview": false,
-	"workbench.editor.limit.perEditorGroup": true,
-	"workbench.tree.renderIndentGuides": "onHover",
-	"workbench.editor.closeEmptyGroups": true,
+	"workbench.iconTheme": "symbols",
+	"workbench.productIconTheme": "fluent-icons",
 	"workbench.colorTheme": "Kanagawa",
 	"workbench.preferredDarkColorTheme": "Kanagawa",
 	"workbench.preferredHighContrastColorTheme": "Kanagawa",
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.productIconTheme": "material-product-icons",
-	"workbench.editor.showTabs": "single",
-	"workbench.editor.openPositioning": "left",
-	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.limit.enabled": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.editor.enablePreview": false,
+	"workbench.layoutControl.enabled": false,
+	"workbench.editor.closeEmptyGroups": true,
 	"workbench.editor.closeOnFileDelete": false,
-	"workbench.editor.labelFormat": "long",
+	"workbench.editor.limit.perEditorGroup": true,
+	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.showTabs": "single",
+	"workbench.editor.labelFormat": "short",
+	"workbench.editor.openPositioning": "left",
+	"workbench.tree.renderIndentGuides": "onHover",
 	"workbench.editorAssociations": {
 		"*.ipynb": "jupyter-notebook"
 	},
 	"workbench.sideBar.location": "left",
-	"workbench.colorCustomizations": {},
 	/*==================================================================================
 	================================ EDITOR CONFIGURATION ===========================
 	==================================================================================*/
 	"editor.tabSize": 4,
-	"editor.wordWrap": "on",
 	"editor.fontSize": 11,
-	"editor.inlayHints.fontSize": 11,
-	"editor.lineHeight": 1.5,
-	"editor.letterSpacing": 1,
-	"editor.lineNumbers": "relative",
-	"editor.glyphMargin": true,
+	"editor.lineHeight": 1.8,
+	"editor.letterSpacing": 1.4,
+	"editor.wordWrap": "on",
 	"diffEditor.wordWrap": "on",
+	"editor.wordWrapColumn": 160,
+	"editor.inlayHints.enabled": "on",
+	"editor.inlayHints.fontSize": 12,
+	"editor.inlineSuggest.enabled": true,
+	"editor.lineNumbers": "relative",
+	"editor.renderLineHighlight": "gutter",
+	"editor.semanticHighlighting.enabled": false,
+	"editor.glyphMargin": true,
 	"editor.formatOnSave": true,
 	"editor.tabCompletion": "on",
-	"editor.wordWrapColumn": 160,
 	"editor.linkedEditing": true,
 	"editor.cursorStyle": "block",
 	"editor.fontWeight": "normal",
-	"editor.fontLigatures": false,
+	"editor.fontLigatures": true,
 	"editor.minimap.enabled": false,
 	"editor.cursorBlinking": "solid",
 	"editor.renderWhitespace": "boundary",
@@ -2055,19 +2063,16 @@
 	"editor.foldingMaximumRegions": 10000,
 	"editor.foldingImportsByDefault": true,
 	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.guides.bracketPairsHorizontal": false,
 	"editor.bracketPairColorization.enabled": false,
 	"editor.guides.highlightActiveBracketPair": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
 	"editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-	// "editor.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
-	"editor.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
-	"editor.scrollbar.vertical": "hidden",
-	"editor.inlineSuggest.enabled": true,
-	"editor.inlayHints.enabled": "on",
+	"editor.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.accessibilitySupport": "off",
 	"editor.smoothScrolling": true,
@@ -2126,8 +2131,7 @@
 	"debug.autoExpandLazyVariables": true,
 	"debug.terminal.clearBeforeReusing": true,
 	"debug.console.wordWrap": true,
-	// "debug.console.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
-	"debug.console.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
+	"debug.console.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"debug.console.fontSize": 11,
 	/*==================================================================================
 	=============================== TERMINAL CONFIGURATION =============================
@@ -2135,12 +2139,12 @@
 	"terminal.integrated.fontSize": 11,
 	"terminal.integrated.lineHeight": 1,
 	"terminal.integrated.cursorWidth": 1,
-	"terminal.integrated.letterSpacing": 1,
+	"terminal.integrated.letterSpacing": 1.4,
 	"terminal.integrated.inheritEnv": true,
 	"terminal.integrated.scrollback": 1000,
 	"terminal.integrated.fontWeight": "normal",
 	// =============== For MacOS ===========
-	"terminal.external.osxExec": "iterm.app",
+	"terminal.external.osxExec": "Terminal.app",
 	// "terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe", // =============== For Window ===========
 	"terminal.integrated.detectLocale": "on",
 	"terminal.integrated.allowChords": false,
@@ -2157,8 +2161,7 @@
 	"terminal.integrated.tabs.defaultIcon": "terminal",
 	"terminal.integrated.shellIntegration.decorationsEnabled": "both",
 	"terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
-	// "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
-	"terminal.integrated.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"terminal.integrated.stickyScroll.enabled": false,
 	// =================== For terminal on Windows ============
 	// "terminal.integrated.profiles.windows": {
@@ -2206,7 +2209,7 @@
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"files.associations": {
-		"*.scss": "scss",
+		"*.scss": "postcss",
 		".env*": "dotenv"
 	},
 	"files.watcherExclude": {
@@ -2229,6 +2232,7 @@
 	==================================================================================*/
 	"explorer.confirmDelete": true,
 	"explorer.confirmDragAndDrop": true,
+	"explorer.compactFolders": false,
 	/*##################################################################################
 	################################# EXTENSIONS CONFIGURATION #########################
 	####################################################################################*/
@@ -2255,8 +2259,7 @@
 	},
 	"jupyter.askForKernelRestart": false,
 	"notebook.breadcrumbs.showCodeCells": false,
-	// "notebook.output.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
-	"notebook.output.fontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', JetBrainsMono Nerd Font",
+	"notebook.output.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	/*==================================================================================
 	================================== AWS CONFIGURATION ===============================
 	==================================================================================*/
@@ -2274,7 +2277,8 @@
 	"vva.trustedDomain": true,
 	"scm.inputFontSize": 11,
 	"breadcrumbs.enabled": false,
-	"scm.inputFontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', RobotoMono Nerd Font",
+	// "scm.inputFontFamily": "RobotoMono Nerd Font, 'RobotoMono Nerd Font', RobotoMono Nerd Font",
+	"scm.inputFontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"search.searchOnType": false,
 	"window.commandCenter": false,
 	"remote.autoForwardPorts": false,
@@ -2283,6 +2287,7 @@
 	"accessibility.dimUnfocused.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
 	"vsintellicode.modify.editor.suggestSelection": "enabled",
+	"application.shellEnvironmentResolutionTimeout": 120,
 	/*==================================================================================
 	=================== WORKBENCH CONFIGURATION APPLY TO ALL PROFILES ==================
 	==================================================================================*/
@@ -2300,10 +2305,10 @@
 		"remote.autoForwardPorts",
 		"screencastMode.fontSize",
 		"telemetry.telemetryLevel",
-		"window.density.editorTabHeight",
 		"accessibility.dimUnfocused.enabled",
 		"security.workspace.trust.untrustedFiles",
 		"vsintellicode.modify.editor.suggestSelection",
+		"application.shellEnvironmentResolutionTimeout",
 		/*==================================================================================
 		=================================== VIM CONFIGURATION ==============================
 		==================================================================================*/
@@ -2368,9 +2373,10 @@
 		/*==================================================================================
 		================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
 		==================================================================================*/
-		"apc.electron",
 		"window.titleBarStyle",
 		"window.customTitleBarVisibility",
+		"window.density.editorTabHeight",
+		"apc.electron",
 		"apc.font.family",
 		"apc.monospace.font.family",
 		"apc.parts.font.family",
@@ -2391,40 +2397,44 @@
 		"workbench.tree.indent",
 		"workbench.reduceMotion",
 		"workbench.editor.limit.value",
-		"workbench.editor.limit.enabled",
-		"workbench.list.smoothScrolling",
-		"workbench.editor.enablePreview",
-		"workbench.editor.limit.perEditorGroup",
-		"workbench.tree.renderIndentGuides",
-		"workbench.editor.closeEmptyGroups",
+		"workbench.iconTheme",
+		"workbench.productIconTheme",
 		"workbench.colorTheme",
 		"workbench.preferredDarkColorTheme",
 		"workbench.preferredHighContrastColorTheme",
-		"workbench.iconTheme",
-		"workbench.productIconTheme",
-		"workbench.editor.showTabs",
-		"workbench.editor.openPositioning",
-		"workbench.editor.tabSizing",
+		"workbench.editor.limit.enabled",
+		"workbench.list.smoothScrolling",
+		"workbench.editor.enablePreview",
+		"workbench.layoutControl.enabled",
+		"workbench.editor.closeEmptyGroups",
 		"workbench.editor.closeOnFileDelete",
+		"workbench.editor.limit.perEditorGroup",
+		"workbench.editor.tabSizing",
+		"workbench.editor.showTabs",
 		"workbench.editor.labelFormat",
+		"workbench.editor.openPositioning",
+		"workbench.tree.renderIndentGuides",
 		"workbench.editorAssociations",
 		"workbench.sideBar.location",
-		"workbench.colorCustomizations",
 		/*==================================================================================
 		================================== EDITOR CONFIGURATION ============================
 		==================================================================================*/
 		"editor.tabSize",
-		"editor.wordWrap",
 		"editor.fontSize",
-		"editor.inlayHints.fontSize",
 		"editor.lineHeight",
 		"editor.letterSpacing",
-		"editor.lineNumbers",
-		"editor.glyphMargin",
+		"editor.wordWrap",
 		"diffEditor.wordWrap",
+		"editor.wordWrapColumn",
+		"editor.inlayHints.enabled",
+		"editor.inlayHints.fontSize",
+		"editor.inlineSuggest.enabled",
+		"editor.lineNumbers",
+		"editor.renderLineHighlight",
+		"editor.semanticHighlighting.enabled",
+		"editor.glyphMargin",
 		"editor.formatOnSave",
 		"editor.tabCompletion",
-		"editor.wordWrapColumn",
 		"editor.linkedEditing",
 		"editor.cursorStyle",
 		"editor.fontWeight",
@@ -2436,18 +2446,16 @@
 		"editor.foldingMaximumRegions",
 		"editor.foldingImportsByDefault",
 		"editor.scrollbar.horizontal",
+		"editor.scrollbar.vertical",
 		"editor.cursorSmoothCaretAnimation",
 		"editor.guides.bracketPairsHorizontal",
 		"editor.bracketPairColorization.enabled",
 		"editor.guides.highlightActiveBracketPair",
+		"editor.defaultFormatter",
 		"editor.codeLensFontFamily",
 		"editor.inlayHints.fontFamily",
-		"editor.defaultFormatter",
 		"editor.bracketPairColorization.independentColorPoolPerBracketType",
 		"editor.fontFamily",
-		"editor.scrollbar.vertical",
-		"editor.inlineSuggest.enabled",
-		"editor.inlayHints.enabled",
 		"editor.acceptSuggestionOnEnter",
 		"editor.accessibilitySupport",
 		"editor.smoothScrolling",
@@ -2536,4 +2544,6 @@
 			"level": "on"
 		}
 	},
+	"symbols.hidesExplorerArrows": false,
+	"update.mode": "default",
 }
