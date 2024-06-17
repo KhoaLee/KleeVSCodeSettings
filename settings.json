@@ -2014,9 +2014,9 @@
 	"workbench.editor.limit.value": 1,
 	"workbench.iconTheme": "symbols",
 	"workbench.productIconTheme": "fluent-icons",
-	"workbench.colorTheme": "Kanagawa",
-	"workbench.preferredDarkColorTheme": "Kanagawa",
-	"workbench.preferredHighContrastColorTheme": "Kanagawa",
+	"workbench.colorTheme": "Kanagawa Paper",
+	"workbench.preferredDarkColorTheme": "Kanagawa Paper",
+	"workbench.preferredHighContrastColorTheme": "Kanagawa Paper",
 	"workbench.editor.limit.enabled": true,
 	"workbench.list.smoothScrolling": true,
 	"workbench.editor.enablePreview": false,
@@ -2033,6 +2033,10 @@
 		"*.ipynb": "jupyter-notebook"
 	},
 	"workbench.sideBar.location": "left",
+	"workbench.colorCustomizations": {
+		"terminalCursor.foreground": "#8c8a8a",
+		"terminalCursor.background": "#626262"
+	},
 	/*==================================================================================
 	================================ EDITOR CONFIGURATION ===========================
 	==================================================================================*/
@@ -2163,6 +2167,7 @@
 	"terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, 'JetBrainsMono Nerd Font', JetBrainsMono Nerd Font",
 	"terminal.integrated.stickyScroll.enabled": false,
+	"terminal.integrated.allowMnemonics": false,
 	// =================== For terminal on Windows ============
 	// "terminal.integrated.profiles.windows": {
 	// 	"Ubuntu (WSL)": {
@@ -2416,6 +2421,7 @@
 		"workbench.tree.renderIndentGuides",
 		"workbench.editorAssociations",
 		"workbench.sideBar.location",
+		"workbench.colorCustomizations",
 		/*==================================================================================
 		================================== EDITOR CONFIGURATION ============================
 		==================================================================================*/
