@@ -1,23 +1,24 @@
 // Place your key bindings in this file to override the defaults
 [
-  // NAVIGATE BETWEEN PANEL IN VSCODE KEY BINDINGS
+  // ========================================
+  // Navigation Between Panels & Editors
+  // ========================================
   {
-    "key": "ctrl+h",
+    "key": "ctrl+w+h",
     "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+w+l",
     "command": "workbench.action.navigateRight"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+w+k",
     "command": "workbench.action.navigateUp"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+w+j",
     "command": "workbench.action.navigateDown"
   },
-  // MOVE ACTIVE EDITOR LEFT OR RIGHT KEY BINDINGS
   {
     "key": "cmd+ctrl+h",
     "command": "moveActiveEditor",
@@ -32,19 +33,24 @@
       "to": "right"
     }
   },
-  // MOVE LINE UP OR DOWN KEY BINDINGS
+
+  // ========================================
+  // Editor Actions
+  // ========================================
   {
-    "key": "alt+j",
+    "key": "ctrl+shift+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+k",
+    "key": "ctrl+shift+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  // Traverse VSCode IntelliSense suggestions with vim keybindings.
+  // ========================================
+  // IntelliSense & Code Actions
+  // ========================================
   {
     "key": "ctrl+n",
     "command": "selectNextSuggestion",
@@ -60,18 +66,6 @@
     "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
-  // Traverse VSCode quick open options with vim keybindings.
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  // Easy navigation in code action
   {
     "key": "ctrl+n",
     "command": "selectNextCodeAction",
@@ -87,22 +81,42 @@
     "command": "acceptSelectedCodeAction",
     "when": "codeActionMenuVisible"
   },
-  // Add ctrl+h/l to navigate in file browser
+
+  // ========================================
+  // Quick Open Navigation
+  // ========================================
   {
-    "key": "ctrl+h",
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+
+  // ========================================
+  // File Browser Navigation
+  // ========================================
+  {
+    "key": "ctrl+w+h",
     "command": "file-browser.stepOut",
     "when": "inFileBrowser"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+w+l",
     "command": "file-browser.stepIn",
     "when": "inFileBrowser"
   },
-  // EPLORER KEYBINDINGS
+
+  // ========================================
+  // Explorer Actions
+  // ========================================
   {
     "key": "e",
     "command": "workbench.explorer.fileView.focus",
-    "when": "!editorFocus && !inputFocus && !codeium.chatPanelView.active"
+    "when": "!editorFocus && !inputFocus && !codium.chatPanelView.active && !chat-view.active"
   },
   {
     "key": "a",
@@ -174,23 +188,29 @@
     "command": "copyRelativeFilePath",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
-  // Git
+
+  // ========================================
+  // Git Integration
+  // ========================================
   {
-    "key": "ctrl + shift + g",
+    "key": "ctrl+shift+g",
     "command": "workbench.scm.focus",
     "when": "!editorFocus && !inputFocus"
   },
   {
-    "key": "ctrl + shift + o",
+    "key": "ctrl+shift+o",
     "command": "workbench.action.focusNextPart",
     "when": "timelineFollowActiveEditor && !inputFocus && !scmFocus"
   },
   {
-    "key": "ctrl + shift + c",
+    "key": "ctrl+shift+c",
     "command": "git.timeline.copyCommitId",
     "when": "timelineFollowActiveEditor && !inputFocus"
   },
-  // TERMINAL KEYBINDINGS
+
+  // ========================================
+  // Terminal Operations
+  // ========================================
   {
     "key": "ctrl+m",
     "command": "workbench.action.toggleMaximizedPanel",
@@ -216,7 +236,6 @@
     "command": "workbench.action.terminal.scrollUpPage",
     "when": "terminalFocus && terminalProcessSupported"
   },
-  // Switch between split pane of terminal
   {
     "key": "ctrl+n",
     "command": "workbench.action.terminal.focusNextPane",
@@ -227,7 +246,6 @@
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalProcessSupported"
   },
-  // Move to the previous/next terminal.
   {
     "key": "cmd+shift+]",
     "command": "workbench.action.terminal.focusNext",
@@ -252,5 +270,13 @@
     "key": "ctrl+`",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
   }
 ]

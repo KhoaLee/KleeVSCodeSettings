@@ -721,24 +721,48 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
+  /*====================================================================================================
+       EXTENSION: ZOOMBAR CONFIGURATION
+       Command: Open the Zoombar view (if available) using your extension’s command palette entry
+    ====================================================================================================*/
   "zoombar.zoomUnit": 1,
   "zoombar.defaultZoom": 100,
   "zoombar.zoomUnitType": "multiplicative",
-  /*==================================================================================
-	================================ WORKBENCH CONFIGURATION ===========================
-	==================================================================================*/
+
+  /*
+   * WORKBENCH - TREE & SIDEBAR SETTINGS
+   */
   "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.sideBar.location": "left",
+
+  /*
+   * WORKBENCH - MOTION & VISUAL EFFECTS
+   */
   "workbench.reduceMotion": "on",
   "workbench.fontAliasing": "default",
-  "workbench.iconTheme": "symbols",
+  "workbench.list.smoothScrolling": true,
+
+  /*
+   * WORKBENCH - APPEARANCE & THEMES
+   */
+  "workbench.iconTheme": "moxer-icons",
   "workbench.productIconTheme": "material-product-icons",
-  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Kanagawa",
   "workbench.preferredDarkColorTheme": "Kanagawa",
   "workbench.preferredHighContrastColorTheme": "Kanagawa",
-  "workbench.list.smoothScrolling": true,
-  "workbench.editor.enablePreview": false,
+
+  /*
+   * WORKBENCH - ACTIVITY BAR & LAYOUT CONTROL
+   */
+  "workbench.activityBar.location": "top",
   "workbench.layoutControl.enabled": true,
+
+  /*
+   * WORKBENCH - EDITOR GROUPS & TAB SETTINGS
+   */
+  "workbench.editor.enablePreview": false,
   "workbench.editor.closeEmptyGroups": true,
   "workbench.editor.closeOnFileDelete": false,
   "workbench.editor.limit.enabled": true,
@@ -751,68 +775,91 @@
   "workbench.editor.centeredLayoutAutoResize": true,
   "workbench.editor.labelFormat": "long",
   "workbench.editor.openPositioning": "right",
-  "workbench.tree.renderIndentGuides": "always",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.tree.enableStickyScroll": false,
-  "workbench.sideBar.location": "left",
-  /*==================================================================================
-	================================ EDITOR CONFIGURATION ===========================
-	==================================================================================*/
+
+  /*
+   * BUILT-IN: EDITOR - FONT & LAYOUT
+   */
   "editor.tabSize": 4,
   "editor.lineHeight": 2,
   "editor.letterSpacing": 1,
-  "editor.wordWrap": "on",
-  "editor.largeFileOptimizations": true,
-  "diffEditor.wordWrap": "on",
-  "editor.wordWrapColumn": 160,
-  "editor.inlayHints.enabled": "on",
-  "editor.inlayHints.fontSize": 11,
-  "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "relative",
-  "editor.renderLineHighlight": "gutter",
-  "editor.semanticHighlighting.enabled": false,
-  "editor.copyWithSyntaxHighlighting": false,
-  "editor.glyphMargin": true,
-  "editor.formatOnSave": true,
-  "editor.tabCompletion": "on",
-  "editor.linkedEditing": true,
-  "editor.cursorStyle": "block",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Propo, 'JetBrainsMonoNL Nerd Font Propo', JetBrainsMonoNL Nerd Font Propo",
+  "editor.fontSize": 12,
   "editor.fontWeight": "normal",
   "editor.fontLigatures": true,
+  "editor.largeFileOptimizations": true,
   "editor.minimap.enabled": false,
-  "editor.cursorBlinking": "solid",
-  "editor.renderWhitespace": "boundary",
-  "editor.suggestSelection": "first",
-  "editor.foldingMaximumRegions": 10000,
-  "editor.foldingImportsByDefault": true,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.guides.bracketPairsHorizontal": false,
-  "editor.bracketPairColorization.enabled": false,
-  "editor.guides.highlightActiveBracketPair": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeLensFontFamily": "Hurmit Nerd Font Mono",
-  "editor.inlayHints.fontFamily": "Hurmit Nerd Font Mono",
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-  "editor.fontFamily": "Hurmit Nerd Font Mono, 'Hurmit Nerd Font Mono', Hurmit Nerd Font Mono",
-  "editor.fontSize": 11,
-  "editor.acceptSuggestionOnEnter": "on",
-  "editor.accessibilitySupport": "off",
+
+  /*
+   * BUILT-IN: EDITOR - WORD WRAP & SCROLLING
+   */
+  "editor.wordWrap": "on",
+  "diffEditor.wordWrap": "on",
+  "editor.wordWrapColumn": 160,
   "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  /*
+   * BUILT-IN: EDITOR - INLAY HINTS & SUGGESTIONS
+   */
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontSize": 12,
+  "editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font Propo",
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "on",
   "editor.quickSuggestions": {
     "comments": "on",
     "strings": "on",
     "other": "on"
   },
+
+  /*
+   * BUILT-IN: EDITOR - RENDERING & VISUALS
+   */
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "boundary",
+  "editor.glyphMargin": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "solid",
+
+  /*
+   * BUILT-IN: EDITOR - GUIDES & FOLDING
+   */
+  "editor.foldingMaximumRegions": 10000,
+  "editor.foldingImportsByDefault": true,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+
+  /*
+   * BUILT-IN: EDITOR - ACTIONS & BEHAVIOR
+   */
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
+  "editor.tabCompletion": "on",
+  "editor.linkedEditing": true,
+  "editor.cursorStyle": "block",
+  "editor.accessibilitySupport": "off",
+  "editor.codeLensFontFamily": "JetBrainsMonoNL Nerd Font Propo",
+
+  /*
+   * BUILT-IN: EDITOR - SCROLLBARS & STICKY SCROLL
+   */
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.stickyScroll.enabled": false,
+  /*
+   * BUILT-IN: TOKEN COLOR CUSTOMIZATIONS
+   */
   "editor.tokenColorCustomizations": {
     "[*Light*]": {
       "textMateRules": [
@@ -848,20 +895,26 @@
   "debug.showVariableTypes": true,
   "debug.inlineValues": "auto",
   "debug.console.wordWrap": true,
-  "debug.console.fontFamily": "Hurmit Nerd Font Mono, 'Hurmit Nerd Font Mono', Hurmit Nerd Font Mono",
-  "debug.console.fontSize": 11,
-  /*==================================================================================
-	=============================== TERMINAL CONFIGURATION =============================
-	==================================================================================*/
-  "terminal.integrated.fontSize": 11,
+  "debug.console.fontFamily": "JetBrainsMonoNL Nerd Font Propo, 'JetBrainsMonoNL Nerd Font Propo', JetBrainsMonoNL Nerd Font Propo",
+  "debug.console.fontSize": 12,
+
+  /*
+   * BUILT-IN: TERMINAL - GENERAL CONFIGURATION
+   * Command: Open integrated terminal via "Terminal: Focus Integrated Terminal" (Cmd+`)
+   */
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.cursorWidth": 1,
   "terminal.integrated.letterSpacing": 1.4,
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.scrollback": 1000,
   "terminal.integrated.fontWeight": "normal",
-  // =============== For MacOS ===========
-  "terminal.external.osxExec": "iTerm.app",
+
+  /*
+   * BUILT-IN: TERMINAL - MACOS SPECIFIC CONFIGURATION
+   * Command: Open external terminal via "Terminal: Open New External Terminal" (Cmd+Shift+C)
+   */
+  "terminal.external.osxExec": "ghostty.app",
   "terminal.integrated.detectLocale": "on",
   "terminal.integrated.allowChords": false,
   "terminal.integrated.customGlyphs": true,
@@ -870,31 +923,42 @@
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.osx": null, // set to null to use fish shell on terminal
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.tabs.defaultIcon": "terminal",
   "terminal.integrated.shellIntegration.decorationsEnabled": "both",
   "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
-  "terminal.integrated.fontFamily": "Hurmit Nerd Font Mono, 'Hurmit Nerd Font Mono', Hurmit Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Propo, 'JetBrainsMonoNL Nerd Font Propo', JetBrainsMonoNL Nerd Font Propo",
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.allowMnemonics": false,
-  // ================== For terminal on Mac =================
+
+  /*
+   * BUILT-IN: TERMINAL - MACOS TERMINAL PROFILES
+   */
   "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/bin/fish",
+      "args": [],
+      "icon": "terminal-bash"
+    },
     "zsh": {
       "path": "/bin/zsh",
       "args": ["-l", "-i"],
       "icon": "terminal-bash"
     }
   },
-  /*==================================================================================
-	================================= FILES CONFIGURATION ==============================
-	==================================================================================*/
+  /*
+   * BUILT-IN: FILES CONFIGURATION
+   */
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10000,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.associations": {
+    "*.sqlbook": "sql",
+    "*.ndjson": "jsonl",
+    "*.dbclient-js": "javascript",
     "*.js": "javascript",
     ".env*": "dotenv",
     "*.scss": "postcss"
@@ -914,20 +978,51 @@
     "**/.git/objects/**": true
   },
   "files.enableTrash": true,
-  /*==================================================================================
-	============================== FILE EXPLORER CONFIGURATION =========================
-	==================================================================================*/
+
+  /*
+   * BUILT-IN: FILE EXPLORER CONFIGURATION
+   */
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
   "explorer.compactFolders": false,
+
   /*##################################################################################
 	################################# EXTENSIONS CONFIGURATION #########################
 	####################################################################################*/
-  /*============================ SONARLINT CONFIGURATION ============================*/
-  "sonarlint.disableTelemetry": true,
-  /*==================================================================================
-	================================== GIT CONFIGURATION ===============================
-	==================================================================================*/
+  "custom-ui-style.electron": {
+    "frame": false,
+    "roundedCorners": true,
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 20,
+      "y": 16
+    }
+  },
+  "custom-ui-style.font.sansSerif": "JetBrainsMonoNL Nerd Font Propo, -apple-system",
+  "custom-ui-style.stylesheet": {
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 28vh !important",
+    ".quick-input-list .scrollbar": "display: none",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+    ".quick-input-titlebar": "background: #100B15 !important",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".sidebar": "border: none !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".monaco-list-row.focused": "outline: none !important",
+    ".monaco-editor .scroll-decoration": "display: none",
+    ".title-actions": "display: none !important",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+    ".title .monaco-icon-label:after": "margin-right: 0",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+    ".title .monaco-icon-label.file-icon": "margin: 0 60px"
+  },
+  /*
+   * GIT CONFIGURATION
+   */
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.createOnPublishBranch": "never",
   "git.confirmSync": false,
@@ -935,53 +1030,74 @@
   "git.enableSmartCommit": true,
   "git.terminalGitEditor": true,
   "git-graph.dialog.rebase.launchInteractiveRebase": true,
-  /*==================================================================================
-	================================== NOTEBOOK CONFIGURATION ==========================
-	==================================================================================*/
+
+  /*
+   * NOTEBOOK CONFIGURATION
+   */
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
   },
   "jupyter.askForKernelRestart": false,
   "notebook.breadcrumbs.showCodeCells": false,
-  "notebook.output.fontFamily": "Hurmit Nerd Font Mono, 'Hurmit Nerd Font Mono', Hurmit Nerd Font Mono",
-  /*==================================================================================
-	================================== AWS CONFIGURATION ===============================
-	==================================================================================*/
+  "notebook.output.fontFamily": "JetBrainsMonoNL Nerd Font Propo, 'JetBrainsMonoNL Nerd Font Propo', JetBrainsMonoNL Nerd Font Propo",
+
+  /*
+   * AWS CONFIGURATION
+   */
   // "aws.samcli.location": "/usr/local/bin/sam",
   // "aws.telemetry": false,
-  /*==================================================================================
-	================================== MICS CONFIGURATION ===============================
-	==================================================================================*/
+
+  /*
+   * SEARCH CONFIGURATION
+   */
   "search.exclude": {
     "**/env": true,
     "**/venv": true,
     "**/node_modules": true,
     "**/bower_components": true
   },
+  "search.searchOnType": false,
+
+  /*
+   * SCM & BREADCRUMBS CONFIGURATION
+   */
   "scm.inputFontSize": 11,
   "breadcrumbs.enabled": false,
-  "scm.inputFontFamily": "Hurmit Nerd Font Mono, 'Hurmit Nerd Font Mono', Hurmit Nerd Font Mono",
-  "search.searchOnType": false,
+  "scm.inputFontFamily": "JetBrainsMonoNL Nerd Font Propo, 'JetBrainsMonoNL Nerd Font Propo', JetBrainsMonoNL Nerd Font Propo",
+
+  /*
+   * WINDOW CONFIGURATION
+   */
   "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   "window.customTitleBarVisibility": "windowed",
   "window.density.editorTabHeight": "compact",
   "window.confirmBeforeClose": "always",
+  "window.newWindowProfile": "Default",
+
+  /*
+   * REMOTE CONFIGURATION
+   */
   "remote.autoForwardPorts": false,
+
+  /*
+   * MICS: MISCELLANEOUS CONFIGURATION
+   */
   "screencastMode.fontSize": 60,
-  "telemetry.telemetryLevel": "all",
+  "telemetry.telemetryLevel": "off",
   "accessibility.dimUnfocused.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "vsintellicode.modify.editor.suggestSelection": "enabled",
   "application.shellEnvironmentResolutionTimeout": 120,
-  /*==================================================================================
-	=================== WORKBENCH CONFIGURATION APPLY TO ALL PROFILES ==================
-	==================================================================================*/
+  "update.mode": "manual",
+  "dotenv.enableAutocloaking": false,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "database-client.autoSync": true,
   "workbench.settings.applyToAllProfiles": [
-    /*==================================================================================
-		=================================== MISC CONFIGURATION =============================
-		==================================================================================*/
+    /* MISC CONFIGURATION */
     "search.exclude",
     "vva.trustedDomain",
     "scm.inputFontSize",
@@ -997,9 +1113,8 @@
     "vsintellicode.modify.editor.suggestSelection",
     "application.shellEnvironmentResolutionTimeout",
     "symbols.hidesExplorerArrows",
-    /*==================================================================================
-		=================================== VIM CONFIGURATION ==============================
-		==================================================================================*/
+
+    /* VIM CONFIGURATION */
     "vim.normalModeKeyBindings",
     "vim.normalModeKeyBindingsNonRecursive",
     "vim.insertModeKeyBindings",
@@ -1057,28 +1172,20 @@
     "vim.useSystemClipboard",
     "vim.wrapscan",
     "extensions.experimental.affinity",
-    /*==================================================================================
-	  ======================== ZOOMBAR EXTENSION CONFIGURATION ===========================
-	  ==================================================================================*/
+
+    /* ZOOMBAR EXTENSION CONFIGURATION */
     "zoombar.zoomUnit",
     "zoombar.defaultZoom",
     "zoombar.zoomUnitType",
     "window.zoomLevel",
-    /*==================================================================================
-		================== APC CUSTOMIZE UI++ EXTENSION CONFIGURATION ======================
-		==================================================================================*/
+
+    /* WINDOW CONFIGURATION */
     "window.titleBarStyle",
     "window.customTitleBarVisibility",
     "window.density.editorTabHeight",
     "window.confirmBeforeClose",
-    /*================================================================================
-		======================= SONAR LINT EXTENSION CONFIGURATION ========================
-		================================================================================*/
-    "sonarlint.disableTelemetry",
-    "sonarlint.pathToNodeExecutable",
-    /*==================================================================================
-		================================ WORKBENCH CONFIGURATION ===========================
-		==================================================================================*/
+
+    /* WORKBENCH CONFIGURATION */
     "workbench.tree.indent",
     "workbench.tree.enableStickyScroll",
     "workbench.reduceMotion",
@@ -1106,9 +1213,8 @@
     "workbench.editorAssociations",
     "workbench.sideBar.location",
     "workbench.activityBar.location",
-    /*==================================================================================
-		================================== EDITOR CONFIGURATION ============================
-		==================================================================================*/
+
+    /* EDITOR CONFIGURATION */
     "editor.tabSize",
     "editor.fontSize",
     "editor.lineHeight",
@@ -1154,22 +1260,18 @@
     "editor.quickSuggestions",
     "editor.codeActionsOnSave",
     "editor.tokenColorCustomizations",
-    /*==================================================================================
-		================================== JSON CONFIGURATION ==============================
-		==================================================================================*/
+
+    /* JSON CONFIGURATION */
     "json.maxItemsComputed",
     "[json][jsonc]",
-    /*==================================================================================
-		================================== PRISMA CONFIGURATION ==============================
-		==================================================================================*/
+
+    /* PRISMA CONFIGURATION */
     "[prisma]",
-    /*==================================================================================
-		================================== DOTENV CONFIGURATION ==============================
-		==================================================================================*/
+
+    /* DOTENV CONFIGURATION */
     "dotenv.enableAutocloaking",
-    /*==================================================================================
-		================================== DEBUG CONFIGURATION =============================
-		==================================================================================*/
+
+    /* DEBUG CONFIGURATION */
     "debug.autoExpandLazyVariables",
     "debug.terminal.clearBeforeReusing",
     "debug.showVariableTypes",
@@ -1177,9 +1279,8 @@
     "debug.console.wordWrap",
     "debug.console.fontFamily",
     "debug.console.fontSize",
-    /*==================================================================================
-		================================== TERMINAL CONFIGURATION ==========================
-		==================================================================================*/
+
+    /* TERMINAL CONFIGURATION */
     "terminal.integrated.fontSize",
     "terminal.integrated.lineHeight",
     "terminal.integrated.cursorWidth",
@@ -1187,7 +1288,7 @@
     "terminal.integrated.inheritEnv",
     "terminal.integrated.scrollback",
     "terminal.integrated.fontWeight",
-    // =============== For MacOS ===========
+    /* For MacOS */
     "terminal.external.osxExec",
     "terminal.integrated.detectLocale",
     "terminal.integrated.allowChords",
@@ -1205,11 +1306,10 @@
     "terminal.integrated.persistentSessionReviveProcess",
     "terminal.integrated.fontFamily",
     "terminal.integrated.stickyScroll.enabled",
-    // ================== For terminal on Mac =================
+    /* For terminal on Mac */
     "terminal.integrated.profiles.osx",
-    /*==================================================================================
-		================================== FILES CONFIGURATION =============================
-		==================================================================================*/
+
+    /* FILES CONFIGURATION */
     "files.autoSave",
     "files.trimTrailingWhitespace",
     "files.associations",
@@ -1218,15 +1318,13 @@
     "files.watcherExclude",
     "files.exclude",
     "files.enableTrash",
-    /*==================================================================================
-		============================= FILE EXPLORER CONFIGURATION ==========================
-		==================================================================================*/
+
+    /* FILE EXPLORER CONFIGURATION */
     "explorer.confirmDelete",
     "explorer.confirmDragAndDrop",
     "explorer.compactFolders",
-    /*==================================================================================
-		================================== GIT CONFIGURATION ===============================
-		==================================================================================*/
+
+    /* GIT CONFIGURATION */
     "githubPullRequests.pullBranch",
     "githubPullRequests.createOnPublishBranch",
     "git.confirmSync",
@@ -1236,17 +1334,5 @@
     "git-graph.dialog.rebase.launchInteractiveRebase",
     "github.copilot.enable"
   ],
-  "sonarlint.rules": {
-    "typescript:S5843": {
-      "level": "on"
-    }
-  },
-  "symbols.hidesExplorerArrows": false,
-  "update.mode": "manual",
-  "window.newWindowProfile": "Default",
-  "dotenv.enableAutocloaking": false,
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "workbench.colorCustomizations": {}
+  "settingsSync.ignoredExtensions": ["sonarsource.sonarlint-vscode"]
 }
