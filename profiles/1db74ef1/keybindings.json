@@ -1,174 +1,19 @@
+// Place your key bindings in this file to override the defaults
 [
+  // ========================================
+  // Navigation Between Panels & Editors
+  // ========================================
   {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
-  {
-    "key": "tab",
-    "command": "extension.vim_tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-  },
-  {
-    "key": "tab",
-    "command": "-extension.vim_tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "key": "x",
-    "command": "magit.discard-at-point",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "k",
-    "command": "-magit.discard-at-point"
-  },
-  {
-    "key": "-",
-    "command": "magit.reverse-at-point",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "v",
-    "command": "-magit.reverse-at-point"
-  },
-  {
-    "key": "shift+-",
-    "command": "magit.reverting",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "shift+v",
-    "command": "-magit.reverting"
-  },
-  {
-    "key": "shift+o",
-    "command": "magit.resetting",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "shift+x",
-    "command": "-magit.resetting"
-  },
-  {
-    "key": "x",
-    "command": "-magit.reset-mixed"
-  },
-  {
-    "key": "ctrl+u x",
-    "command": "-magit.reset-hard"
-  },
-  {
-    "key": "y",
-    "command": "-magit.show-refs"
-  },
-  {
-    "key": "y",
-    "command": "vspacecode.showMagitRefMenu",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-  },
-  {
-    "key": "g",
-    "command": "-magit.refresh",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "g",
-    "command": "vspacecode.showMagitRefreshMenu",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "tab",
-    "command": "acceptSelectedSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "showNextParameterHint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "showPrevParameterHint",
-    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "selectNextCodeAction",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "selectPrevCodeAction",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "acceptSelectedCodeAction",
-    "when": "codeActionMenuVisible"
+    "key": "ctrl+w+h",
+    "command": "workbench.action.navigateLeft"
   },
   {
     "key": "ctrl+w+l",
-    "command": "file-browser.stepOut",
-    "when": "inFileBrowser || inSearchEditor"
-  },
-  {
-    "key": "ctrl+w+h",
-    "command": "file-browser.stepIn",
-    "when": "inFileBrowser || inSearchEditor"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
-  },
-  {
-    "key": "ctrl+cmd+w",
-    "command": "workbench.action.switchWindow"
-  },
-  /*
-   * ========================================
-   * Navigation Between Panels & Editors
-   * ========================================
-   */
-  {
-    "key": "ctrl+w+h",
-    "command": "workbench.action.navigateLeft || workbench.action.focusLeftGroup",
-    "when": "vim.active && vim.mode != 'Insert'"
-  },
-  {
-    "key": "ctrl+w+l",
-    "command": "workbench.action.navigateRight || workbench.action.focusRightGroup",
-    "when": "vim.active && vim.mode != 'Insert'"
+    "command": "workbench.action.navigateRight"
   },
   {
     "key": "ctrl+w+k",
-    "command": "workbench.action.navigateUp",
-    "when": "vim.active && vim.mode != 'Insert'"
+    "command": "workbench.action.navigateUp"
   },
   {
     "key": "ctrl+w+j",
@@ -189,11 +34,85 @@
     }
   },
 
-  /*
-   * ========================================
-   * Explorer Actions
-   * ========================================
-   */
+  // ========================================
+  // Editor Actions
+  // ========================================
+  {
+    "key": "ctrl+shift+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // ========================================
+  // IntelliSense & Code Actions
+  // ========================================
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+
+  // ========================================
+  // Quick Open Navigation
+  // ========================================
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+
+  // ========================================
+  // File Browser Navigation
+  // ========================================
+  {
+    "key": "ctrl+w+h",
+    "command": "file-browser.stepOut",
+    "when": "inFileBrowser"
+  },
+  {
+    "key": "ctrl+w+l",
+    "command": "file-browser.stepIn",
+    "when": "inFileBrowser"
+  },
+
+  // ========================================
+  // Explorer Actions
+  // ========================================
   {
     "key": "e",
     "command": "workbench.explorer.fileView.focus",
@@ -269,21 +188,26 @@
     "command": "copyRelativeFilePath",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
-  /*
-   * ========================================
-   * Editor Actions
-   * ========================================
-   */
+
+  // ========================================
+  // Git Integration
+  // ========================================
   {
-    "key": "ctrl+shift+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "ctrl+shift+g",
+    "command": "workbench.scm.focus",
+    "when": "!editorFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.focusNextPart",
+    "when": "timelineFollowActiveEditor && !inputFocus && !scmFocus"
   },
+  {
+    "key": "ctrl+shift+c",
+    "command": "git.timeline.copyCommitId",
+    "when": "timelineFollowActiveEditor && !inputFocus"
+  },
+
   // ========================================
   // Terminal Operations
   // ========================================
@@ -341,5 +265,18 @@
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
   }
 ]

@@ -1,0 +1,143 @@
+{
+  /*################################ LANGUAGE CONFIGURATION ############################*/
+  /*================================ HTML CONFIGURATION ================================*/
+  "html.suggest.html5": true,
+  "html.autoClosingTags": true,
+  "html.format.wrapLineLength": 80,
+  "html.format.indentInnerHtml": true,
+  "html.format.indentHandlebars": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.foldingStrategy": "auto",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "never"
+    }
+  },
+  /*============================= JAVASCRIPT CONFIGURATION =============================*/
+  "javascript.autoClosingTags": true,
+  "[javascript][javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "javascript.format.semicolons": "insert",
+  "javascript.suggest.enabled": true,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.jsdoc.generateReturns": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  /*============================= TYPESCRIPT CONFIGURATION =============================*/
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "typescript.suggest.enabled": true,
+  "typescript.autoClosingTags": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  /*================================ JSON CONFIGURATION ================================*/
+  "[json][jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  /*============================ CSS SCSS LESS CONFIGURATION ===========================*/
+  "[css][scss][less]": {
+    "editor.formatOnSave": true,
+    "editor.foldingStrategy": "auto",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "css.completion.completePropertyWithSemicolon": true,
+  "scss.completion.completePropertyWithSemicolon": true,
+  "less.completion.completePropertyWithSemicolon": true,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  /*================================= ESLINT CONFIGURATION =============================*/
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
+  /*================================= STYLELINT CONFIGURATION ===========================*/
+  // Disable VSCode's built-int linter (optional) from documentation of Stylelint plugin
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  //Sets the Stylelint config option. Note that when this option is enabled, Stylelint doesn't load configuration files -> Set to null
+  "stylelint.config": null,
+  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.validate": ["css", "scss", "postcss"],
+  "git.ignoreRebaseWarning": true,
+  "codium.enable": true,
+  "dotenv.enableAutocloaking": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "prisma": true
+  },
+  "react-native-tools.showUserTips": false,
+  "workbench.colorCustomizations": {},
+  "git.openRepositoryInParentFolders": "always",
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  }
+}

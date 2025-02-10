@@ -1,0 +1,141 @@
+{
+    /*################################ LANGUAGE CONFIGURATION ############################*/
+    /*================================ HTML CONFIGURATION ================================*/
+    "html.format.enable": true,
+    "html.suggest.html5": true,
+    "html.autoClosingTags": true,
+    "html.format.wrapLineLength": 80,
+    "html.format.indentInnerHtml": true,
+    "html.format.indentHandlebars": true,
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "[html]": {
+        "editor.formatOnSave": true,
+        "editor.linkedEditing": true,
+        "editor.foldingStrategy": "auto",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.fixAll.eslint": "never"
+        }
+    },
+    /*============================= JAVASCRIPT CONFIGURATION =============================*/
+    "javascript.autoClosingTags": true,
+    "[javascript][javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "javascript.format.enable": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.suggest.enabled": true,
+    "javascript.suggest.completeJSDocs": true,
+    "javascript.suggest.jsdoc.generateReturns": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    /*============================= TYPESCRIPT CONFIGURATION =============================*/
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "typescript.format.enable": true,
+    "typescript.suggest.enabled": true,
+    "typescript.autoClosingTags": true,
+    "typescript.format.semicolons": "insert",
+    "typescript.suggest.completeJSDocs": true,
+    "js/ts.implicitProjectConfig.target": "ES2022",
+    "typescript.suggest.jsdoc.generateReturns": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    /*================================ JSON CONFIGURATION ================================*/
+    "[json][jsonc]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    /*============================ CSS SCSS LESS CONFIGURATION ===========================*/
+    "[css][scss][less]": {
+        "editor.formatOnSave": true,
+        "editor.foldingStrategy": "auto",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit"
+        }
+    },
+    "css.format.enable": true,
+    "scss.format.enable": true,
+    "less.format.enable": true,
+    "css.completion.completePropertyWithSemicolon": true,
+    "scss.completion.completePropertyWithSemicolon": true,
+    "less.completion.completePropertyWithSemicolon": true,
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+    },
+    /*################################ EXTENSIONS CONFIGURATION ##########################*/
+    /*================================ YAML CONFIGURATION ================================*/
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "yaml.format.printWidth": 160,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    /*================================= ESLINT CONFIGURATION =============================*/
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.run": "onSave",
+    // NOTE:  Other options should be configured in the settings.json file of .vscode folder of the workspace that we are currently working on
+    /*================================= CODEIUM CONFIGURATION ============================*/
+    "codeium.enableConfig": {
+        "*": true,
+        "postcss": true,
+        "plaintext": true
+    },
+    "symbols.hidesExplorerArrows": false,
+    "workbench.colorCustomizations": {}
+}
