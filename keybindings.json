@@ -1,4 +1,7 @@
 [
+  ////////////////////////////////////////////////////////////
+  // Global / vspacecode & Vim Shortcuts
+  ////////////////////////////////////////////////////////////
   {
     "key": "space",
     "command": "vspacecode.space",
@@ -19,6 +22,10 @@
     "command": "-extension.vim_tab",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   },
+
+  ////////////////////////////////////////////////////////////
+  // Magit Specific Bindings
+  ////////////////////////////////////////////////////////////
   {
     "key": "x",
     "command": "magit.discard-at-point",
@@ -82,6 +89,10 @@
     "command": "vspacecode.showMagitRefreshMenu",
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
+
+  ////////////////////////////////////////////////////////////
+  // Quick Open & Suggestion Shortcuts
+  ////////////////////////////////////////////////////////////
   {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
@@ -103,7 +114,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "tab",
+    "key": "ctrl+l",
     "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
@@ -132,16 +143,10 @@
     "command": "acceptSelectedCodeAction",
     "when": "codeActionMenuVisible"
   },
-  {
-    "key": "ctrl+w+l",
-    "command": "file-browser.stepOut",
-    "when": "inFileBrowser || inSearchEditor"
-  },
-  {
-    "key": "ctrl+w+h",
-    "command": "file-browser.stepIn",
-    "when": "inFileBrowser || inSearchEditor"
-  },
+
+  ////////////////////////////////////////////////////////////
+  // Editor Navigation & Window Management
+  ////////////////////////////////////////////////////////////
   {
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
@@ -150,11 +155,6 @@
     "key": "ctrl+cmd+w",
     "command": "workbench.action.switchWindow"
   },
-  /*
-   * ========================================
-   * Navigation Between Panels & Editors
-   * ========================================
-   */
   {
     "key": "ctrl+w+h",
     "command": "workbench.action.navigateLeft || workbench.action.focusLeftGroup",
@@ -177,23 +177,17 @@
   {
     "key": "cmd+ctrl+h",
     "command": "moveActiveEditor",
-    "args": {
-      "to": "left"
-    }
+    "args": { "to": "left" }
   },
   {
     "key": "cmd+ctrl+l",
     "command": "moveActiveEditor",
-    "args": {
-      "to": "right"
-    }
+    "args": { "to": "right" }
   },
 
-  /*
-   * ========================================
-   * Explorer Actions
-   * ========================================
-   */
+  ////////////////////////////////////////////////////////////
+  // File Explorer Shortcuts
+  ////////////////////////////////////////////////////////////
   {
     "key": "e",
     "command": "workbench.explorer.fileView.focus",
@@ -269,11 +263,10 @@
     "command": "copyRelativeFilePath",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
-  /*
-   * ========================================
-   * Editor Actions
-   * ========================================
-   */
+
+  ////////////////////////////////////////////////////////////
+  // Editor Actions Shortcuts
+  ////////////////////////////////////////////////////////////
   {
     "key": "ctrl+shift+j",
     "command": "editor.action.moveLinesDownAction",
@@ -284,9 +277,10 @@
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // ========================================
+
+  ////////////////////////////////////////////////////////////
   // Terminal Operations
-  // ========================================
+  ////////////////////////////////////////////////////////////
   {
     "key": "ctrl+m",
     "command": "workbench.action.toggleMaximizedPanel",
@@ -341,5 +335,17 @@
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+
+  ////////////////////////////////////////////////////////////
+  // Panel View Size Controls
+  ////////////////////////////////////////////////////////////
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.increaseViewSize"
   }
 ]

@@ -89,7 +89,6 @@
   "zoombar.zoomUnit": 1,
   "zoombar.defaultZoom": 100,
   "zoombar.zoomUnitType": "multiplicative",
-
   /*
    * WORKBENCH - TREE & SIDEBAR SETTINGS
    */
@@ -97,7 +96,6 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.enableStickyScroll": false,
   "workbench.sideBar.location": "left",
-
   /*
    * WORKBENCH - MOTION & VISUAL EFFECTS
    */
@@ -107,13 +105,11 @@
   "workbench.productIconTheme": "fluent-icons",
   "workbench.preferredDarkColorTheme": "Kanagawa Paper",
   "workbench.preferredHighContrastColorTheme": "Kanagawa Paper",
-
   /*
    * WORKBENCH - ACTIVITY BAR & LAYOUT CONTROL
    */
-  "workbench.activityBar.location": "top",
+  "workbench.activityBar.location": "bottom",
   "workbench.layoutControl.enabled": true,
-
   /*
    * WORKBENCH - EDITOR GROUPS & TAB SETTINGS
    */
@@ -134,7 +130,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.panel.showLabels": false,
-
   /*
    * BUILT-IN: EDITOR - FONT & LAYOUT
    */
@@ -147,7 +142,6 @@
   "editor.fontLigatures": false,
   "editor.largeFileOptimizations": true,
   "editor.minimap.enabled": false,
-
   /*
    * BUILT-IN: EDITOR - WORD WRAP & SCROLLING
    */
@@ -156,11 +150,11 @@
   "editor.wordWrapColumn": 160,
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
-
   /*
    * BUILT-IN: EDITOR - INLAY HINTS & SUGGESTIONS
    */
   "editor.inlayHints.enabled": "off",
+  "editor.parameterHints.enabled": false, // disable parameter hints on typing function
   "editor.inlayHints.fontSize": 12,
   "editor.inlayHints.fontFamily": "CommitMono Nerd Font Propo",
   "editor.inlineSuggest.enabled": true,
@@ -171,17 +165,19 @@
     "strings": "on",
     "other": "on"
   },
-
   /*
    * BUILT-IN: EDITOR - RENDERING & VISUALS
    */
   "editor.lineNumbers": "relative",
-  "editor.renderLineHighlight": "line",
+  "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "none",
-  "editor.glyphMargin": true,
+  "editor.glyphMargin": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "solid",
-
+  "editor.colorDecorators": false, // disable rendering color decorators
+  "editor.codeLens": false, // disable displaying some action button above line of code
+  "editor.links": false, // disable rendering underline indicating for links
+  "editor.hideCursorInOverviewRuler": true,
   /*
    * BUILT-IN: EDITOR - GUIDES & FOLDING
    */
@@ -191,7 +187,6 @@
   "editor.guides.highlightActiveBracketPair": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-
   /*
    * BUILT-IN: EDITOR - ACTIONS & BEHAVIOR
    */
@@ -201,12 +196,13 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.snippetSuggestions": "inline",
   "editor.tabCompletion": "on",
   "editor.linkedEditing": true,
   "editor.cursorStyle": "block",
   "editor.accessibilitySupport": "off",
   "editor.codeLensFontFamily": "CommitMono Nerd Font Propo",
-
   /*
    * BUILT-IN: EDITOR - SCROLLBARS & STICKY SCROLL
    */
@@ -245,19 +241,17 @@
   "debug.console.wordWrap": true,
   "debug.console.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
   "debug.console.fontSize": 12,
-
   /*
    * BUILT-IN: TERMINAL - GENERAL CONFIGURATION
    * Command: Open integrated terminal via "Terminal: Focus Integrated Terminal" (Cmd+`)
    */
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.lineHeight": 1.5,
   "terminal.integrated.cursorWidth": 1,
   "terminal.integrated.letterSpacing": 1.4,
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.scrollback": 1000,
   "terminal.integrated.fontWeight": "normal",
-
   /*
    * BUILT-IN: TERMINAL - MACOS SPECIFIC CONFIGURATION
    * Command: Open external terminal via "Terminal: Open New External Terminal" (Cmd+Shift+C)
@@ -280,7 +274,6 @@
   "terminal.integrated.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.allowMnemonics": false,
-
   /*
    * BUILT-IN: TERMINAL - MACOS TERMINAL PROFILES
    */
@@ -326,14 +319,13 @@
     "**/.git/objects/**": true
   },
   "files.enableTrash": true,
-
   /*
    * BUILT-IN: FILE EXPLORER CONFIGURATION
    */
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
   "explorer.compactFolders": false,
-
+  "explorer.decorations.badges": false,
   /*
    * ####################################################################################
    * ################################# EXTENSIONS CONFIGURATION #########################
@@ -344,8 +336,8 @@
     "roundedCorners": true,
     "titleBarStyle": "hiddenInset",
     "trafficLightPosition": {
-      "x": 20,
-      "y": 16
+      "x": 8,
+      "y": 8
     }
   },
   "custom-ui-style.font.sansSerif": "CommitMono Nerd Font Propo, -apple-system",
@@ -354,7 +346,7 @@
     ".quick-input-widget.show-file-icons": "box-shadow: none !important",
     ".quick-input-widget": "top: 36vh !important",
     // ".quick-input-list .scrollbar": "display: none",
-    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    // ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
     ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
     ".quick-input-titlebar": "background: #100B15 !important",
     // ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
@@ -367,12 +359,14 @@
     // ".title-actions": "display: none !important",
     ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: start; padding: 0 !important",
     ".title .monaco-icon-label:after": "margin-right: 0",
-    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
-    ".title .monaco-icon-label.file-icon": "margin: 0 60px"
+    // ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+    // ".title .monaco-icon-label.file-icon": "margin: 0 60px",
+    "div.part.sidebar.left > div.composite.title > div.title-label > h2": "padding-left: 72px"
   },
   /*
    * GIT CONFIGURATION
    */
+  "git.decorations.enabled": false,
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.createOnPublishBranch": "never",
   "git.confirmSync": true,
@@ -381,7 +375,6 @@
   "git.terminalGitEditor": true,
   "git-graph.dialog.rebase.launchInteractiveRebase": true,
   "git.ignoreRebaseWarning": false,
-
   /*
    * NOTEBOOK CONFIGURATION
    */
@@ -392,11 +385,9 @@
   "jupyter.askForKernelRestart": false,
   "notebook.breadcrumbs.showCodeCells": false,
   "notebook.output.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
-
   /* AWS CONFIGURATION */
   "aws.samcli.location": "/usr/local/bin/sam",
   "aws.telemetry": false,
-
   /*
    * SEARCH CONFIGURATION
    */
@@ -407,48 +398,41 @@
     "**/bower_components": true
   },
   "search.searchOnType": false,
-
   /*
    * SCM & BREADCRUMBS CONFIGURATION
    */
   "scm.inputFontSize": 11,
   "breadcrumbs.enabled": false,
   "scm.inputFontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
-
   /*
    * WINDOW CONFIGURATION
    */
   "window.commandCenter": false,
-  "window.titleBarStyle": "custom",
-  "window.customTitleBarVisibility": "windowed",
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
   "window.density.editorTabHeight": "compact",
   "window.confirmBeforeClose": "always",
   "window.newWindowProfile": "Default",
-
   /*
    * ACCESSABILITY CONFIGURATION
    */
   "accessibility.dimUnfocused.enabled": false,
-
   /*
    * REMOTE CONFIGURATION
    */
   "remote.autoForwardPorts": false,
   "database-client.autoSync": true,
-
   /*
    * MICS: MISCELLANEOUS CONFIGURATION
    */
   "telemetry.telemetryLevel": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "application.shellEnvironmentResolutionTimeout": 120,
-  "update.mode": "manual",
+  "update.mode": "none",
   "dotenv.enableAutocloaking": false,
-
   /*
    * LANGUAGE CONFIGURATION
    */
-
   /*================================ HTML ================================*/
   "html.suggest.html5": true,
   "html.autoClosingTags": true,
@@ -489,7 +473,6 @@
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-
   /*============================= TYPESCRIPT =============================*/
   "[typescript]": {
     "editor.formatOnSave": true,
@@ -514,7 +497,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-
   /*================================ JSON ================================*/
   "[json][jsonc]": {
     "editor.formatOnSave": true,
@@ -530,7 +512,6 @@
       "source.fixAll.stylelint": "explicit"
     }
   },
-
   "css.enabledLanguages": ["html", "typescript"], // From HTML CSS Support extension
   "css.completion.completePropertyWithSemicolon": true,
   "scss.completion.completePropertyWithSemicolon": true,
@@ -542,7 +523,6 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
-
   /*================================ STYLELINT ===========================*/
   // Disable VSCode's built-int linter (optional) from documentation of Stylelint plugin
   "css.validate": false,
@@ -553,7 +533,6 @@
   "stylelint.config": null,
   "stylelint.configFile": ".stylelintrc.json",
   "stylelint.validate": ["css", "scss", "postcss"],
-
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
