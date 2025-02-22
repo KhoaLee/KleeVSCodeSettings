@@ -1,7 +1,8 @@
 {
   /*==================================================================================
 	================================== VIM CONFIGURATION ===============================
-	==================================================================================*/
+	==================================================================================*
+  /* From https://github.com/AnthonyAsDev/VSCodeVimSettings?tab=readme-ov-file#-vim-shortcuts */
   // Copy indent from current line when starting a new line
   "vim.autoindent": true,
   // Highlights all text matching current search
@@ -20,31 +21,47 @@
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.sneakUseIgnorecaseAndSmartcase": true,
-  "vim.cursorStylePerMode.insert": "underline-thin",
+  "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block-outline",
   "vim.cursorStylePerMode.replace": "block-outline",
-  "vim.cursorStylePerMode.visual": "block-outline",
+  "vim.cursorStylePerMode.visual": "line",
   "vim.cursorStylePerMode.visualblock": "line",
   "vim.cursorStylePerMode.visualline": "line",
-  "vim.normalModeKeyBindingsNonRecursive": [
+  // Operator Pending Mode Keybindings
+  "vim.operatorPendingModeKeyBindings": [
+    // Bind L to $ and H to ^ in operator pending mode
+    // makes yL and dH work like y$ and d^ respectively:
     {
-      "before": ["<space>"],
-      "commands": ["vspacecode.space"]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [","],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
+      "before": ["H"],
+      "after": ["^"]
     }
   ],
-  "vim.visualModeKeyBindingsNonRecursive": [
+  // Insert Mode Keybindings Non Recursive
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Exit Insert Mode
     {
-      "before": ["<space>"],
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  // Normal Mode Keybindings Non Recursive
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Mimic the behaviour of scrolling up and down with <C-d> and <C-u>
+    // The value must be <= with value of "vim.scroll"
+    {
+      "before": ["<C-j>"],
+      "after": ["8", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["8", "k"]
+    },
+    {
+      "before": ["<space>", "<space>"],
       "commands": ["vspacecode.space"]
     },
     {
@@ -57,6 +74,9 @@
         }
       ]
     },
+    ////////////////////////////////////////////////////
+    // Keybindings for lines indentation
+    ////////////////////////////////////////////////////
     {
       "before": [">"],
       "commands": ["editor.action.indentLines"]
@@ -64,13 +84,772 @@
     {
       "before": ["<"],
       "commands": ["editor.action.outdentLines"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for toggling code actions
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+
+    ////////////////////////////////////////////////////
+    // Keybindings for editor actions with LSP
+    ////////////////////////////////////////////////////
+    // NOTE: The gd(Go to Definition) keybinding is built-in
+    // so no need to re-specify
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.goToDeclaration"]
+    },
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for toggling sidebar and auxiliary bar
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "E"],
+      "commands": ["workbench.action.toggleAuxiliaryBar"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for jumping between methods/attributes
+    ////////////////////////////////////////////////////
+    {
+      // Go to previous method with [m
+      "before": ["[", "m"],
+      "commands": ["editor.action.previousMethodOrAttributeKeys"]
+    },
+    {
+      // Go to next method with ]m
+      "before": ["]", "m"],
+      "commands": ["editor.action.nextMethodOrAttributeKeys"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for jumping between diagnostics/errors
+    ////////////////////////////////////////////////////
+    {
+      // Go to next problem/error with ]d
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      // Go to previous problem/error with [d
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["<leader>", "f", "d"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "r", "s"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "t", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "g", "l"],
+      "commands": ["workbench.action.gotoLine"]
+    },
+    {
+      "before": ["<leader>", "i"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for interact with notifications panel
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "n", "h"],
+      "commands": ["notifications.hideList"]
+    },
+    {
+      "before": ["<leader>", "n", "c"],
+      "commands": ["notifications.clearAll"]
+    },
+    {
+      "before": ["<leader>", "n", "f"],
+      "commands": ["notifications.focusToasts"]
+    },
+    {
+      "before": ["<leader>", "n", "s"],
+      "commands": ["notifications.showList"]
+    },
+
+    ////////////////////////////////////////////////////
+    // Keybindings for adjust view size, height and width
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "v", "i"],
+      "commands": ["workbench.action.increaseViewSize"]
+    },
+    {
+      "before": ["<leader>", "v", "d"],
+      "commands": ["workbench.action.decreaseViewSize"]
+    },
+    {
+      "before": ["<leader>", "v", "i", "h"],
+      "commands": ["workbench.action.increaseViewHeight"]
+    },
+    {
+      "before": ["<leader>", "v", "d", "h"],
+      "commands": ["workbench.action.decreaseViewHeight"]
+    },
+    {
+      "before": ["<leader>", "v", "i", "w"],
+      "commands": ["workbench.action.increaseViewWidth"]
+    },
+    {
+      "before": ["<leader>", "v", "d", "w"],
+      "commands": ["workbench.action.decreaseViewWidth"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for action with editor groups
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "a", "g", "j"],
+      "commands": ["workbench.action.moveActiveEditorGroupDown"]
+    },
+    {
+      "before": ["<leader>", "a", "g", "h"],
+      "commands": ["workbench.action.moveActiveEditorGroupLeft"]
+    },
+    {
+      "before": ["<leader>", "a", "g", "l"],
+      "commands": ["workbench.action.moveActiveEditorGroupRight"]
+    },
+    {
+      "before": ["<leader>", "a", "g", "k"],
+      "commands": ["workbench.action.moveActiveEditorGroupUp"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "f"],
+      "commands": ["workbench.action.moveEditorToFirstGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "l"],
+      "commands": ["workbench.action.moveEditorToLastGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "n"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "p"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "g", "h"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "e", "g", "l"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "c", "e", "g"],
+      "commands": ["workbench.action.closeEditorsAndGroup"]
+    },
+    {
+      "before": ["<leader>", "a", "c", "o", "e"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
+      "before": ["<leader>", "a", "c", "e", "o"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },
+    ////////////////////////////////////////////////////
+    // keybindings for Git and SCM
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.scm.focus"]
+    },
+    {
+      "before": ["<leader>", "g", "t", "l"],
+      "commands": ["timeline.focus"]
+    },
+    {
+      "before": ["<leader>", "g", "i", "r"],
+      "commands": ["git.init"]
+    },
+    {
+      "before": ["<leader>", "g", "a", "i"],
+      "commands": ["git.ignore"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "g"],
+      "commands": ["github.publish"]
+    },
+    {
+      "before": ["<leader>", "g", "a", "r"],
+      "commands": ["git.addRemote"]
+    },
+    {
+      "before": ["<leader>", "g", "r", "r"],
+      "commands": ["git.removeRemote"]
+    },
+    // Git stage commands
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["git.stage"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "a", "c"],
+      "commands": ["git.stageAll"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "a", "m"],
+      "commands": ["git.stageAllMerge"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "a", "t"],
+      "commands": ["git.stageAllTracked"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "a", "u"],
+      "commands": ["git.stageAllUntracked"]
+    },
+    // Git unstage commands
+    {
+      "before": ["<leader>", "g", "u"],
+      "commands": ["git.unstage"]
+    },
+    {
+      "before": ["<leader>", "g", "u", "a", "c"],
+      "commands": ["git.unstageAll"]
+    },
+    // Git commit commands
+    {
+      "before": ["<leader>", "g", "c"],
+      "commands": ["git.commit"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "a"],
+      "commands": ["git.commitAll"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "s"],
+      "commands": ["git.commitStaged"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "e"],
+      "commands": ["git.commitEmpty"]
+    },
+    {
+      "before": ["<leader>", "g", "u", "c"],
+      "commands": ["git.undoCommit"]
+    },
+    // Git push commands
+    {
+      "before": ["<leader>", "g", "p", "h"],
+      "commands": ["git.push"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "f"],
+      "commands": ["git.pushForce"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "b", "t"],
+      "commands": ["git.pushTo"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "b", "t", "f"],
+      "commands": ["git.pushToForce"]
+    },
+    // Git pull commands
+    {
+      "before": ["<leader>", "g", "P", "r"],
+      "commands": ["git.pull"]
+    },
+    {
+      "before": ["<leader>", "g", "P", "f"],
+      "commands": ["git.pullFrom"]
+    },
+    {
+      "before": ["<leader>", "g", "P", "r"],
+      "commands": ["git.pullRebase"]
+    },
+    // Git rebase command
+    {
+      "before": ["<leader>", "g", "A", "r"],
+      "commands": ["git.rebaseAbort"]
+    },
+    // Git branch commands
+    {
+      "before": ["<leader>", "g", "c", "b"],
+      "commands": ["git.branch"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "b", "f"],
+      "commands": ["git.branchFrom"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "b"],
+      "commands": ["git.deleteBranch"]
+    },
+    {
+      "before": ["<leader>", "g", "m", "b"],
+      "commands": ["git.merge"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "b"],
+      "commands": ["git.publish"]
+    },
+    {
+      "before": ["<leader>", "g", "r", "b"],
+      "commands": ["git.renameBranch"]
+    },
+    {
+      "before": ["<leader>", "g", "R", "b"],
+      "commands": ["git.rebase"]
+    },
+    {
+      "before": ["<leader>", "g", "C"],
+      "commands": ["git.checkout"]
+    },
+    {
+      "before": ["<leader>", "g", "C", "d"],
+      "commands": ["git.checkoutDetached"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "p"],
+      "commands": ["git.cherryPick"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "c"],
+      "commands": ["git.clean"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "a", "c"],
+      "commands": ["git.cleanAll"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "a", "t"],
+      "commands": ["git.cleanAllTracked"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "a", "u"],
+      "commands": ["git.cleanAllUntracked"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "s"],
+      "commands": ["git.stash"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "i", "u"],
+      "commands": ["git.stashIncludeUntracked"]
+    },
+    {
+      "before": ["<leader>", "g", "a", "s"],
+      "commands": ["git.stashApply"]
+    },
+    {
+      "before": ["<leader>", "g", "a", "l", "s"],
+      "commands": ["git.stashApplyLatest"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "s"],
+      "commands": ["git.stashDrop"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "s"],
+      "commands": ["git.stashPop"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "l", "s"],
+      "commands": ["git.stashPopLatest"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "t"],
+      "commands": ["git.createTag"]
+    },
+    {
+      "before": ["<leader>", "g", "d", "t"],
+      "commands": ["git.deleteTag"]
+    },
+    {
+      "before": ["<leader>", "g", "p", "t"],
+      "commands": ["git.pushTags"]
+    },
+    {
+      "before": ["<leader>", "g", "f", "f"],
+      "commands": ["git.fetch"]
+    },
+    {
+      "before": ["<leader>", "g", "f", "p"],
+      "commands": ["git.fetchPrune"]
+    },
+    {
+      "before": ["<leader>", "g", "f", "f", "a", "r"],
+      "commands": ["git.fetchAll"]
+    },
+    {
+      "before": ["<leader>", "g", "o", "c"],
+      "commands": ["git.openChange"]
+    },
+    {
+      "before": ["<leader>", "g", "o", "f"],
+      "commands": ["git.openFile"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "n"],
+      "commands": ["editor.action.dirtydiff.next"]
+    },
+    {
+      "before": ["<leader>", "g", "s", "N"],
+      "commands": ["editor.action.dirtydiff.previous"]
+    },
+    {
+      "before": ["<leader>", "g", "m", "n"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    {
+      "before": ["<leader>", "g", "m", "N"],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "n"],
+      "commands": ["workbench.action.compareEditor.nextChange"]
+    },
+    {
+      "before": ["<leader>", "g", "c", "N"],
+      "commands": ["workbench.action.compareEditor.previousChange"]
+    },
+    {
+      "before": ["<leader>", "g", "i", "v"],
+      "commands": ["toggle.diff.renderSideBySide"]
+    },
+    // Git merge conflict commands
+    {
+      "before": ["<leader>", "m", "c", "b"],
+      "commands": ["merge-conflict.accept.both"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "c"],
+      "commands": ["merge-conflict.accept.current"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "i"],
+      "commands": ["merge-conflict.accept.incoming"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "a", "b"],
+      "commands": ["merge-conflict.accept.all-both"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "a", "c"],
+      "commands": ["merge-conflict.accept.all-current"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "a", "i"],
+      "commands": ["merge-conflict.accept.all-incoming"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "o"],
+      "commands": ["merge-conflict.compare"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "n"],
+      "commands": ["merge-conflict.next"]
+    },
+    {
+      "before": ["<leader>", "m", "c", "N"],
+      "commands": ["merge-conflict.previous"]
+    },
+
+    ////////////////////////////////////////////////////
+    // Keybindings for debug commands
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<Leader>", "d", "f"],
+      "commands": ["workbench.view.debug"]
+    },
+    {
+      "before": ["<Leader>", "d", "c"],
+      "commands": ["workbench.action.debug.continue"]
+    },
+    {
+      "before": ["<Leader>", "d", "p"],
+      "commands": ["workbench.action.debug.pause"]
+    },
+    {
+      "before": ["<Leader>", "d", "r"],
+      "commands": ["workbench.action.debug.restart"]
+    },
+    {
+      "before": ["<Leader>", "d", "h"],
+      "commands": ["editor.debug.action.showDebugHover"]
+    },
+    {
+      "before": ["<Leader>", "d", "s"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["<Leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    {
+      "before": ["<Leader>", "d", "u"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+    {
+      "before": ["<Leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<Leader>", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "x"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "l"],
+      "commands": ["editor.debug.action.addLogPoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "f"],
+      "commands": ["workbench.debug.viewlet.action.addFunctionBreakpointAction"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "c"],
+      "commands": ["editor.debug.action.conditionalBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "a", "i"],
+      "commands": ["editor.debug.action.toggleInlineBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "e", "b"],
+      "commands": ["workbench.debug.viewlet.action.enableAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "d", "b"],
+      "commands": ["workbench.debug.viewlet.action.disableAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "r", "b"],
+      "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+    },
+    {
+      "before": ["<Leader>", "d", "n"],
+      "commands": ["editor.debug.action.goToNextBreakpoint"]
+    },
+    {
+      "before": ["<Leader>", "d", "N"],
+      "commands": ["editor.debug.action.goToPreviousBreakpoint"]
+    },
+    ////////////////////////////////////////////////////
+    // keybindings for spliting editor
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorLeft"]
+    },
+    {
+      "before": ["<leader>", "s", "j"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "s", "k"],
+      "commands": ["workbench.action.splitEditorUp"]
+    },
+    {
+      "before": ["<leader>", "s", "l"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for moving lines up and down
+    ////////////////////////////////////////////////////
+    {
+      "before": ["ctrl", "shift", "j"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["ctrl", "shift", "k"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Mimic the behaviour of scrolling up and down with <C-d> and <C-u>
+    // The value must be <= with value of "vim.scroll"
+    {
+      "before": ["<C-j>"],
+      "after": ["8", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["8", "k"]
+    },
+    {
+      "before": ["<space>", "<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for lines indentation
+    ////////////////////////////////////////////////////
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for toggling code actions
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for toggling sidebar and auxiliary bar
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "E"],
+      "commands": ["workbench.action.toggleAuxiliaryBar"]
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    },
+    {
+      "before": ["<leader>", "i"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+
+    ////////////////////////////////////////////////////
+    // Keybindings for git  commands in Visual mode
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<Leader>", "g", "s"],
+      "commands": ["git.stageSelectedRanges"]
+    },
+    {
+      "before": ["<Leader>", "g", "u"],
+      "commands": ["git.unstageSelectedRanges"]
+    },
+    {
+      "before": ["<Leader>", "g", "r"],
+      "commands": ["git.revertSelectedRanges"]
+    },
+    {
+      "before": ["leader", "m", "c", "a"],
+      "commands": ["merge-conflict.accept.selection"]
+    },
+    ////////////////////////////////////////////////////
+    // keybindings for spliting editor
+    ////////////////////////////////////////////////////
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorLeft"]
+    },
+    {
+      "before": ["<leader>", "s", "j"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "s", "k"],
+      "commands": ["workbench.action.splitEditorUp"]
+    },
+    {
+      "before": ["<leader>", "s", "l"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    ////////////////////////////////////////////////////
+    // Keybindings for moving lines up and down
+    ////////////////////////////////////////////////////
+    {
+      "before": ["ctrl", "shift", "j"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["ctrl", "shift", "k"],
+      "commands": ["editor.action.moveLinesUpAction"]
     }
   ],
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false,
     // VS Code new marker @ next occurence
-    "<C-c>": true
+    "<C-c>": true,
+    // False Ctrl+d to use Ctrl+j for scrolling down
+    "<C-d>": false,
+    // False Ctrl+u to use Ctrl+k for scrolling up
+    "<C-u>": false,
+    // Disable Ctrl+f to use VS Code's find instead
+    "<C-f>": false
     // Cut
     // "<C-x>": false,
     // Paste
@@ -101,8 +880,7 @@
    */
   "workbench.reduceMotion": "on",
   "workbench.fontAliasing": "default",
-  "workbench.list.smoothScrolling": true,
-  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Kanagawa Paper",
   "workbench.preferredDarkColorTheme": "Kanagawa Paper",
   "workbench.preferredHighContrastColorTheme": "Kanagawa Paper",
   /*
@@ -135,8 +913,8 @@
    */
   "editor.tabSize": 4,
   "editor.lineHeight": 1.5,
-  "editor.letterSpacing": 1,
-  "editor.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
+  "editor.letterSpacing": 1.0,
+  "editor.fontFamily": "GeistMono Nerd Font Propo, 'GeistMono Nerd Font Propo', GeistMono Nerd Font Propo",
   "editor.fontSize": 12,
   "editor.fontWeight": "normal",
   "editor.fontLigatures": false,
@@ -156,7 +934,7 @@
   "editor.inlayHints.enabled": "off",
   "editor.parameterHints.enabled": false, // disable parameter hints on typing function
   "editor.inlayHints.fontSize": 12,
-  "editor.inlayHints.fontFamily": "CommitMono Nerd Font Propo",
+  "editor.inlayHints.fontFamily": "GeistMono Nerd Font Propo",
   "editor.inlineSuggest.enabled": true,
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "on",
@@ -202,7 +980,7 @@
   "editor.linkedEditing": true,
   "editor.cursorStyle": "block",
   "editor.accessibilitySupport": "off",
-  "editor.codeLensFontFamily": "CommitMono Nerd Font Propo",
+  "editor.codeLensFontFamily": "GeistMono Nerd Font Propo",
   /*
    * BUILT-IN: EDITOR - SCROLLBARS & STICKY SCROLL
    */
@@ -239,7 +1017,7 @@
   "debug.showVariableTypes": true,
   "debug.inlineValues": "auto",
   "debug.console.wordWrap": true,
-  "debug.console.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
+  "debug.console.fontFamily": "GeistMono Nerd Font Propo, 'GeistMono Nerd Font Propo', GeistMono Nerd Font Propo",
   "debug.console.fontSize": 12,
   /*
    * BUILT-IN: TERMINAL - GENERAL CONFIGURATION
@@ -271,7 +1049,7 @@
   "terminal.integrated.tabs.defaultIcon": "terminal",
   "terminal.integrated.shellIntegration.decorationsEnabled": "both",
   "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
-  "terminal.integrated.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
+  "terminal.integrated.fontFamily": "GeistMono Nerd Font Propo, 'GeistMono Nerd Font Propo', GeistMono Nerd Font Propo",
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.allowMnemonics": false,
   /*
@@ -340,28 +1118,17 @@
       "y": 8
     }
   },
-  "custom-ui-style.font.sansSerif": "CommitMono Nerd Font Propo, -apple-system",
+  "custom-ui-style.font.sansSerif": "GeistMono Nerd Font Propo, -apple-system",
   "custom-ui-style.stylesheet": {
-    ".notification-toast": "box-shadow: none !important",
-    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
     ".quick-input-widget": "top: 36vh !important",
-    // ".quick-input-list .scrollbar": "display: none",
-    // ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
-    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
-    ".quick-input-titlebar": "background: #100B15 !important",
-    // ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
     ".monaco-scrollable-element > .shadow.top": "display: none",
     ".sidebar .title-label": "padding: 0 !important",
     ".sidebar": "border: none !important",
     ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
     ".monaco-list-row.focused": "outline: none !important",
     ".monaco-editor .scroll-decoration": "display: none",
-    // ".title-actions": "display: none !important",
     ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: start; padding: 0 !important",
-    ".title .monaco-icon-label:after": "margin-right: 0",
-    // ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
-    // ".title .monaco-icon-label.file-icon": "margin: 0 60px",
-    "div.part.sidebar.left > div.composite.title > div.title-label > h2": "padding-left: 72px"
+    ".title .monaco-icon-label:after": "margin-right: 0"
   },
   /*
    * GIT CONFIGURATION
@@ -384,8 +1151,7 @@
   },
   "jupyter.askForKernelRestart": false,
   "notebook.breadcrumbs.showCodeCells": false,
-  "notebook.output.fontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
-  /* AWS CONFIGURATION */
+  "notebook.output.fontFamily": "GeistMono Nerd Font Propo, 'GeistMono Nerd Font Propo', GeistMono Nerd Font Propo",
   "aws.samcli.location": "/usr/local/bin/sam",
   "aws.telemetry": false,
   /*
@@ -401,14 +1167,14 @@
   /*
    * SCM & BREADCRUMBS CONFIGURATION
    */
-  "scm.inputFontSize": 11,
+  "scm.inputFontSize": 12,
   "breadcrumbs.enabled": false,
-  "scm.inputFontFamily": "CommitMono Nerd Font Propo, 'CommitMono Nerd Font Propo', CommitMono Nerd Font Propo",
+  "scm.inputFontFamily": "GeistMono Nerd Font Propo, 'GeistMono Nerd Font Propo', GeistMono Nerd Font Propo",
   /*
    * WINDOW CONFIGURATION
    */
   "window.commandCenter": false,
-  "window.customTitleBarVisibility": "never",
+  "window.customTitleBarVisibility": "windowed",
   "window.titleBarStyle": "native",
   "window.density.editorTabHeight": "compact",
   "window.confirmBeforeClose": "always",
@@ -428,7 +1194,7 @@
   "telemetry.telemetryLevel": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "application.shellEnvironmentResolutionTimeout": 120,
-  "update.mode": "none",
+  "update.mode": "manual",
   "dotenv.enableAutocloaking": false,
   /*
    * LANGUAGE CONFIGURATION
@@ -533,8 +1299,10 @@
   "stylelint.config": null,
   "stylelint.configFile": ".stylelintrc.json",
   "stylelint.validate": ["css", "scss", "postcss"],
+
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "workbench.colorTheme": "Kanagawa Paper"
+  "symbols.hidesExplorerArrows": false,
+  "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"]
 }

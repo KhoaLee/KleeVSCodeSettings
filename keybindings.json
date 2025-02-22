@@ -3,12 +3,12 @@
   // Global / vspacecode & Vim Shortcuts
   ////////////////////////////////////////////////////////////
   {
-    "key": "space",
+    "key": "space space",
     "command": "vspacecode.space",
     "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
   },
   {
-    "key": "space",
+    "key": "space space",
     "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive"
   },
@@ -139,7 +139,7 @@
     "when": "codeActionMenuVisible"
   },
   {
-    "key": "ctrl+n",
+    "key": "ctrl+l",
     "command": "acceptSelectedCodeAction",
     "when": "codeActionMenuVisible"
   },
@@ -156,23 +156,24 @@
     "command": "workbench.action.switchWindow"
   },
   {
-    "key": "ctrl+w+h",
-    "command": "workbench.action.navigateLeft || workbench.action.focusLeftGroup",
-    "when": "vim.active && vim.mode != 'Insert'"
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft",
+    "when": "vim.active && vim.mode != 'Insert' || textInputFocus"
   },
   {
-    "key": "ctrl+w+l",
-    "command": "workbench.action.navigateRight || workbench.action.focusRightGroup",
-    "when": "vim.active && vim.mode != 'Insert'"
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight",
+    "when": "vim.active && vim.mode != 'Insert' || filesExplorerFocus || textInputFocus"
   },
   {
-    "key": "ctrl+w+k",
+    "key": "ctrl+w k",
     "command": "workbench.action.navigateUp",
-    "when": "vim.active && vim.mode != 'Insert'"
+    "when": "vim.active && vim.mode != 'Insert' || textInputFocus"
   },
   {
-    "key": "ctrl+w+j",
-    "command": "workbench.action.navigateDown"
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown",
+    "when": "vim.active && vim.mode != 'Insert' || textInputFocus"
   },
   {
     "key": "cmd+ctrl+h",
@@ -347,5 +348,28 @@
   {
     "key": "ctrl+shift+i",
     "command": "workbench.action.increaseViewSize"
+  },
+  ////////////////////////////////////////////////////////////
+  // Scroll in hover panel
+  ////////////////////////////////////////////////////////////
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
   }
 ]
