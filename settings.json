@@ -1,7 +1,7 @@
 {
-  /*==================================================================================
-	================================== VIM CONFIGURATION ===============================
-	==================================================================================*
+  ////////////////////////////////////////////////////
+  // VIM EXTENSION CONFIGURATION
+  ////////////////////////////////////////////////////
   /* From https://github.com/AnthonyAsDev/VSCodeVimSettings?tab=readme-ov-file#-vim-shortcuts */
   // Copy indent from current line when starting a new line
   "vim.autoindent": true,
@@ -223,11 +223,11 @@
     // Keybindings for adjust view size, height and width
     ////////////////////////////////////////////////////
     {
-      "before": ["<leader>", "v", "i"],
+      "before": ["<leader>", "v", "i", "i"],
       "commands": ["workbench.action.increaseViewSize"]
     },
     {
-      "before": ["<leader>", "v", "d"],
+      "before": ["<leader>", "v", "d", "d"],
       "commands": ["workbench.action.decreaseViewSize"]
     },
     {
@@ -605,83 +605,83 @@
     // Keybindings for debug commands
     ////////////////////////////////////////////////////
     {
-      "before": ["<Leader>", "d", "f"],
+      "before": ["<leader>", "d", "f"],
       "commands": ["workbench.view.debug"]
     },
     {
-      "before": ["<Leader>", "d", "c"],
+      "before": ["<leader>", "d", "c"],
       "commands": ["workbench.action.debug.continue"]
     },
     {
-      "before": ["<Leader>", "d", "p"],
+      "before": ["<leader>", "d", "p"],
       "commands": ["workbench.action.debug.pause"]
     },
     {
-      "before": ["<Leader>", "d", "r"],
+      "before": ["<leader>", "d", "r"],
       "commands": ["workbench.action.debug.restart"]
     },
     {
-      "before": ["<Leader>", "d", "h"],
+      "before": ["<leader>", "d", "h"],
       "commands": ["editor.debug.action.showDebugHover"]
     },
     {
-      "before": ["<Leader>", "d", "s"],
+      "before": ["<leader>", "d", "s"],
       "commands": ["workbench.action.debug.start"]
     },
     {
-      "before": ["<Leader>", "d", "i"],
+      "before": ["<leader>", "d", "i"],
       "commands": ["workbench.action.debug.stepInto"]
     },
     {
-      "before": ["<Leader>", "d", "u"],
+      "before": ["<leader>", "d", "u"],
       "commands": ["workbench.action.debug.stepOut"]
     },
     {
-      "before": ["<Leader>", "d", "o"],
+      "before": ["<leader>", "d", "o"],
       "commands": ["workbench.action.debug.stepOver"]
     },
     {
-      "before": ["<Leader>", "d", "b"],
+      "before": ["<leader>", "d", "b"],
       "commands": ["editor.debug.action.toggleBreakpoint"]
     },
     {
-      "before": ["<Leader>", "d", "x"],
+      "before": ["<leader>", "d", "x"],
       "commands": ["workbench.action.debug.stop"]
     },
     {
-      "before": ["<Leader>", "d", "a", "l"],
+      "before": ["<leader>", "d", "a", "l"],
       "commands": ["editor.debug.action.addLogPoint"]
     },
     {
-      "before": ["<Leader>", "d", "a", "f"],
+      "before": ["<leader>", "d", "a", "f"],
       "commands": ["workbench.debug.viewlet.action.addFunctionBreakpointAction"]
     },
     {
-      "before": ["<Leader>", "d", "a", "c"],
+      "before": ["<leader>", "d", "a", "c"],
       "commands": ["editor.debug.action.conditionalBreakpoint"]
     },
     {
-      "before": ["<Leader>", "d", "a", "i"],
+      "before": ["<leader>", "d", "a", "i"],
       "commands": ["editor.debug.action.toggleInlineBreakpoint"]
     },
     {
-      "before": ["<Leader>", "d", "e", "b"],
+      "before": ["<leader>", "d", "e", "b"],
       "commands": ["workbench.debug.viewlet.action.enableAllBreakpoints"]
     },
     {
-      "before": ["<Leader>", "d", "d", "b"],
+      "before": ["<leader>", "d", "d", "b"],
       "commands": ["workbench.debug.viewlet.action.disableAllBreakpoints"]
     },
     {
-      "before": ["<Leader>", "d", "r", "b"],
+      "before": ["<leader>", "d", "r", "b"],
       "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
     },
     {
-      "before": ["<Leader>", "d", "n"],
+      "before": ["<leader>", "d", "n"],
       "commands": ["editor.debug.action.goToNextBreakpoint"]
     },
     {
-      "before": ["<Leader>", "d", "N"],
+      "before": ["<leader>", "d", "N"],
       "commands": ["editor.debug.action.goToPreviousBreakpoint"]
     },
     ////////////////////////////////////////////////////
@@ -794,15 +794,15 @@
     // Keybindings for git  commands in Visual mode
     ////////////////////////////////////////////////////
     {
-      "before": ["<Leader>", "g", "s"],
+      "before": ["<leader>", "g", "s"],
       "commands": ["git.stageSelectedRanges"]
     },
     {
-      "before": ["<Leader>", "g", "u"],
+      "before": ["<leader>", "g", "u"],
       "commands": ["git.unstageSelectedRanges"]
     },
     {
-      "before": ["<Leader>", "g", "r"],
+      "before": ["<leader>", "g", "r"],
       "commands": ["git.revertSelectedRanges"]
     },
     {
@@ -1024,7 +1024,7 @@
    * Command: Open integrated terminal via "Terminal: Focus Integrated Terminal" (Cmd+`)
    */
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.lineHeight": 1,
   "terminal.integrated.cursorWidth": 1,
   "terminal.integrated.letterSpacing": 1.4,
   "terminal.integrated.inheritEnv": true,
@@ -1109,6 +1109,17 @@
    * ################################# EXTENSIONS CONFIGURATION #########################
    * ####################################################################################
    */
+  "animations.Install-Method": "Custom UI Style",
+  "animations.Enabled": true,
+  "animations.CursorAnimation": true,
+  "animations.CursorAnimationOptions": {
+    "Color": "#c8c093",
+    "CursorStyle": "block",
+    "TrailLength": 8
+  },
+  "custom-ui-style.external.imports": [
+    "file:///Users/klee/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
   "custom-ui-style.electron": {
     "frame": false,
     "roundedCorners": true,
@@ -1199,10 +1210,12 @@
   /*
    * LANGUAGE CONFIGURATION
    */
-  /*================================ HTML ================================*/
+  //////////////////////////////////////////////////////////////////////////
+  // HTML LSP CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "html.suggest.html5": true,
   "html.autoClosingTags": true,
-  "html.format.wrapLineLength": 80,
+  "html.format.wrapLineLength": 110,
   "html.format.indentInnerHtml": true,
   "html.format.indentHandlebars": true,
   "html.format.wrapAttributes": "force-expand-multiline",
@@ -1216,7 +1229,25 @@
       "source.fixAll.eslint": "never"
     }
   },
-  /*============================= JAVASCRIPT =============================*/
+  //////////////////////////////////////////////////////////////////////////
+  // CSS SCSS AND LESS LSP CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
+  "[css][scss][less]": {
+    "editor.formatOnSave": true,
+    "editor.foldingStrategy": "auto",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "css.enabledLanguages": ["html", "typescript"], // From HTML CSS Support extension
+  "css.completion.completePropertyWithSemicolon": true,
+  "scss.completion.completePropertyWithSemicolon": true,
+  "less.completion.completePropertyWithSemicolon": true,
+  //////////////////////////////////////////////////////////////////////////
+  // JAVASCRIPT LSP CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "javascript.autoClosingTags": true,
   "[javascript][javascriptreact]": {
     "editor.formatOnSave": true,
@@ -1239,7 +1270,9 @@
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  /*============================= TYPESCRIPT =============================*/
+  //////////////////////////////////////////////////////////////////////////
+  // TYPESCRIPT LSP CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
@@ -1263,33 +1296,28 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-  /*================================ JSON ================================*/
+  //////////////////////////////////////////////////////////////////////////
+  // JSON/JSONC CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "[json][jsonc]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  /*============================ CSS SCSS LESS ===========================*/
-  "[css][scss][less]": {
-    "editor.formatOnSave": true,
-    "editor.foldingStrategy": "auto",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.fixAll.stylelint": "explicit"
-    }
-  },
-  "css.enabledLanguages": ["html", "typescript"], // From HTML CSS Support extension
-  "css.completion.completePropertyWithSemicolon": true,
-  "scss.completion.completePropertyWithSemicolon": true,
-  "less.completion.completePropertyWithSemicolon": true,
+  //////////////////////////////////////////////////////////////////////////
+  // DOCKER FILE LSP CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  /*================================= ESLINT =============================*/
+  //////////////////////////////////////////////////////////////////////////
+  // ESLINT CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
-  /*================================ STYLELINT ===========================*/
+  //////////////////////////////////////////////////////////////////////////
+  // STYELINT CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   // Disable VSCode's built-int linter (optional) from documentation of Stylelint plugin
   "css.validate": false,
   "less.validate": false,
@@ -1299,10 +1327,12 @@
   "stylelint.config": null,
   "stylelint.configFile": ".stylelintrc.json",
   "stylelint.validate": ["css", "scss", "postcss"],
-
+  //////////////////////////////////////////////////////////////////////////
+  // PRISMA CONFIGURATION
+  //////////////////////////////////////////////////////////////////////////
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "symbols.hidesExplorerArrows": false,
+  "symbols.hidesExplorerArrows": true,
   "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"]
 }
